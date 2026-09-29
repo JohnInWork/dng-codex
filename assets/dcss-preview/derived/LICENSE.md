@@ -1,0 +1,125 @@
+# Derived from the CC0 library
+
+Everything here is made from the Dungeon Crawl Stone Soup tiles in the parent
+directory, which are CC0 1.0 / public domain. The edits are ours and are placed
+under the same dedication: **CC0 1.0**.
+
+The parent `LICENSE.md` says the DCSS copy is unmodified, and it stays that way
+— which is exactly why edited files live here instead.
+
+## `books/`
+
+Six book covers, recoloured to an absolute hue from six library covers:
+
+| file | from | hue |
+| --- | --- | --- |
+| `rust.png` | `item/book/turquoise.png` | rust |
+| `ink.png` | `item/book/tan.png` | ink blue |
+| `rose.png` | `item/book/metal_green.png` | rose |
+| `wine.png` | `item/book/light_blue.png` | wine red |
+| `emerald.png` | `item/book/purple.png` | emerald |
+| `gold.png` | `item/book/red.png` | gilded |
+
+Two unidentified books that look the same are not a puzzle, they are a bug: the
+game needs one distinct cover per book type. The library holds twenty-four and
+the game now has thirty spellbooks, so six were painted.
+
+## `tools/`
+
+| file | from | change |
+| --- | --- | --- |
+| `bandage.png` | `item/food/bread_ration.png` | recoloured to linen |
+
+The library ships no bandage of any kind, and a bandage drawn as a scroll reads
+as a spell. The ration is the right shape — a wrapped bundle — so it was
+repainted white and lost its bread.
+
+## `hud/`
+
+| file | what |
+| --- | --- |
+| `home.png` | Домик для значка этажа в городе: там `romanDepth` отдаёт слово «ГОРОД», а места в значке — на одну-две римские цифры. |
+| `moon.png` | Месяц для шкалы сна. Нарисован с нуля в палитре игры (`--bone`), без сглаживания: ничего похожего на «сон» в библиотеке нет, а вектор со стороны рядом с тридцатидвойками читался бы чужим. |
+
+## `icon/`
+
+Двадцать восемь значков заклинаний, эффектов и расходников, собранных из
+угловых накладок библиотеки (`item/*/i-*.png`).
+
+В DCSS такой файл — не иконка, а метка: игра кладёт её на угол картинки
+предмета, поэтому содержимое размером 9–15 пикселей лежит в правом нижнем углу
+холста 32×32, а остальное прозрачно. Мы использовали эти файлы как
+самостоятельные значки — и они честно рисовались в углу кнопки, смещённые на
+6–9 пикселей из тридцати двух. Иван: «почему то многие иконки не по центру в
+кнопках».
+
+Каждый обрезан по содержимому, увеличен ровно вдвое (целый множитель — пиксели
+остаются квадратными) и положен в центр холста 32×32. Имя файла — папка
+источника и название без префикса `i-`: `item/wand/i-fire.png` →
+`icon/wand-fire.png`.
+
+## `item/`
+
+| file | what |
+| --- | --- |
+| `belt.png` | Пояс для пустого слота. В библиотеке предмета-пояса нет вовсе — в слоте лежал слой бумажной куклы `player/legs/belt_gray.png`: полоска 10×5 пикселей, растянутая на 54×77 и вылезавшая за кнопку. Нарисован в той же палитре, что месяц и домик. |
+| `legs/*.png` | Иконки штанов (слот `legs`): слои куклы `player/legs/<то же имя>.png`, обрезанные по содержимому, увеличенные ровно вдвое и положенные в центр холста 32×32 — тем же приёмом, что значки в `icon/`. Предметов-штанов в библиотеке нет, а слой куклы лежит в нижней трети холста и в клетке выглядел бы крошечным. `pants_brown.png` заодно служит картинкой пустого слота. |
+| `body/`, `head/`, `boots/`, `gloves/`, `cloak/`, ещё десять `legs/` | Значки дополнительных видов брони (27.09.2026, `tools/dcss-rpg-armour-looks.js`): слой куклы `player/<слот>/<то же имя>.png` тем же приёмом — обрезать, увеличить в целое число раз (куртки и штаны ×2, мелкие шлемы и обмотки до ×3, мантии и плащи ×1), в центр 32×32. У перчаток и сапог левая и правая половина пары сдвинуты вплотную, иначе в клетке были бы две точки по краям. Собирает `tools/atlas/derive-icons.py`; он же воспроизводит девять прежних штанов пиксель в пиксель. |
+| ещё 64 `body/`, 45 `head/`, 7 `legs/`, 4 `gloves/` | Значки новых вещей из свободных слоёв куклы (27.09.2026: рубахи, жилеты, куртки, рясы, мантии, халаты, кафтаны, кирасы; повязки, шапки, капюшоны, тюрбаны, колпаки, шляпы; юбки и набедренные повязки; перчатки и наручи). Тот же приём и тот же скрипт (`НОВЫЕ_ВЕЩИ` в `tools/atlas/derive-icons.py`). |
+
+## `mon/`
+
+| file | from | change |
+| --- | --- | --- |
+| `boar.png` | `mon/animals/hog.png` | тёмная щетина вместо розовой кожи |
+
+Кабан и домашняя свинья делили и картинку, и имя: обоих звали «Кабан» и обоих
+рисовали одним спрайтом. Кабаньих спрайтов в библиотеке ровно два, и второй —
+адский, так что выбирать было не из чего. Тон сдвинут в землю, светлота срезана
+больше чем вдвое, насыщенность приглушена: та же туша, но дикая.
+
+## `food/`
+
+| file | from | change |
+| --- | --- | --- |
+| `roast.png` | `item/food/meat_ration.png` | темнее и румянее: кусок, снятый с огня |
+| `stew.png` | — | нарисована с нуля |
+
+Жаркое и варёное мясо делили одну картинку, хлеб и сытная похлёбка — другую.
+Мясо разошлось перекраской, а с похлёбкой выбирать было не из чего: миски с
+едой в библиотеке нет вовсе, а котелки трактира уже стоят у очага. Чаша
+нарисована в тех же правилах, что месяц, домик и ремень: целые координаты,
+обводка по контуру, одна ступень тени — и пар двумя завитками, чтобы горячее
+читалось горячим.
+
+## `books/` — добавлено
+
+Ещё шесть обложек: неопознанных книг стало больше, чем разных переплётов, и
+шесть пар снова смотрели одинаково.
+
+| file | from |
+| --- | --- |
+| `amber.png` | `item/book/light_green.png` |
+| `violet.png` | `item/book/metal_blue.png` |
+| `jade.png` | `item/book/metal_cyan.png` |
+| `brick.png` | `item/book/dark_blue.png` |
+| `slate.png` | `item/book/parchment.png` |
+| `moss.png` | `item/book/book_of_the_dead.png` |
+
+## `item/hand1/`, `item/hand2/`
+
+Значки видов оружия и щитов (`looks`, 27.09.2026): слой куклы
+`player/hand1/<имя>.png` или `player/hand2/<путь>.png`, обрезанный по
+содержимому, увеличенный в целое число раз (не больше чем вдвое, чтобы баклер
+не вырос крупнее башенного щита) и положенный в центр холста 32×32. Путь значка
+повторяет путь слоя. Собираются скриптом `tools/atlas/derive-hand-icons.py`.
+
+## `intro/`
+
+| file | from | change |
+| --- | --- | --- |
+| `carpet-left.png`, `carpet-mid.png`, `carpet-right.png` | `dngn/floor/demonic_red1.png` | ворс чуть темнее и ровнее, золотая кайма по краю (левый/правый) и золотой ромб по оси (середина) |
+
+Ковровая дорожка тронного зала (`?intro=1`, `tools/dcss-rpg-intro.js`). Ковра
+в библиотеке нет ни одного; красный пол без глаз и трещин читается ворсом.
+Собирает `tools/atlas/derive-intro-carpet.py`.
