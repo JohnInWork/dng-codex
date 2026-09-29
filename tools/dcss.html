@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-CyEQlSII.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-6zWJmkfs.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-D6_hmRGk.css">
+    <script type="module" crossorigin src="../assets/game-DqM68M-h.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-Bh6OwEnD.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-D9Tx3pb5.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -305,9 +305,17 @@
         </button>
       </header>
 
-      <button id="floor-map-button" class="depth pixel-frame tappable" type="button" aria-label="Открыть карту этажа I">
-        <span>I</span>
-        <img id="depth-home" class="depth-home" src="../assets/dcss-preview/derived/hud/home.png" alt="" hidden />
+      <!--
+        Миникарта и есть кнопка этажа: разведанная часть этажа целиком, номер
+        этажа в углу, тап открывает большую карту. Рисует её dcss.js по
+        чистой модели dcss-rpg-floor-map.js (fitFloorMinimap).
+      -->
+      <button id="floor-map-button" class="depth pixel-frame tappable minimap" type="button" aria-label="Открыть карту этажа I">
+        <canvas id="minimap-canvas" class="minimap-canvas" width="80" height="80" aria-hidden="true"></canvas>
+        <b class="minimap-depth">
+          <span>I</span>
+          <img id="depth-home" class="depth-home" src="../assets/dcss-preview/derived/hud/home.png" alt="" hidden />
+        </b>
         <i aria-hidden="true"></i>
       </button>
 
