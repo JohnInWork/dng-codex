@@ -74,6 +74,8 @@ repainted white and lost its bread.
 | `boar.png` | `mon/animals/hog.png` | почти чёрная щетина, красный глаз, клык |
 | `wild_sheep.png` | `mon/animals/sheep.png` | тёмная шерсть, красный глаз |
 | `death_yak.png` | `mon/animals/death_yak.png` | чёрная шерсть, красные глаза, рога остались костяными |
+| `sea_serpent.png` | `mon/animals/sea_snake.png` | морской змей гротов: тёмно-зелёное тело, огненные полосы, красный глаз (`tools/atlas/derive-grotto.py`) |
+| `kraken_head_sunk.png` | `mon/aquatic/kraken_head.png` | голова кракена под водой: притоплена в цвет воды гротов, глаза остались красными (`tools/atlas/derive-grotto.py`) |
 
 Кабан и домашняя свинья делили и картинку, и имя: обоих звали «Кабан» и обоих
 рисовали одним спрайтом. Кабаньих спрайтов в библиотеке ровно два, и второй —
@@ -130,3 +132,14 @@ repainted white and lost its bread.
 Ковровая дорожка тронного зала (`?intro=1`, `tools/dcss-rpg-intro.js`). Ковра
 в библиотеке нет ни одного; красный пол без глаз и трещин читается ворсом.
 Собирает `tools/atlas/derive-intro-carpet.py`.
+
+## `dngn/lava/`
+
+| file | from | change |
+| --- | --- | --- |
+| `lava0.png` … `lava5.png` | `dngn/water/shoals_deep_water0.png` … `shoals_deep_water5.png` | яркость воды легла на градиент лавы: тёмное — корка, гребни — раскалённые трещины |
+| `lava_bed.png` | `dngn/water/shoals_deep_water0.png` | то же, на две ступени темнее — ложе под мерцанием |
+
+Лава «Магмового уступа» и «Инфернального ядра» (генератор v20,
+`docs/2D-LAVA.md`). Своей лавы в библиотеке нет; сетка гребней отмели
+читается трещинами в остывающей корке. Собирает `tools/atlas/derive-lava.py`.

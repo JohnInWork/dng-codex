@@ -244,7 +244,8 @@ CC0 1.0 as the project's own work.
 `sfx/find-crystal.mp3`, `sfx/result-good.mp3`, `sfx/result-bad.mp3`,
 `sfx/refuse.mp3`, `sfx/enemy-shot.mp3`, `sfx/enemy-spell.mp3`,
 `sfx/ambient-hush.mp3`, `sfx/ambient-wings.mp3`, `sfx/ambient-drag.mp3`,
-`sfx/ambient-gust.mp3`, `sfx/ambient-rumble.mp3`, `sfx/ambient-drip.mp3`.
+`sfx/ambient-gust.mp3`, `sfx/ambient-rumble.mp3`, `sfx/ambient-drip.mp3`,
+`sfx/kraken-splash.mp3`, `sfx/kraken-lash.mp3`.
 
 Синтез поверх переработанной записи из этого каталога (исходник — CC0, автор
 назван в его разделе выше):
