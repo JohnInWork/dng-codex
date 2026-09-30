@@ -12,10 +12,16 @@
     <link rel="icon" href="./icon.svg" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <link rel="canonical" href="https://johninwork.github.io/dng-codex/tools/dcss.html" />
-    <meta http-equiv="refresh" content="0; url=./tools/dcss.html" />
+    <noscript><meta http-equiv="refresh" content="0; url=./tools/dcss.html" /></noscript>
     <style>html,body{background:#07090a;min-height:100%;margin:0}</style>
     <script>
-      location.replace(`./tools/dcss.html${location.search}${location.hash}`);
+      // Путь к игре — от корня сайта, а не от текущего адреса: если эту
+      // страницу отдали вместо самой игры (офлайн-кэш, запасная страница
+      // сервера), относительный `./tools/…` уводил в `tools/tools/tools/…`.
+      const root = location.pathname.replace(/\/tools\/.*$/, '/').replace(/[^/]*$/, '');
+      const game = `${root}tools/dcss.html`;
+      // Отдали вместо самой игры по её же адресу — повтор ничего не даст.
+      if (location.pathname !== game) location.replace(`${game}${location.search}${location.hash}`);
     </script>
   </head>
   <body></body>

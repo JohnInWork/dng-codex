@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-Bxu3kN4o.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-BIVTStSQ.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-BTrRadiq.css">
+    <script type="module" crossorigin src="../assets/game-oLS_gL4K.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-BXiqoNzW.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-B94uKkS5.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -125,25 +125,25 @@
             <section class="appearance-option" aria-labelledby="appearance-body-label">
               <b id="appearance-body-label">Тело</b>
               <div>
-                <button type="button" data-appearance-kind="body" data-appearance-step="-1" aria-label="Предыдущее тело">‹</button>
+                <button type="button" data-appearance-kind="body" data-appearance-step="-1" aria-label="Предыдущее тело">&lt;</button>
                 <output id="appearance-body-value">1/2</output>
-                <button type="button" data-appearance-kind="body" data-appearance-step="1" aria-label="Следующее тело">›</button>
+                <button type="button" data-appearance-kind="body" data-appearance-step="1" aria-label="Следующее тело">&gt;</button>
               </div>
             </section>
             <section class="appearance-option" aria-labelledby="appearance-hair-label">
               <b id="appearance-hair-label">Волосы</b>
               <div>
-                <button type="button" data-appearance-kind="hair" data-appearance-step="-1" aria-label="Предыдущая причёска">‹</button>
+                <button type="button" data-appearance-kind="hair" data-appearance-step="-1" aria-label="Предыдущая причёска">&lt;</button>
                 <output id="appearance-hair-value">2/9</output>
-                <button type="button" data-appearance-kind="hair" data-appearance-step="1" aria-label="Следующая причёска">›</button>
+                <button type="button" data-appearance-kind="hair" data-appearance-step="1" aria-label="Следующая причёска">&gt;</button>
               </div>
             </section>
             <section class="appearance-option" aria-labelledby="appearance-beard-label">
               <b id="appearance-beard-label">Борода</b>
               <div>
-                <button type="button" data-appearance-kind="beard" data-appearance-step="-1" aria-label="Предыдущая борода">‹</button>
+                <button type="button" data-appearance-kind="beard" data-appearance-step="-1" aria-label="Предыдущая борода">&lt;</button>
                 <output id="appearance-beard-value">1/2</output>
-                <button type="button" data-appearance-kind="beard" data-appearance-step="1" aria-label="Следующая борода">›</button>
+                <button type="button" data-appearance-kind="beard" data-appearance-step="1" aria-label="Следующая борода">&gt;</button>
               </div>
             </section>
           </div>
@@ -278,7 +278,7 @@
       </div>
 
       <header class="hud pixel-frame" aria-label="Состояние героя">
-        <div class="portrait" aria-hidden="true"><span>ᚱ</span></div>
+        <div class="portrait" aria-hidden="true"></div>
         <div class="vitals">
           <div class="health" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <button id="hunger-meter" class="hunger-meter tappable" type="button" data-stage="fed">
@@ -392,7 +392,7 @@
       </output>
 
       <aside id="onboarding-hint" class="onboarding-hint pixel-frame" role="status" aria-live="polite" hidden>
-        <b id="onboarding-glyph" aria-hidden="true">✥</b>
+        <b id="onboarding-glyph" aria-hidden="true">☩</b>
         <strong id="onboarding-title"></strong>
         <p id="onboarding-text"></p>
         <div class="onboarding-actions">
@@ -606,7 +606,7 @@
             <button id="close-floor-map" type="button" aria-label="Закрыть карту">×</button>
             <button id="floor-map-legend-toggle" type="button" aria-label="Что значат значки" aria-pressed="false">?</button>
             <button id="floor-map-center" type="button" aria-label="К герою"><i class="ui-icon" data-icon="crosshair" aria-hidden="true"></i></button>
-            <button id="floor-map-zoom-out" type="button" aria-label="Отдалить">−</button>
+            <button id="floor-map-zoom-out" type="button" aria-label="Отдалить">-</button>
             <button id="floor-map-zoom-in" type="button" aria-label="Приблизить">+</button>
           </footer>
         </article>
@@ -941,10 +941,17 @@
           />
           <h2 id="run-end-title" class="run-end-title">Забег окончен</h2>
           <dl id="run-summary" class="run-summary"></dl>
-          <button id="restart-run" class="restart-run pixel-frame tappable" type="button" aria-label="Начать новый забег">
-            <i class="ui-icon" data-icon="cycle" aria-hidden="true"></i>
-            <b id="restart-run-label">Новый забег</b>
-          </button>
+          <!-- Новый забег — через выбор героя, а не сразу; рядом — главное меню
+               (Иван, 30.09.2026). Подписи пишет runEndActions(). -->
+          <div class="run-end-actions">
+            <button id="restart-run" class="restart-run pixel-frame tappable" type="button" aria-label="Начать новый забег">
+              <i class="ui-icon" data-icon="cycle" aria-hidden="true"></i>
+              <b id="restart-run-label">Новый забег</b>
+            </button>
+            <button id="run-end-menu" class="run-end-menu pixel-frame tappable" type="button" aria-label="Выйти в главное меню">
+              <b id="run-end-menu-label">В меню</b>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -1028,7 +1035,7 @@
                   <i class="ui-icon audio-on" data-icon="speaker" aria-hidden="true"></i>
                   <i class="ui-icon audio-off" data-icon="speaker-off" aria-hidden="true"></i>
                 </button>
-                <button id="audio-volume-down" type="button" aria-label="Тише">−</button>
+                <button id="audio-volume-down" type="button" aria-label="Тише">-</button>
                 <output id="audio-volume-value" aria-live="polite">70%</output>
                 <button id="audio-volume-up" type="button" aria-label="Громче">+</button>
               </div>
@@ -1041,7 +1048,7 @@
                   <i class="ui-icon music-on" data-icon="speaker" aria-hidden="true"></i>
                   <i class="ui-icon music-off" data-icon="speaker-off" aria-hidden="true"></i>
                 </button>
-                <button id="music-volume-down" type="button" aria-label="Тише">−</button>
+                <button id="music-volume-down" type="button" aria-label="Тише">-</button>
                 <output id="music-volume-value" aria-live="polite">70%</output>
                 <button id="music-volume-up" type="button" aria-label="Громче">+</button>
               </div>
@@ -1051,7 +1058,7 @@
               <h3 id="settings-brightness-title">Яркость</h3>
               <div id="settings-brightness" class="main-menu-audio" role="group" aria-label="Яркость">
                 <span class="settings-brightness-glyph" aria-hidden="true">☼</span>
-                <button id="brightness-down" type="button" aria-label="Темнее">−</button>
+                <button id="brightness-down" type="button" aria-label="Темнее">-</button>
                 <output id="brightness-value" aria-live="polite">100%</output>
                 <button id="brightness-up" type="button" aria-label="Светлее">+</button>
               </div>
