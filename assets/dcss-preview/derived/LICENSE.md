@@ -88,6 +88,33 @@ repainted white and lost its bread.
 горящие красные глаза, у кабана ещё клык. Все три собирает
 `tools/atlas/derive-beasts.py`; мирные остаются библиотечными.
 
+### Составные существа генератора v23 (01.10.2026)
+
+В библиотеке дракониане и повелители ада лежат частями — DCSS кладёт слои
+друг на друга сама. У нас существо — одна картинка, поэтому части собраны
+заранее: слои библиотеки положены друг на друга без единого изменения цвета,
+снизу вверх. Высокие картинки (части повелителей 32×48 и `sprint/unspeakable`)
+положены на квадрат 48×48 — по центру по ширине и по низу, лишнее прозрачно:
+мир рисует спрайт квадратом, и высокий файл сплющился бы. Собирает
+`tools/atlas/derive-road-fauna.py` по таблице `ROAD_FAUNA_COMPOSITES`
+(`tools/dcss-rpg-road-fauna.js`).
+
+| file | from (снизу вверх, пути от `mon/`) |
+| --- | --- |
+| `brown_draconian.png` | `draco/draco-base-brown` + `draco/draco-job-knight` |
+| `yellow_draconian.png` | `draco/draco-base-yellow` + `draco/draco-job-caller` |
+| `white_draconian.png` | `draco/draco-base-white` + `draco/draco-job-monk` |
+| `purple_draconian.png` | `draco/draco-base-purple` + `draco/draco-job-shifter` |
+| `black_draconian.png` | `draco/draco-base-black` + `draco/draco-job-zealot` |
+| `red_draconian.png` | `draco/draco-base-red` + `draco/draco-job-scorcher` |
+| `green_draconian.png` | `draco/draco-base-green` + `draco/draco-job-annihilator` |
+| `mantis_fiend.png` | `panlord/demon_wings_dragonfly` + `demon_body_mantis` + `demon_head_bird`, на 48×48 |
+| `skull_fiend.png` | `panlord/demon_wings_bat` + `demon_body_fat` + `demon_head_cow_skull`, на 48×48 |
+| `squid_fiend.png` | `panlord/demon_body_tentacley` + `demon_head_cthulhu`, на 48×48 |
+| `plated_fiend.png` | `panlord/demon_wings_hooked` + `demon_body_armour` + `demon_head_helmet`, на 48×48 |
+| `trunk_fiend.png` | `panlord/demon_body_crouch` + `demon_head_elephant`, на 48×48 |
+| `unspeakable.png` | `sprint/unspeakable` (32×48), на 48×48 |
+
 ## `food/`
 
 | file | from | change |
