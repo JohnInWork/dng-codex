@@ -1,6 +1,6 @@
 const APP_ROOT = new URL('./', self.location.href);
 const CACHE_PREFIX = `dng-codex-static:${APP_ROOT.pathname}:`;
-const CACHE = `${CACHE_PREFIX}v38-own-sounds`;
+const CACHE = `${CACHE_PREFIX}v39-no-redirect-loop`;
 const inScope = url => url.origin === APP_ROOT.origin && url.pathname.startsWith(APP_ROOT.pathname);
 self.addEventListener('install', event => {
   const shell = ['./', 'icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'manifest.webmanifest', 'manifest.en.webmanifest'].map(path => new URL(path, APP_ROOT).href);
@@ -30,7 +30,13 @@ self.addEventListener('fetch', event => {
       if (response.ok) await cache.put(request, response.clone());
       return response;
     } catch (error) {
-      const cached = await cache.match(request, { ignoreVary: true }) || (request.mode === 'navigate' ? await cache.match(APP_ROOT.href) : null);
+      // Без сети страница берётся своя, с любым `?…`: сперва точный адрес, затем
+      // тот же путь без параметров. Корень — только для самого корня: его
+      // перенаправление, отданное вместо `tools/dcss.html`, уводило браузер в
+      // бесконечное `tools/tools/tools/…` (найдено 30.09.2026).
+      const cached = await cache.match(request, { ignoreVary: true })
+        || (request.mode === 'navigate' ? await cache.match(request, { ignoreVary: true, ignoreSearch: true }) : null)
+        || (request.mode === 'navigate' && new URL(request.url).pathname === APP_ROOT.pathname ? await cache.match(APP_ROOT.href) : null);
       if (cached) return cached;
       throw error;
     }
