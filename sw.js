@@ -1,6 +1,6 @@
 const APP_ROOT = new URL('./', self.location.href);
 const CACHE_PREFIX = `dng-codex-static:${APP_ROOT.pathname}:`;
-const CACHE = `${CACHE_PREFIX}v39-no-redirect-loop`;
+const CACHE = `${CACHE_PREFIX}v40-dng-icon`;
 const inScope = url => url.origin === APP_ROOT.origin && url.pathname.startsWith(APP_ROOT.pathname);
 self.addEventListener('install', event => {
   const shell = ['./', 'icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'manifest.webmanifest', 'manifest.en.webmanifest'].map(path => new URL(path, APP_ROOT).href);
