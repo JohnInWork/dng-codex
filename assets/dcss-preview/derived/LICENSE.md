@@ -67,6 +67,9 @@ repainted white and lost its bread.
 | `body/`, `head/`, `boots/`, `gloves/`, `cloak/`, ещё десять `legs/` | Значки дополнительных видов брони (27.09.2026, `tools/dcss-rpg-armour-looks.js`): слой куклы `player/<слот>/<то же имя>.png` тем же приёмом — обрезать, увеличить в целое число раз (куртки и штаны ×2, мелкие шлемы и обмотки до ×3, мантии и плащи ×1), в центр 32×32. У перчаток и сапог левая и правая половина пары сдвинуты вплотную, иначе в клетке были бы две точки по краям. Собирает `tools/atlas/derive-icons.py`; он же воспроизводит девять прежних штанов пиксель в пиксель. |
 | ещё 64 `body/`, 45 `head/`, 7 `legs/`, 4 `gloves/` | Значки новых вещей из свободных слоёв куклы (27.09.2026: рубахи, жилеты, куртки, рясы, мантии, халаты, кафтаны, кирасы; повязки, шапки, капюшоны, тюрбаны, колпаки, шляпы; юбки и набедренные повязки; перчатки и наручи). Тот же приём и тот же скрипт (`НОВЫЕ_ВЕЩИ` в `tools/atlas/derive-icons.py`). |
 | `body/mail_shirt.png`, `body/apprentice_robe.png`, `body/scout_coat.png`, `head/apprentice_hat.png`, `head/archer_hood.png`, `head/scout_hood.png` | Значки стартовой одежды классов (30.09.2026) — из перекрашенных слоёв `derived/player/<слот>/<то же имя>.png` тем же приёмом (`ИЗ_ПЕРЕКРАСКИ` в `tools/atlas/derive-icons.py`). |
+| `boots/mesh_black.png`, `boots/middle_purple.png`, `boots/spider.png`, `boots/blue_gold.png`, `boots/hooves.png`, `gloves/glove_short_gray.png`, `gloves/gauntlet_blue.png`, `gloves/glove_grayfist.png`, `gloves/glove_red.png`, `gloves/glove_white.png`, `cloak/gray.png`, `cloak/red.png`, `cloak/white.png`, `cloak/yellow.png`, `cloak/magenta.png` | Значки основного вида вещей второй половины дороги (02.10.2026). Значком у них служил сам слой куклы `player/<слот>/<то же имя>.png`: сапоги у нижнего края клетки, перчатки — две точки по краям, плащ сдвинут вниз. Тот же приём, что у остальных видов этих слотов (`ИЗ_СЛОЯ_КУКЛЫ` в `tools/atlas/derive-icons.py`). |
+| `head/crown_gold2.png` | Значок «Древней короны» (02.10.2026): слой куклы `player/head/crown_gold2.png` тем же приёмом (×3). Раньше значком был бронзовый шлем с плюмажем `item/armour/headgear/helmet_art3.png` — не корона и не то, что у героя на голове. |
+| `belt/belt_gray.png`, `belt/belt_redbrown.png`, `belt/belt1.png`, `belt/belt2.png` | Значки поясов (02.10.2026): слой куклы `player/legs/belt_gray.png`, `player/legs/belt_redbrown.png`, `player/body/belt1.png`, `player/body/belt2.png`, обрезанный, увеличенный вдвое и положенный в центр 32×32 (`ПОЯСА` в `tools/atlas/derive-icons.py`). Раньше значком была сама полоска на талии куклы, ниже центра клетки. |
 
 ## `mon/`
 
@@ -151,6 +154,19 @@ repainted white and lost its bread.
 не вырос крупнее башенного щита) и положенный в центр холста 32×32. Путь значка
 повторяет путь слоя. Собираются скриптом `tools/atlas/derive-hand-icons.py`.
 
+02.10.2026: у слоя правой руки под кулаком героя дыра в рукояти (слой лежит
+поверх пальцев) — значок выходил разорванным: голова, щель, кусок рукояти.
+Перед обрезкой дыра закрывается сечением той же рукояти, сдвинутым по прямой
+древка (`tools/atlas/grip.py`); цвета и ширина — от рукояти рядом, слой на
+герое не меняется. У двух цепов, рапиры и двух кнутов, где рукоять идёт
+наискось или петля висит сбоку, несколько пикселей поставлены руками
+(`РУЧНЫЕ` в том же файле): цвет каждого взят у пикселя той же картинки. Так
+пересобраны 45 значков оружия, и так же сделаны десять новых — основные виды
+вещей второй половины дороги, у которых значком был сам слой куклы у края
+клетки: `hand1/axe_small.png`, `axe_short.png`, `axe_double.png`,
+`battleaxe.png`, `axe_blood.png`, `knife.png`, `enchantress_dagger.png`,
+`bow.png`, `great_bow.png`, `black_whip.png`.
+
 ## `intro/`
 
 | file | from | change |
@@ -195,4 +211,95 @@ repainted white and lost its bread.
 Ржавый меч воина (30.09.2026): Иван выбрал по листу вариант 7 — простой прямой
 меч с ржавым клинком. Собирает `tools/atlas/derive-rusty-sword.py`, он же
 делает значок `item/weapon/rusty_sword.png` (обрезка, поворот на 45°, центр
-холста 32×32 — тем же приёмом, что `derive-hand-icons.py`).
+холста 32×32 — тем же приёмом, что `derive-hand-icons.py`; с 02.10.2026 —
+с рукоятью, дорисованной под кулаком, `tools/atlas/grip.py`).
+
+## Слой на герое — того же цвета, что значок (02.10.2026)
+
+Иван: «иконка топора одна, а когда я его надел, то топор был другого цвета».
+Аудит всех вещей и видов (`node scripts/item-visual-audit.mjs`) нашёл полсотни
+пар, где значок рюкзака и слой на герое взяты из разных наборов библиотеки:
+бурый кожаный плащ в рюкзаке — чёрный на спине, синий меч — серый в руке,
+золотой посох — бурая палка. Силуэт и тени слоя остаются; пиксели «чужого»
+материала встают на цвета, которыми нарисован значок, по ступеням светлоты
+(тёмное к тёмному, светлое к светлому); контур и остальные материалы не
+меняются. Где значок противоречил имени вещи («Золотые сапоги» с бурым
+значком, «Кровавая мантия» с фиолетовым), наоборот перекрашен значок — по
+цветам слоя. Собирает `tools/atlas/derive-agree.py`; семейства цвета — в
+`tools/atlas/colour_family.py`. Пути — от `derived/`.
+
+| file | from | colours of | change |
+| --- | --- | --- | --- |
+| `player/hand1/morg_copper.png` | `player/hand1/artefact/morg.png` | `item/weapon/artefact/urand_morg.png` | золото → бронза/кожа (short-blade 3) |
+| `player/hand1/falchion2_bronze.png` | `player/hand1/falchion2.png` | `item/weapon/falchion3.png` | синий → бронза/кожа (iron-falchion 3) |
+| `player/hand1/axe_executioner2_steel.png` | `player/hand1/axe_executioner2.png` | `item/weapon/hand_axe1.png` | синий → серый металл (executioner-axe 1) |
+| `player/hand1/quarterstaff_gold.png` | `player/hand1/quarterstaff.png` | `item/staff/staff01.png` | бронза/кожа → золото (apprentice-staff 1-2) |
+| `player/hand1/quarterstaff_red.png` | `player/hand1/quarterstaff.png` | `item/staff/staff03.png` | бронза/кожа → красный (apprentice-staff 3) |
+| `player/hand1/staff_skull_green.png` | `player/hand1/staff_skull.png` | `item/staff/staff05.png` | серый металл → зелёный (skull-staff 3) |
+| `player/hand1/bow_three_wood.png` | `player/hand1/bow_three.png` | `item/weapon/ranged/longbow1.png` | красный → бронза/кожа (longbow 1, 3) |
+| `player/hand1/spear_two_blue.png` | `player/hand1/spear_two.png` | `item/weapon/spear2.png` | золото → синий (war-pike 1) |
+| `player/hand1/bow_two_wood.png` | `player/hand1/bow_two.png` | `item/weapon/ranged/shortbow1.png` | золото → бронза/кожа (short-bow 1) |
+| `player/hand1/arbalest_two_blue.png` | `player/hand1/arbalest_two.png` | `item/weapon/ranged/arbalest3.png` | бронза/кожа → синий (arbalest 3) |
+| `player/hand1/whip2_green.png` | `player/hand1/whip2.png` | `item/weapon/bullwhip3.png` | бронза/кожа → зелёный (barbed-whip 1) |
+| `player/hand1/double_sword_blue.png` | `player/hand1/double_sword.png` | `item/weapon/double_sword2.png` | серый металл → синий (double-sword 2) |
+| `player/hand1/double_sword_red.png` | `player/hand1/double_sword.png` | `item/weapon/double_sword3.png` | серый металл → красный (double-sword 3) |
+| `player/hand1/scythe_blue.png` | `player/hand1/scythe.png` | `item/weapon/scythe2.png` | красный → синий (war-scythe 2) |
+| `player/hand1/flail_ball_blue.png` | `player/hand1/flail_ball.png` | `item/weapon/flail2.png` | серый металл → синий (iron-flail 2) |
+| `player/hand1/eveningstar_blue.png` | `player/hand1/eveningstar.png` | `item/weapon/eveningstar2.png` | серый металл → синий (eveningstar 2) |
+| `player/hand1/flail_great_blue.png` | `player/hand1/flail_great.png` | `item/weapon/dire_flail2.png` | серый металл → синий (dire-flail 2) |
+| `player/hand1/giant_club_spike_red.png` | `player/hand1/giant_club_spike.png` | `item/weapon/giant_spiked_club.png` | бронза/кожа → красный (spiked-club 1, 5) |
+| `player/hand1/long_sword_slant2_steel.png` | `player/hand1/long_sword_slant2.png` | `item/weapon/long_sword1.png` | синий → серый металл (long-sword 1-2) |
+| `player/hand2/short_sword_slant2_steel.png` | `player/hand2/misc/short_sword_slant2.png` | `item/weapon/long_sword1.png` | синий → серый металл (long-sword 1-2, левая рука) |
+| `player/hand1/falchion2_steel.png` | `player/hand1/falchion2.png` | `item/weapon/falchion1.png` | синий → серый металл (iron-falchion 2) |
+| `player/hand1/great_sword_slant2_steel.png` | `player/hand1/great_sword_slant2.png` | `item/weapon/greatsword1.png` | синий → серый металл (dungeon-greatsword 1-2) |
+| `player/hand1/dagger_slant_gold.png` | `player/hand1/dagger_slant.png` | `item/weapon/dagger3.png` | серый металл → бронза/кожа (bone-dirk 1) |
+| `player/hand2/dagger_gold.png` | `player/hand2/misc/dagger.png` | `item/weapon/dagger3.png` | серый металл → бронза/кожа (bone-dirk 1, левая рука) |
+| `player/hand1/club_slant_red.png` | `player/hand1/club_slant.png` | `item/weapon/club2.png` | бронза/кожа → красный (oak-club 2) |
+| `player/hand1/mace_blue.png` | `player/hand1/mace.png` | `item/weapon/mace2.png` | серый металл → синий (iron-mace 2) |
+| `player/hand1/morningstar_two_blue.png` | `player/hand1/morningstar_two.png` | `item/weapon/morningstar2.png` | серый металл → синий (morning-star 1) |
+| `player/hand1/morningstar_two_green.png` | `player/hand1/morningstar_two.png` | `item/weapon/morningstar3.png` | серый металл → зелёный (morning-star 3) |
+| `player/hand1/bow_two_silver.png` | `player/hand1/bow_two.png` | `item/weapon/ranged/shortbow3.png` | золото → серый металл (short-bow 3) |
+| `player/hand1/hand_crossbow_steel.png` | `player/hand1/hand_crossbow.png` | `item/weapon/ranged/hand_crossbow2.png` | бронза/кожа → серый металл (hand-crossbow 1) |
+| `player/hand1/scimitar_bone.png` | `player/hand1/scimitar.png` | `item/weapon/scimitar3.png` | серый металл → бронза/кожа (scimitar 2) |
+| `player/hand1/triple_sword_blue.png` | `player/hand1/triple_sword.png` | `item/weapon/triple_sword2.png` | серый металл → синий (triple-sword 2) |
+| `player/hand1/eveningstar_red.png` | `player/hand1/eveningstar.png` | `item/weapon/eveningstar3.png` | серый металл → красный (eveningstar 3) |
+| `player/hand1/giant_club_spike_steel.png` | `player/hand1/giant_club_spike.png` | `item/weapon/giant_spiked_club3.png` | бронза/кожа → серый металл (spiked-club 3) |
+| `player/hand1/large_mace_bronze.png` | `player/hand1/large_mace.png` | `item/weapon/mace_large3.png` | серый металл → бронза/кожа (great-mace 3) |
+| `player/body/robe_black_gold_green.png` | `player/body/robe_black_gold.png` | `item/armour/robe_art1.png` | серый металл → зелёный (runic-robe 1) |
+| `player/body/half_plate_bronze.png` | `player/body/half_plate.png` | `item/armour/scale_mail3.png` | серый металл → бронза/кожа (half-plate 3) |
+| `player/body/dragonsc_ice.png` | `player/body/dragonsc_cyan.png` | `item/armour/ice_dragon_hide.png` | синий → серый металл (ice-dragon-scales 3) |
+| `player/body/chain_bronze.png` | `player/body/green_chain.png` | `item/armour/ring_mail1.png` | зелёный → бронза/кожа (ring-mail 1) |
+| `player/body/isildur_red.png` | `player/body/isildur.png` | `item/armour/artefact/urand_salamander.png` | серый металл → красный (ring-mail 3) |
+| `player/body/gil-galad_violet.png` | `player/body/gil-galad.png` | `item/armour/ring_mail3.png` | синий → фиолетовый (ring-mail 5) |
+| `player/body/dragonarm_ice.png` | `player/body/dragonarm_cyan.png` | `item/armour/ice_dragon_hide.png` | синий → серый металл (ice-dragon-scales 2) |
+| `item/body/robe_art2_red.png` | `item/armour/robe_art2.png` | `player/body/robe_red_gold.png` | фиолетовый → красный (значок blood-robe 1) |
+| `player/head/fhelm_horn2_red.png` | `player/head/fhelm_horn2.png` | `item/armour/headgear/helmet_art1.png` | серый металл → красный (horned-helm 1) |
+| `player/head/helm_leather.png` | `player/head/helm_green.png` | `item/armour/headgear/elven_leather_helm.png` | зелёный → бронза/кожа (elven-helm 1) |
+| `player/head/wizard_scholar.png` | `player/head/wizard_white.png` | `item/armour/headgear/hat1.png` | серый металл → синий (scholar-hat 1: шляпа, как на значке, а не капюшон) |
+| `player/head/art_dragonhelm_steel.png` | `player/head/art_dragonhelm.png` | `item/armour/headgear/helmet_ego1.png` | синий → серый металл (drake-helm 1) |
+| `player/head/bear_grey.png` | `player/head/bear.png` | `item/armour/artefact/urand_bear.png` | бронза/кожа → серый металл (bearskin-hood 1) |
+| `player/boots/middle_gray_leather.png` | `player/boots/middle_gray.png` | `item/armour/boots2_jackboots.png` | серый металл → бронза/кожа (jackboots 1) |
+| `player/boots/middle_brown2_gold.png` | `player/boots/middle_brown2.png` | `item/armour/boots3_stripe.png` | красный → золото (spider-boots 1) |
+| `item/boots/boots1_gold.png` | `item/armour/boots1_brown.png` | `player/boots/middle_gold.png` | бронза/кожа → золото (значок golden-boots 1) |
+| `player/cloak/black_leather.png` | `player/cloak/black.png` | `item/armour/cloak1_leather.png` | серый металл → бронза/кожа (travel-cloak 1: и почти чёрная заливка тоже) |
+| `player/cloak/blue_silver.png` | `player/cloak/blue.png` | `item/armour/cloak2.png` | синий → серый металл (tide-cloak 1) |
+| `player/cloak/blue_magenta.png` | `player/cloak/blue.png` | `item/armour/cloak4.png` | синий → фиолетовый (tide-cloak 2) |
+| `player/cloak/dragonskin_blue.png` | `player/cloak/dragonskin.png` | `item/armour/cloak3.png` | зелёный → синий (dragon-cloak 1) |
+| `player/gloves/glove_black_leather.png` | `player/gloves/glove_black.png` | `item/armour/glove1.png` | серый металл → красный (leather-gloves 1) |
+| `player/gloves/claws_blue.png` | `player/gloves/claws.png` | `item/armour/glove5.png` | серый металл → синий (beast-claws 1) |
+| `player/hand2/buckler_green_gold.png` | `player/hand2/buckler_green.png` | `item/armour/shields/buckler3.png` | зелёный → синий; серый металл → золото (wood-buckler 3) |
+| `player/hand2/shield_knight_gray_blue.png` | `player/hand2/shield_knight_gray.png` | `item/armour/shields/shield2.png` | серый металл → синий (round-shield 2) |
+| `player/hand2/shield_knight_gray_green.png` | `player/hand2/shield_knight_gray.png` | `item/armour/shields/shield1.png` | серый металл → зелёный (round-shield 1) |
+| `player/hand2/buckler_green_rust.png` | `player/hand2/buckler_green.png` | `item/armour/shields/buckler2.png` | зелёный → бронза/кожа (wood-buckler 2) |
+| `player/hand2/lshield_quartered_red.png` | `player/hand2/lshield_quartered.png` | `item/armour/shields/large_shield1.png` | синий → красный (tower-shield 1) |
+| `player/hand2/lshield_quartered_gold.png` | `player/hand2/lshield_quartered.png` | `item/armour/shields/large_shield3.png` | синий → бронза/кожа (tower-shield 3) |
+| `player/hand2/shield_bullseye_violet.png` | `player/hand2/shield_bullseye.png` | `item/armour/shields/shield3.png` | красный → фиолетовый (spiked-shield 1) |
+| `player/hand2/book_moss.png` | `player/hand2/misc/book_red.png` | `derived/books/moss.png` | красный → серый металл (dead-book 1) |
+| `player/hand2/lshield_long_blue.png` | `player/hand2/lshield_long_red.png` | `item/armour/shields/lshield_louise.png` | красный → синий (cross-pavise 1) |
+| `player/hand2/lshield_of_ignorance_wood.png` | `player/hand2/lshield_of_ignorance.png` | `item/armour/artefact/urand_ignorance.png` | золото → бронза/кожа (cross-pavise 3) |
+| `player/hand2/lshield_gold_red.png` | `player/hand2/lshield_gold.png` | `item/armour/shields/shield_donald.png` | бронза/кожа → красный (bulwark 1) |
+
+Два значка оружия сделаны из своих слоёв тем же приёмом, что `item/hand1/`
+(`tools/atlas/derive-hand-icons.py`): `item/hand1/staff_mage.png` — жезл
+(раньше значком жезла была угловая накладка «посоха направления», не посох) и
+`item/hand1/trident_elec.png` — трезубец бури (раньше — значок копья).
