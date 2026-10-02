@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-C8OUeZLJ.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-EHpq4tS_.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-_meM_war.css">
+    <script type="module" crossorigin src="../assets/game-Biuq3dCK.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-D2fPLzBq.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-DcwmTYy-.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -65,18 +65,17 @@
           </div>
           <div class="main-menu-actions">
             <p id="main-menu-state" class="main-menu-state" hidden>ПАУЗА</p>
+            <!-- Одна главная кнопка: «Играть» открывает слоты, на паузе — «Продолжить». -->
             <button id="start-game" class="start-game" type="button" disabled>
               <i class="ui-icon" data-icon="stairs" aria-hidden="true"></i>
-              <b id="start-game-label">Начать забег</b>
+              <b id="start-game-label">Играть</b>
               <small id="start-game-detail"></small>
             </button>
-            <!-- «Новая игра» открывает слоты: пустой — начать, занятый — заново или играть. -->
-            <button id="restart-from-menu" class="start-game start-game-second" type="button" disabled>
-              <i class="ui-icon" data-icon="cycle" aria-hidden="true"></i>
-              <b id="restart-from-menu-label">Новая игра</b>
-              <small id="restart-from-menu-detail"></small>
-            </button>
             <div class="main-menu-secondary">
+              <!-- Только на паузе: сменить слот или начать заново, не выходя в главное меню. -->
+              <button id="open-slots" type="button" hidden>
+                <i class="ui-icon" data-icon="cycle" aria-hidden="true"></i><b id="open-slots-label">Слоты</b>
+              </button>
               <button id="edit-appearance" type="button" disabled>
                 <img id="menu-appearance-icon" src="../assets/dcss-preview/player/base/human_m.png" alt="" />
                 <b id="edit-appearance-label">Внешность</b>
@@ -95,12 +94,13 @@
               </button>
             </div>
             <ul id="main-menu-conditions" class="main-menu-conditions" aria-label="Условия забега" hidden></ul>
-            <p id="main-menu-hint" class="main-menu-hint">Случайное подземелье</p>
-            <footer class="main-menu-meta">
-              <span id="app-version"></span>
-              <a id="feedback-link" href="https://github.com/JohnInWork/dng-codex/issues" target="_blank" rel="noreferrer">Отзывы и ошибки</a>
-            </footer>
+            <p id="main-menu-hint" class="main-menu-hint"></p>
           </div>
+          <!-- Подвал — третья часть карточки: в landscape он встаёт под названием, а не под кнопками. -->
+          <footer class="main-menu-meta">
+            <span id="app-version"></span>
+            <a id="feedback-link" href="https://github.com/JohnInWork/dng-codex/issues" target="_blank" rel="noreferrer">Отзывы и ошибки</a>
+          </footer>
         </article>
       </section>
 
@@ -136,14 +136,6 @@
                 <button type="button" data-appearance-kind="hair" data-appearance-step="-1" aria-label="Предыдущая причёска">&lt;</button>
                 <output id="appearance-hair-value">2/9</output>
                 <button type="button" data-appearance-kind="hair" data-appearance-step="1" aria-label="Следующая причёска">&gt;</button>
-              </div>
-            </section>
-            <section class="appearance-option" aria-labelledby="appearance-beard-label">
-              <b id="appearance-beard-label">Борода</b>
-              <div>
-                <button type="button" data-appearance-kind="beard" data-appearance-step="-1" aria-label="Предыдущая борода">&lt;</button>
-                <output id="appearance-beard-value">1/2</output>
-                <button type="button" data-appearance-kind="beard" data-appearance-step="1" aria-label="Следующая борода">&gt;</button>
               </div>
             </section>
           </div>
@@ -628,6 +620,11 @@
               <h2 id="character-sheet-title">Персонаж</h2>
               <p><span id="character-level">Уровень 1</span><i>◆</i><span id="character-floor">Этаж I</span></p>
             </div>
+            <!-- Свободные очки: шапка не прокручивается, и число видно всегда. -->
+            <output id="character-free-points" class="character-free-points" data-state="empty">
+              <b id="character-free-points-value">0</b>
+              <span><i id="character-free-points-label">очков</i><small id="character-free-points-note"></small></span>
+            </output>
             <button id="character-sheet-language" type="button" aria-label="Read in English">EN</button>
           </header>
 
@@ -871,6 +868,11 @@
               <p id="item-detail-description"></p>
               <div id="item-detail-comparison" class="item-detail-comparison" hidden>
                 <h3 id="item-detail-comparison-title">После надевания</h3>
+                <!-- Оружие в обеих руках: с каким из двух сравнивать (Иван, 02.10.2026). -->
+                <div id="item-detail-compare-hands" class="item-detail-compare-hands" role="group" aria-label="Сравнить с" hidden>
+                  <button type="button" data-compare-hand="hand1" aria-pressed="true">С правой</button>
+                  <button type="button" data-compare-hand="hand2" aria-pressed="false">С левой</button>
+                </div>
                 <ul id="item-detail-comparison-list"></ul>
               </div>
               <div class="item-detail-effects" aria-label="Свойства предмета">
@@ -879,11 +881,21 @@
               </div>
             </div>
           </div>
+          <!--
+            Две группы: слева крестик и «Выбросить», справа действия с вещью.
+            Не влезают в строку — группа действий целиком уходит вниз, к пальцу.
+          -->
           <footer class="item-detail-actions">
-            <button id="close-item-detail" data-press-sound="close" type="button" aria-label="Закрыть описание">×</button>
-            <button id="item-detail-variant" type="button" hidden>Иначе</button>
-            <button id="item-detail-offhand" type="button" hidden>В левую</button>
-            <button id="item-detail-action" type="button">Надеть</button>
+            <div class="item-detail-actions-aside">
+              <button id="close-item-detail" data-press-sound="close" type="button" aria-label="Закрыть описание">×</button>
+              <!-- Вещь из рюкзака — на пол рядом с героем; поднять обратно можно кнопкой «что рядом». -->
+              <button id="item-detail-drop" type="button" hidden>Выбросить</button>
+            </div>
+            <div class="item-detail-actions-main">
+              <button id="item-detail-variant" type="button" hidden>Иначе</button>
+              <button id="item-detail-offhand" type="button" hidden>В левую</button>
+              <button id="item-detail-action" type="button">Надеть</button>
+            </div>
           </footer>
         </article>
       </section>
