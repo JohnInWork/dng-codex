@@ -22,14 +22,18 @@ draws were cut out of them as individual PNGs, because the renderer requests
 one sprite per path and the itch packager copies only the files the catalog
 names.
 
-Two files are edited rather than merely cut:
+Three files are edited rather than merely cut:
 
 - `hearth/fireplace1..6.png` — the stone surround of the fireplace with each
   of the six upstream fire frames composited into its opening, so the hearth
   is one animated prop instead of two props that have to be kept aligned.
 - `deco/torch1..3.png` — the three torch frames padded onto a common 16×32
   canvas, anchored bottom-centre, so the flame flickers in place.
-Both edits are modifications of CC-BY-SA 3.0 material and are themselves
+- `deco/torch-out.png` — the first torch frame with the flame removed and the
+  coals in the bowl turned to ash with one dim ember (2026-10-02), so a torch
+  a draught blew out reads as out. Made by `tools/atlas/derive-torch-out.py`
+  on the same canvas and anchor as the burning frames.
+All three edits are modifications of CC-BY-SA 3.0 material and are themselves
 CC-BY-SA 3.0.
 
 The tavern's floorboards are **not** here: they come from `licensed/lpc-floors`,
