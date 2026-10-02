@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-DbqZDKng.js"></script>
+    <script type="module" crossorigin src="../assets/game-CNUVoeX7.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-EHpq4tS_.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-BqdvT7s6.css">
+    <link rel="stylesheet" crossorigin href="../assets/game-_meM_war.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -148,7 +148,7 @@
             </section>
           </div>
           <footer class="appearance-actions">
-            <button id="close-appearance" class="secondary" type="button" aria-label="Закрыть редактор">×</button>
+            <button id="close-appearance" data-press-sound="close" class="secondary" type="button" aria-label="Закрыть редактор">×</button>
             <button id="save-appearance" type="button">Готово</button>
           </footer>
         </article>
@@ -210,13 +210,13 @@
                 <small id="creation-skill-detail-next"></small>
                 <div class="character-skill-detail-actions">
                   <button id="creation-skill-take" class="primary" type="button">Взять</button>
-                  <button id="creation-skill-close" type="button">Отмена</button>
+                  <button id="creation-skill-close" data-press-sound="close" type="button">Отмена</button>
                 </div>
               </div>
             </section>
           </section>
           <footer class="creation-actions">
-            <button id="cancel-creation" class="creation-back" type="button">Отмена</button>
+            <button id="cancel-creation" data-press-sound="close" class="creation-back" type="button">Отмена</button>
             <button id="confirm-creation" class="creation-start" type="button">
               <i class="ui-icon" data-icon="stairs" aria-hidden="true"></i>
               <b id="confirm-creation-label">Начать</b>
@@ -242,7 +242,7 @@
         <article class="save-slots-card pixel-frame">
           <header class="save-slots-header">
             <h2 id="save-slots-title">Слоты сохранения</h2>
-            <button id="close-save-slots" type="button" aria-label="Закрыть слоты">×</button>
+            <button id="close-save-slots" data-press-sound="close" type="button" aria-label="Закрыть слоты">×</button>
           </header>
           <ol id="save-slots-list" class="save-slots-list"></ol>
         </article>
@@ -264,7 +264,7 @@
           <h2 id="new-run-confirm-title">Точно?</h2>
           <p id="new-run-confirm-copy">Отменить нельзя.</p>
           <div>
-            <button id="cancel-new-run" type="button">Отмена</button>
+            <button id="cancel-new-run" data-press-sound="close" type="button">Отмена</button>
             <button id="confirm-new-run" type="button">Начать</button>
           </div>
         </article>
@@ -274,7 +274,7 @@
         <strong>Кадр не отрисовался</strong>
         <p id="frame-failure-text"></p>
         <small>Сфотографируй это и покажи — по тексту видно, что сломалось.</small>
-        <button id="frame-failure-close" type="button">Понятно</button>
+        <button id="frame-failure-close" data-press-sound="close" type="button">Понятно</button>
       </div>
 
       <header class="hud pixel-frame" aria-label="Состояние героя">
@@ -334,6 +334,7 @@
       <div
         id="move-control"
         class="move-control pixel-frame"
+        data-press-sound="none"
         role="group"
         aria-label="Движение: нажми стрелку, удерживай её или потяни центр"
         data-active="false"
@@ -464,7 +465,7 @@
         aria-hidden="true"
         inert
       >
-        <button id="context-action-backdrop" class="context-action-backdrop" type="button" tabindex="-1" aria-label="Закрыть"></button>
+        <button id="context-action-backdrop" data-press-sound="close" data-press="still" class="context-action-backdrop" type="button" tabindex="-1" aria-label="Закрыть"></button>
         <article class="context-action-card pixel-frame">
           <header class="context-action-header">
             <img id="context-action-icon" alt="" />
@@ -475,7 +476,7 @@
           </header>
           <div id="context-action-list" class="context-action-list"></div>
           <footer class="context-action-footer">
-            <button id="close-context-actions" type="button" aria-label="Закрыть">×</button>
+            <button id="close-context-actions" data-press-sound="close" type="button" aria-label="Закрыть">×</button>
           </footer>
         </article>
       </section>
@@ -507,7 +508,7 @@
           <div id="merchant-shop-list" class="merchant-shop-list"></div>
           <p id="merchant-shop-feedback" class="merchant-shop-feedback" role="status" aria-live="polite"></p>
           <footer class="merchant-shop-footer">
-            <button id="close-merchant-shop" type="button" aria-label="Закрыть торговлю">×</button>
+            <button id="close-merchant-shop" data-press-sound="close" type="button" aria-label="Закрыть торговлю">×</button>
           </footer>
         </article>
       </section>
@@ -547,7 +548,7 @@
           </div>
           <p id="chest-container-feedback" class="chest-container-feedback" role="status" aria-live="polite"></p>
           <footer class="chest-container-footer">
-            <button id="close-chest-container" type="button" aria-label="Закрыть сундук">×</button>
+            <button id="close-chest-container" data-press-sound="close" type="button" aria-label="Закрыть сундук">×</button>
           </footer>
         </article>
       </section>
@@ -566,7 +567,7 @@
           <strong id="trap-placement-label">Выбери клетку</strong>
         </output>
         <div id="trap-placement-targets" class="trap-placement-targets" role="group"></div>
-        <button id="cancel-trap-placement" class="cancel-trap-placement pixel-frame" type="button" aria-label="Отменить установку">×</button>
+        <button id="cancel-trap-placement" data-press-sound="close" class="cancel-trap-placement pixel-frame" type="button" aria-label="Отменить установку">×</button>
       </section>
 
       <section
@@ -583,7 +584,7 @@
           <strong id="ability-targeting-label">Выбери цель</strong>
         </output>
         <div id="ability-targeting-targets" class="ability-targeting-targets" role="group"></div>
-        <button id="cancel-ability-targeting" class="cancel-ability-targeting pixel-frame" type="button" aria-label="Отменить выбор цели">×</button>
+        <button id="cancel-ability-targeting" data-press-sound="close" class="cancel-ability-targeting pixel-frame" type="button" aria-label="Отменить выбор цели">×</button>
       </section>
 
       <section
@@ -603,7 +604,7 @@
           <canvas id="floor-map-canvas" class="floor-map-canvas" aria-label="Разведанная часть этажа"></canvas>
           <ul id="floor-map-legend" class="floor-map-legend" aria-label="Что значат значки" hidden></ul>
           <footer class="floor-map-actions">
-            <button id="close-floor-map" type="button" aria-label="Закрыть карту">×</button>
+            <button id="close-floor-map" data-press-sound="close" type="button" aria-label="Закрыть карту">×</button>
             <button id="floor-map-legend-toggle" type="button" aria-label="Что значат значки" aria-pressed="false">?</button>
             <button id="floor-map-center" type="button" aria-label="К герою"><i class="ui-icon" data-icon="crosshair" aria-hidden="true"></i></button>
             <button id="floor-map-zoom-out" type="button" aria-label="Отдалить">-</button>
@@ -683,7 +684,7 @@
                   <small id="character-skill-detail-cost"></small>
                   <div class="character-skill-detail-actions">
                     <button id="character-skill-learn" class="primary" type="button">Изучить</button>
-                    <button id="character-skill-cancel" type="button">Отмена</button>
+                    <button id="character-skill-cancel" data-press-sound="close" type="button">Отмена</button>
                   </div>
                 </div>
               </section>
@@ -695,7 +696,7 @@
             </section>
           </div>
           <footer class="character-sheet-actions">
-            <button id="close-character-sheet" type="button" aria-label="Закрыть характеристики">×</button>
+            <button id="close-character-sheet" data-press-sound="close" type="button" aria-label="Закрыть характеристики">×</button>
           </footer>
         </article>
       </section>
@@ -822,7 +823,7 @@
           </div>
 
           <footer class="inventory-actions">
-            <button id="close-inventory" type="button" aria-label="Закрыть рюкзак">×</button>
+            <button id="close-inventory" data-press-sound="close" type="button" aria-label="Закрыть рюкзак">×</button>
             <button
               id="salvage"
               type="button"
@@ -879,7 +880,7 @@
             </div>
           </div>
           <footer class="item-detail-actions">
-            <button id="close-item-detail" type="button" aria-label="Закрыть описание">×</button>
+            <button id="close-item-detail" data-press-sound="close" type="button" aria-label="Закрыть описание">×</button>
             <button id="item-detail-variant" type="button" hidden>Иначе</button>
             <button id="item-detail-offhand" type="button" hidden>В левую</button>
             <button id="item-detail-action" type="button">Надеть</button>
@@ -911,7 +912,7 @@
           </header>
           <div id="lore-body" class="lore-body"></div>
           <footer class="lore-actions">
-            <button id="close-lore" type="button" aria-label="Закрыть">Закрыть</button>
+            <button id="close-lore" data-press-sound="close" type="button" aria-label="Закрыть">Закрыть</button>
           </footer>
         </article>
       </section>
@@ -967,7 +968,7 @@
         <article class="records-card pixel-frame">
           <header class="records-header">
             <h2 id="records-title">Записи</h2>
-            <button id="close-records" type="button" aria-label="Закрыть записи">×</button>
+            <button id="close-records" data-press-sound="close" type="button" aria-label="Закрыть записи">×</button>
           </header>
           <div class="records-body">
             <section class="records-block" aria-labelledby="records-best-title">
@@ -1012,7 +1013,7 @@
         <article class="settings-card pixel-frame">
           <header class="settings-header">
             <h2 id="settings-title">Настройки</h2>
-            <button id="close-settings" type="button" aria-label="Закрыть настройки">×</button>
+            <button id="close-settings" data-press-sound="close" type="button" aria-label="Закрыть настройки">×</button>
           </header>
           <div class="settings-body">
             <section class="settings-block" aria-labelledby="settings-language-title">
@@ -1088,7 +1089,7 @@
         <article class="credits-card pixel-frame">
           <header class="credits-header">
             <h2 id="credits-title">Авторы</h2>
-            <button id="close-credits" type="button" aria-label="Закрыть авторов">×</button>
+            <button id="close-credits" data-press-sound="close" type="button" aria-label="Закрыть авторов">×</button>
           </header>
           <div id="credits-body" class="credits-body"></div>
         </article>
@@ -1106,7 +1107,7 @@
         <article class="help-card pixel-frame">
           <header class="help-header">
             <h2 id="help-title">Как играть</h2>
-            <button id="close-help" type="button" aria-label="Закрыть справку">×</button>
+            <button id="close-help" data-press-sound="close" type="button" aria-label="Закрыть справку">×</button>
           </header>
           <div id="help-body" class="help-body"></div>
         </article>
@@ -1124,7 +1125,7 @@
         <article class="records-card outfit-card pixel-frame">
           <header class="records-header">
             <h2 id="outfit-title">Снаряжение</h2>
-            <button id="close-outfit" type="button" aria-label="Закрыть снаряжение">×</button>
+            <button id="close-outfit" data-press-sound="close" type="button" aria-label="Закрыть снаряжение">×</button>
           </header>
           <div class="outfit-top">
             <div class="outfit-hero">
@@ -1162,7 +1163,7 @@
               <ul id="outfit-detail-effects" class="outfit-detail-effects"></ul>
               <p id="outfit-detail-owned" class="outfit-detail-owned" hidden></p>
               <footer class="outfit-detail-actions">
-                <button id="outfit-detail-close" class="tappable" type="button"></button>
+                <button id="outfit-detail-close" data-press-sound="close" class="tappable" type="button"></button>
                 <button id="outfit-detail-return" class="tappable" type="button" hidden></button>
                 <button id="outfit-detail-buy" class="tappable outfit-detail-buy" type="button"></button>
               </footer>
