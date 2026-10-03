@@ -412,3 +412,14 @@ repainted white and lost its bread.
 | `icon/spellwand-teleport.png` | `derived/icon/scroll-teleportation.png` | жезл в углу |
 | `icon/spellwand-camp-call.png` | `dngn/altars/makhleb_flame1.png` | жезл в углу |
 | `icon/spellwand-unlock.png` | `item/misc/runes/generic.png` | жезл в углу |
+
+## Выбор Ивана по листам вариантов (03.10.2026)
+
+Собраны скриптом `tools/atlas/option-sheets.py` из слоёв библиотеки (CC0);
+Иван выбрал номера на листах.
+
+| file | from | как |
+| --- | --- | --- |
+| `hud/hunger.png` | `player/hand1/trident.png`, `player/hand1/fork.png` | вилка (голова трезубца + ручка вилки) и ложка, набранная скриптом палитрой и контуром вилки; стоя, ×2 — значок голода (№ 6) |
+| `mon/innkeeper.png` | `player/base/human_m.png`, `player/legs/pants_brown.png`, `player/boots/short_brown2.png`, `player/body/shirt_vest.png`, `player/beard/pj.png`, `player/hair/brown1.png`, `player/hand1/misc/bottle.png` | фигура из слоёв героя; стекло бутылки перекрашено из синего в зелёное — трактирщик (№ 1) |
+| `mon/free-blade.png` | `player/cloak/black.png`, `player/base/human_m.png`, `player/legs/pants_black.png`, `player/boots/mesh_black.png`, `player/body/leather_metal.png`, `player/hair/aragorn.png`, `player/hand1/great_sword_slant.png` | фигура из слоёв героя в порядке игры — Вольный клинок (№ 1) |
