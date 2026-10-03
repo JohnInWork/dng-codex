@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-IRkhkt7S.js"></script>
+    <script type="module" crossorigin src="../assets/game-BJftJrnc.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-CbPker1q.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-CuZH3pea.css">
+    <link rel="stylesheet" crossorigin href="../assets/game-BzOkNVWm.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -361,6 +361,16 @@
           <img alt="" /><i></i><b>3</b><output></output>
         </button>
       </nav>
+
+      <!--
+        Вещь «под рукой» (03.10.2026): жезл или ловушка из рюкзака — кнопкой над
+        магией. Видна, только когда рука занята; нажал — выбор стороны, нажал
+        ещё раз — отмена. Стоит сразу за колонкой заклинаний: без заклинаний
+        она встаёт на их место у края.
+      -->
+      <button id="quick-item" class="quick-item pixel-frame tappable" type="button" aria-label="Под рукой" data-aiming="false" hidden>
+        <img alt="" /><b>Q</b><output></output>
+      </button>
 
       <div id="move-marker" class="move-marker" aria-hidden="true"><i></i></div>
 
@@ -886,6 +896,8 @@
               <button id="item-detail-drop" type="button" hidden>Выбросить</button>
             </div>
             <div class="item-detail-actions-main">
+              <!-- Жезл или ловушка — под руку: кнопкой над магией (03.10.2026). -->
+              <button id="item-detail-quick" type="button" hidden>Под руку</button>
               <button id="item-detail-variant" type="button" hidden>Иначе</button>
               <button id="item-detail-offhand" type="button" hidden>В левую</button>
               <button id="item-detail-action" type="button">Надеть</button>
