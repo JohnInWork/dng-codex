@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-QYZfMdgV.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-B6-ZrIno.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-m9-5eu5H.css">
+    <script type="module" crossorigin src="../assets/game-CZC4yveJ.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-Cby0876_.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-DwHWb5kN.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -350,7 +350,12 @@
         </button>
       </div>
 
-      <nav id="spell-bar" class="spell-bar" aria-label="Подготовленные заклинания" aria-hidden="true" data-empty="true" inert>
+      <!--
+        Три ячейки панели (03.10.2026): в каждой заклинание или вещь — жезл,
+        бинт, своя ловушка (`dcss-rpg-action-slots.js`). Отдельной кнопки
+        «под рукой» больше нет: Иван — «3 норм».
+      -->
+      <nav id="spell-bar" class="spell-bar" aria-label="Панель: заклинания и вещи" aria-hidden="true" data-empty="true" inert>
         <button class="spell-action pixel-frame tappable" type="button" data-spell-slot="0" aria-label="Пустой слот" disabled>
           <img alt="" /><i></i><b>1</b><output></output>
         </button>
@@ -361,16 +366,6 @@
           <img alt="" /><i></i><b>3</b><output></output>
         </button>
       </nav>
-
-      <!--
-        Вещь «под рукой» (03.10.2026): жезл или ловушка из рюкзака — кнопкой над
-        магией. Видна, только когда рука занята; нажал — выбор стороны, нажал
-        ещё раз — отмена. Стоит сразу за колонкой заклинаний: без заклинаний
-        она встаёт на их место у края.
-      -->
-      <button id="quick-item" class="quick-item pixel-frame tappable" type="button" aria-label="Под рукой" data-aiming="false" hidden>
-        <img alt="" /><b>Q</b><output></output>
-      </button>
 
       <div id="move-marker" class="move-marker" aria-hidden="true"><i></i></div>
 
@@ -661,7 +656,11 @@
                   <output id="character-spells-intelligence"><i class="ui-icon" data-icon="brain" aria-hidden="true"></i> 4</output>
                 </header>
                 <div id="character-spell-slots" class="character-spell-slots" role="group"></div>
+                <h4 id="character-known-spells-title" class="character-spells-subtitle" hidden>Заклинания</h4>
                 <div id="character-known-spells" class="character-known-spells" role="list"></div>
+                <!-- Жезлы, бинты и свои ловушки из рюкзака — в ячейку вместо заклинания (03.10.2026). -->
+                <h4 id="character-bar-items-title" class="character-spells-subtitle" hidden>Вещи из рюкзака</h4>
+                <div id="character-bar-items" class="character-known-spells character-bar-items" role="list"></div>
               </section>
               <section id="character-attributes" class="character-attributes" aria-labelledby="character-attributes-title">
                 <header>
@@ -890,14 +889,26 @@
             Не влезают в строку — группа действий целиком уходит вниз, к пальцу.
           -->
           <footer class="item-detail-actions">
+            <!--
+              «На панель» → в какую ячейку: в каждой видно, что там сейчас;
+              занятую — заменить. Строкой над кнопками, у пальца.
+            -->
+            <div id="item-detail-bar-picker" class="item-detail-bar-picker" role="group" aria-label="Ячейки панели" hidden>
+              <p id="item-detail-bar-picker-title">В какую ячейку?</p>
+              <div class="item-detail-bar-slots">
+                <button type="button" data-bar-slot="0"><b>1</b><img alt="" /><span><strong>Пусто</strong><small>Свободно</small></span></button>
+                <button type="button" data-bar-slot="1"><b>2</b><img alt="" /><span><strong>Пусто</strong><small>Свободно</small></span></button>
+                <button type="button" data-bar-slot="2"><b>3</b><img alt="" /><span><strong>Пусто</strong><small>Свободно</small></span></button>
+              </div>
+            </div>
             <div class="item-detail-actions-aside">
               <button id="close-item-detail" data-press-sound="close" type="button" aria-label="Закрыть описание">×</button>
               <!-- Вещь из рюкзака — на пол рядом с героем; поднять обратно можно кнопкой «что рядом». -->
               <button id="item-detail-drop" type="button" hidden>Выбросить</button>
             </div>
             <div class="item-detail-actions-main">
-              <!-- Жезл или ловушка — под руку: кнопкой над магией (03.10.2026). -->
-              <button id="item-detail-quick" type="button" hidden>Под руку</button>
+              <!-- Жезл, бинт или своя ловушка — в ячейку панели вместо заклинания (03.10.2026). -->
+              <button id="item-detail-bar" type="button" aria-expanded="false" hidden>На панель</button>
               <button id="item-detail-variant" type="button" hidden>Иначе</button>
               <button id="item-detail-offhand" type="button" hidden>В левую</button>
               <button id="item-detail-action" type="button">Надеть</button>
