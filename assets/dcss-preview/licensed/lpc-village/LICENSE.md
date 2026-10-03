@@ -42,3 +42,11 @@ inside this directory keeps that obvious.
 
 These files are **not** covered by the CC0 dedication that applies to the
 surrounding Dungeon Crawl Stone Soup library.
+
+## Modified cuts
+
+- `cut/bandage-cloth.png` — the linen hanging on a washing line, cut from
+  `decorations-medieval.png` at (355, 138)–(382, 155), with a 9×9 red cross
+  painted on in the red of the library's curing-potion mark. It is the icon of
+  the game's bandages (chosen by Ivan, 03.10.2026). A modification of CC-BY-SA
+  material, so it is CC-BY-SA 3.0+ like every other file in `cut/`.
