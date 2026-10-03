@@ -342,3 +342,73 @@ repainted white and lost its bread.
 `rod09.png` («Алый жезл» … «Стальной жезл»), всего обликов жезлов 22 на 19
 видов. Приманка — библиотечное чучело `mon/statues/training_dummy.png`, лёд
 стужи — плитки `dngn/floor/ice0.png` … `ice3.png`.
+
+## Жезлы заклинаний (03.10.2026, генератор v29)
+
+Собирает тот же `tools/atlas/derive-wands.py`, ничего не скачивая.
+
+Облики неопознанных жезлов `item/wand/*.png` — перекраски жезлов-скипетров
+библиотеки: тело скипетра перекрашено в новый цвет (тон и насыщенность;
+яркость — от исходника), обводка и золотые накладки остались. Силуэт у
+каждого скипетра свой, поэтому два облика одного силуэта различаются цветом,
+а одного цвета — силуэтом.
+
+| file | from | colour |
+| --- | --- | --- |
+| `item/wand/teal-rod.png` | `item/rod/rod00.png` | бирюзовый |
+| `item/wand/charcoal-rod.png` | `item/rod/rod00.png` | угольный |
+| `item/wand/lavender-rod.png` | `item/rod/rod00.png` | лавандовый |
+| `item/wand/cobalt-rod.png` | `item/rod/rod01.png` | кобальтовый |
+| `item/wand/pearl-rod.png` | `item/rod/rod01.png` | жемчужный |
+| `item/wand/garnet-rod.png` | `item/rod/rod02.png` | гранатовый |
+| `item/wand/sky-rod.png` | `item/rod/rod02.png` | небесный |
+| `item/wand/sand-rod.png` | `item/rod/rod02.png` | песочный |
+| `item/wand/honey-rod.png` | `item/rod/rod03.png` | медовый |
+| `item/wand/amethyst-rod.png` | `item/rod/rod03.png` | аметистовый |
+| `item/wand/ruby-rod.png` | `item/rod/rod04.png` | рубиновый |
+| `item/wand/topaz-rod.png` | `item/rod/rod04.png` | топазовый |
+| `item/wand/emerald-rod.png` | `item/rod/rod05.png` | изумрудный |
+| `item/wand/rose-rod.png` | `item/rod/rod05.png` | розовый |
+| `item/wand/mint-rod.png` | `item/rod/rod05.png` | мятный |
+| `item/wand/coral-rod.png` | `item/rod/rod06.png` | коралловый |
+| `item/wand/snow-rod.png` | `item/rod/rod06.png` | снежный |
+| `item/wand/wine-rod.png` | `item/rod/rod06.png` | винный |
+| `item/wand/jade-rod.png` | `item/rod/rod07.png` | нефритовый |
+| `item/wand/lemon-rod.png` | `item/rod/rod07.png` | лимонный |
+| `item/wand/sea-rod.png` | `item/rod/rod08.png` | морской |
+| `item/wand/ebony-rod.png` | `item/rod/rod08.png` | эбеновый |
+| `item/wand/gilded-rod.png` | `item/rod/rod09.png` | золочёный |
+| `item/wand/crimson-rod.png` | `item/rod/rod09.png` | багряный |
+
+Значки опознанных жезлов заклинаний `icon/spellwand-*.png`: знак
+заклинания и маленький жезл в левом нижнем углу (нарисован клетками в
+палитре библиотеки, 11×11), всё вместе — по центру 32×32. Знак — тот же,
+что у заклинания на панели, кроме случаев, когда он занят другой вещью или
+совпадает со знаком другого жезла: тогда взят свой.
+
+| file | from | change |
+| --- | --- | --- |
+| `icon/spellwand-frost-lance.png` | `derived/icon/wand-frost.png` | жезл в углу |
+| `icon/spellwand-glaciate.png` | `item/wand/i-slowing.png` | угловая накладка: обрезана, ×2, в центр; перекрашен в лёд; жезл в углу |
+| `icon/spellwand-arcane-splinter.png` | `derived/icon/wand-magic_darts.png` | жезл в углу |
+| `icon/spellwand-ember-burst.png` | `derived/icon/wand-fireball.png` | жезл в углу |
+| `icon/spellwand-frost-burst.png` | `derived/icon/wand-fireball.png` | перекрашен в лёд; жезл в углу |
+| `icon/spellwand-storm-burst.png` | `item/ring/i-magical-power.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-thunderclap.png` | `derived/icon/scroll-noise.png` | жезл в углу |
+| `icon/spellwand-cauterise.png` | `item/weapon/brands/i-pain.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-kindle.png` | `item/ring/i-r-fire.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-ice-armour.png` | `item/ring/i-r-cold.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-purging-light.png` | `derived/icon/scroll-holy_word.png` | жезл в углу |
+| `icon/spellwand-renewal.png` | `item/potion/i-restore-abilities.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-unbinding.png` | `item/amulet/i-faith.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-cleanse-ally.png` | `derived/icon/potion-cancel.png` | жезл в углу |
+| `icon/spellwand-ward.png` | `derived/icon/amulet-warding.png` | жезл в углу |
+| `icon/spellwand-raise-skeleton.png` | `mon/undead/skeletons/skeleton_humanoid_small.png` | жезл в углу |
+| `icon/spellwand-raise-ghoul.png` | `mon/undead/ghoul.png` | жезл в углу |
+| `icon/spellwand-raise-warden.png` | `mon/undead/skeletal_warrior.png` | жезл в углу |
+| `icon/spellwand-share-life.png` | `derived/icon/potion-blood.png` | жезл в углу |
+| `icon/spellwand-flight.png` | `derived/icon/potion-flight.png` | жезл в углу |
+| `icon/spellwand-invisibility.png` | `derived/icon/potion-invisibility.png` | жезл в углу |
+| `icon/spellwand-teleport.png` | `derived/icon/scroll-teleportation.png` | жезл в углу |
+| `icon/spellwand-camp-call.png` | `dngn/altars/makhleb_flame1.png` | жезл в углу |
+| `icon/spellwand-unlock.png` | `item/misc/runes/generic.png` | жезл в углу |
