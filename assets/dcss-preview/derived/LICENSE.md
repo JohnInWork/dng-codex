@@ -303,3 +303,42 @@ repainted white and lost its bread.
 (`tools/atlas/derive-hand-icons.py`): `item/hand1/staff_mage.png` — жезл
 (раньше значком жезла была угловая накладка «посоха направления», не посох) и
 `item/hand1/trident_elec.png` — трезубец бури (раньше — значок копья).
+
+## Жезлы Ивана (03.10.2026, генератор v28)
+
+Собирает `tools/atlas/derive-wands.py`, ничего не скачивая.
+
+Значки видов жезлов `icon/wand-*.png` — тем же приёмом, что двадцать восемь
+значков выше: угловая накладка библиотеки обрезана по содержимому, увеличена
+ровно вдвое и положена в центр 32×32. Где у смысла нет своей накладки, взята
+близкая и перекрашена в абсолютный тон (яркость — от исходника, тёмная обводка
+остаётся).
+
+| file | from | change |
+| --- | --- | --- |
+| `icon/wand-flood.png` | `item/staff/i-staff_air.png` | вихрь перекрашен в воду (синий) |
+| `icon/wand-magma.png` | `item/staff/i-staff_earth.png` | глыба перекрашена в лаву (оранжево-красный) |
+| `icon/wand-digging.png` | `item/wand/i-digging.png` | — |
+| `icon/wand-stone.png` | `item/staff/i-staff_earth.png` | — |
+| `icon/wand-thorns.png` | `item/rod/i-rod_inaccuracy.png` | — |
+| `icon/wand-sparks.png` | `item/rod/i-rod_lightning.png` | — |
+| `icon/wand-flame.png` | `item/wand/i-flame.png` | — |
+| `icon/wand-miasma.png` | `item/rod/i-rod_clouds.png` | облако перекрашено в яд (зелёный) |
+| `icon/wand-striking.png` | `item/rod/i-rod_striking.png` | — |
+| `icon/wand-sleep.png` | `item/wand/i-paralysis.png` | — |
+| `icon/wand-polymorph.png` | `item/wand/i-polymorph.png` | — |
+| `icon/wand-teleportation.png` | `item/wand/i-teleportation.png` | — |
+| `icon/wand-light.png` | `item/staff/i-staff_power.png` | самоцвет перекрашен в свет (жёлтый) |
+| `icon/wand-lure.png` | `item/wand/i-enslavement.png` | — |
+| `icon/wand-random.png` | `item/wand/i-random_effects.png` | — |
+| `icon/wand-chill.png` | `mon/statues/block_of_ice.png` | целиком, без увеличения: снежинки уже у прилива и Ледяного копья |
+| `icon/wand-hook.png` | — | крюк нарисован клетками 12×14 в палитре библиотеки (тёмная обводка, сталь, верёвка) и увеличен вдвое |
+| `mon/frog_form.png` | `mon/animals/giant_frog.png` | ядовито-салатовая с лиловой тенью: превращённый жезлом враг, а не ручная жаба |
+| `mon/wand_thorns.png` | `mon/fungi_plants/briar_patch.png` | темнее, с багровыми шипами: тернии жезла на 20 с, а не куст «Колючего леса» |
+| `dngn/lava/cooled_stone.png` | `derived/dngn/lava/lava_bed.png` | та же сетка трещин без жара — серо-бурая корка остывшего камня |
+
+Облики неизвестных жезлов берутся из библиотеки без правки:
+`item/wand/gem_plastic.png` («Витой жезл») и `item/rod/rod00.png` …
+`rod09.png` («Алый жезл» … «Стальной жезл»), всего обликов жезлов 22 на 19
+видов. Приманка — библиотечное чучело `mon/statues/training_dummy.png`, лёд
+стужи — плитки `dngn/floor/ice0.png` … `ice3.png`.
