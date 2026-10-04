@@ -64,8 +64,16 @@ repainted white and lost its bread.
 | file | from | для чего |
 | --- | --- | --- |
 | `icon/potion-heal-wounds.png` | `item/potion/i-heal-wounds.png` | зелье исцеления ран |
-| `icon/ring-r-cold.png` | `item/ring/i-r-cold.png` | заклинание «Ледяной доспех» |
-| `icon/ring-magical-power.png` | `item/ring/i-magical-power.png` | заклинание «Грозовая вспышка» |
+| `icon/ring-r-cold.png` | `item/ring/i-r-cold.png` | заклинание «Ледяной доспех» (с 04.10.2026 — «Ледяное благословение») |
+| `icon/ring-magical-power.png` | `item/ring/i-magical-power.png` | заклинание «Грозовая вспышка» (до 04.10.2026) |
+
+04.10.2026 — ещё два, картинки заклинаний, которые Иван выбрал в редакторе
+«Книга заклинаний». Тот же приём и тот же скрипт.
+
+| file | from | для чего |
+| --- | --- | --- |
+| `icon/ring-stealth.png` | `item/ring/i-stealth.png` | заклинание «Ускорение» |
+| `icon/staff-death.png` | `item/staff/i-staff_death.png` | заклинание «Лич» |
 
 04.10.2026 — значки характеристик для строк интерфейса (Иван выбрал накладки
 зелий прибавки). Без масштаба: обрезка по содержимому, 15×15 — в строке рядом с
@@ -412,7 +420,7 @@ repainted white and lost its bread.
 | `icon/spellwand-arcane-splinter.png` | `derived/icon/wand-magic_darts.png` | жезл в углу |
 | `icon/spellwand-ember-burst.png` | `derived/icon/wand-fireball.png` | жезл в углу |
 | `icon/spellwand-frost-burst.png` | `derived/icon/wand-fireball.png` | перекрашен в лёд; жезл в углу |
-| `icon/spellwand-storm-burst.png` | `item/ring/i-magical-power.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-storm-burst.png` | `item/ring/i-stealth.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу (с 04.10.2026 — «Ускорение») |
 | `icon/spellwand-thunderclap.png` | `derived/icon/scroll-noise.png` | жезл в углу |
 | `icon/spellwand-cauterise.png` | `item/weapon/brands/i-pain.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
 | `icon/spellwand-kindle.png` | `item/ring/i-r-fire.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
