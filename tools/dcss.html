@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-C2vj_mp5.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-BNQb3JKX.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-DVPkGudQ.css">
+    <script type="module" crossorigin src="../assets/game-CzvzsF2W.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-DDjIBpxG.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-BoAX0dRn.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -627,7 +627,13 @@
             <button id="character-sheet-language" type="button" aria-label="Read in English">EN</button>
           </header>
 
-          <div class="character-sheet-body">
+          <!-- Две вкладки одного окна (Иван 04.10.2026): «магию и навыки надо разделить». -->
+          <div class="character-tabs" role="tablist" aria-label="Разделы окна героя">
+            <button id="character-tab-hero" type="button" role="tab" aria-selected="true" aria-controls="character-sheet-body">Герой</button>
+            <button id="character-tab-spells" type="button" role="tab" aria-selected="false" aria-controls="character-spells-page">Заклинания</button>
+          </div>
+
+          <div id="character-sheet-body" class="character-sheet-body" role="tabpanel" aria-labelledby="character-tab-hero">
             <section class="character-identity" aria-label="Развитие героя">
               <canvas id="character-paperdoll" width="192" height="224" aria-label="Герой в экипировке"></canvas>
               <div class="character-experience">
@@ -646,21 +652,6 @@
                 </header>
                 <p id="character-effects-empty" class="character-effects-empty">Нет действующих эффектов</p>
                 <div id="character-effect-groups" class="character-effect-groups"></div>
-              </section>
-              <section id="character-spells" class="character-spells" aria-labelledby="character-spells-title">
-                <header>
-                  <div>
-                    <h3 id="character-spells-title">Заклинания</h3>
-                    <p id="character-spells-hint">Выбери слот, затем заклинание</p>
-                  </div>
-                  <output id="character-spells-intelligence"><i class="ui-icon" data-icon="brain" aria-hidden="true"></i> 4</output>
-                </header>
-                <div id="character-spell-slots" class="character-spell-slots" role="group"></div>
-                <h4 id="character-known-spells-title" class="character-spells-subtitle" hidden>Заклинания</h4>
-                <div id="character-known-spells" class="character-known-spells" role="list"></div>
-                <!-- Жезлы, бинты и свои ловушки из рюкзака — в ячейку вместо заклинания (03.10.2026). -->
-                <h4 id="character-bar-items-title" class="character-spells-subtitle" hidden>Вещи из рюкзака</h4>
-                <div id="character-bar-items" class="character-known-spells character-bar-items" role="list"></div>
               </section>
               <section id="character-attributes" class="character-attributes" aria-labelledby="character-attributes-title">
                 <header>
@@ -693,6 +684,27 @@
                 <h3 id="character-combat-title">Боевой профиль</h3>
                 <div id="character-combat-grid"></div>
               </section>
+            </section>
+          </div>
+
+          <!-- Книга заклинаний: ряд — вид магии, без подписей (dcss-rpg-spell-board.js). -->
+          <div id="character-spells-page" class="character-spells-page" role="tabpanel" aria-labelledby="character-tab-spells" hidden>
+            <section id="character-spells" class="character-spells" aria-labelledby="character-spells-title">
+              <header>
+                <div>
+                  <h3 id="character-spells-title">Заклинания</h3>
+                  <p id="character-spells-hint">Выбери слот, затем заклинание</p>
+                </div>
+                <output id="character-spells-intelligence"><i class="ui-icon" data-icon="brain" aria-hidden="true"></i> 4</output>
+              </header>
+              <div id="character-spell-slots" class="character-spell-slots" role="group"></div>
+              <div class="spell-board-area">
+                <div id="character-spell-board" class="spell-board" role="group" aria-label="Заклинания по видам магии"></div>
+                <div id="character-spell-detail" class="spell-detail" aria-live="polite"></div>
+              </div>
+              <!-- Жезлы, бинты и свои ловушки из рюкзака — в ячейку вместо заклинания (03.10.2026). -->
+              <h4 id="character-bar-items-title" class="character-spells-subtitle" hidden>Вещи из рюкзака</h4>
+              <div id="character-bar-items" class="character-known-spells character-bar-items" role="list"></div>
             </section>
           </div>
           <footer class="character-sheet-actions">
