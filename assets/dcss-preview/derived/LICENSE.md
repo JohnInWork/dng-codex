@@ -75,15 +75,13 @@ repainted white and lost its bread.
 | `icon/ring-stealth.png` | `item/ring/i-stealth.png` | заклинание «Ускорение» |
 | `icon/staff-death.png` | `item/staff/i-staff_death.png` | заклинание «Лич» |
 
-04.10.2026 — значки характеристик для строк интерфейса (Иван выбрал накладки
-зелий прибавки). Без масштаба: обрезка по содержимому, 15×15 — в строке рядом с
-текстом 12 px буквы толщиной в пиксель иначе пропадают. Тот же скрипт.
+05.10.2026 — значок «Бури»: Иван выбрал форму на листе, цвет — как у Жезла
+разлива (`icon/wand-flood.png`). Тот же приём, затем перекраска: тон 0,55 и
+насыщенность 0,62, яркость — исходника, тёмная обводка остаётся. Тот же скрипт.
 
 | file | from | для чего |
 | --- | --- | --- |
-| `attr/strength.png` | `item/potion/i-gain-strength.png` | сила |
-| `attr/agility.png` | `item/potion/i-gain-dexterity.png` | ловкость |
-| `attr/intelligence.png` | `item/potion/i-gain-intelligence.png` | интеллект |
+| `icon/spell-tempest.png` | `item/staff/i-staff_enchantment.png` | заклинание «Буря» |
 
 ## `item/`
 
@@ -421,7 +419,7 @@ repainted white and lost its bread.
 | `icon/spellwand-ember-burst.png` | `derived/icon/wand-fireball.png` | жезл в углу |
 | `icon/spellwand-frost-burst.png` | `derived/icon/wand-fireball.png` | перекрашен в лёд; жезл в углу |
 | `icon/spellwand-storm-burst.png` | `item/ring/i-stealth.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу (с 04.10.2026 — «Ускорение») |
-| `icon/spellwand-thunderclap.png` | `derived/icon/scroll-noise.png` | жезл в углу |
+| `icon/spellwand-thunderclap.png` | `derived/icon/spell-tempest.png` | жезл в углу (с 05.10.2026 — спираль «Бури») |
 | `icon/spellwand-cauterise.png` | `item/weapon/brands/i-pain.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
 | `icon/spellwand-kindle.png` | `item/ring/i-r-fire.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
 | `icon/spellwand-ice-armour.png` | `item/ring/i-r-cold.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
