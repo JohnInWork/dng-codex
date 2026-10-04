@@ -194,8 +194,6 @@ CC0, взяты с OpenGameArt, сведены в моно 44,1 кГц MP3 48 к
 56 кбит/с, подрезаны до петли около 1:45 и выровнены по громкости (−22 LUFS):
 мелодия обязана лежать под гулом, а не спорить с ним.
 
-- `music/inn.mp3` — «Medieval: The Old Tower Inn», RandomMind.
-  <https://opengameart.org/content/medieval-the-old-tower-inn> (CC0). Город.
 - `music/field.mp3` — «The Field Of Dreams», pauliuw.
   <https://opengameart.org/content/the-field-of-dreams> (CC0). Открытая местность.
 - `music/cave.mp3` — «Cave Theme», Brandon75689.
@@ -211,17 +209,29 @@ CC0, взяты с OpenGameArt, сведены в моно 44,1 кГц MP3 48 к
   <https://opengameart.org/content/ambience-pack-1-sci-fi-horror> (CC0). Ад.
 - `music/boss.mp3` — «Boss Battle Theme», Cleyton Kauffman.
   <https://opengameart.org/content/boss-battle-theme> (CC0). Бой со стражем главы.
-- `music/menu.mp3` — «Ancient Power Of Serpents», выложено josepharaoh99.
-  <https://opengameart.org/content/ancient-power-of-serpents> (CC0). Главное меню.
-  На странице сказано: указание авторства не требуется, но если указывать — то
-  Kevin MacLeod. Указываем: игра продаётся, и лишняя строчка в титрах дешевле
-  любого спора об авторстве.
-  Первоисточник — FreePD.com, сайт Маклауда с музыкой в общественном достоянии;
-  на 2026-09-23 он закрыт, и проверить трек там больше нельзя. Поэтому в
-  титрах назван не только автор, но и сам трек.
 
 Бой со стражем — не дорога, а событие: эта запись громче остальных и сведена на
 два децибела выше, потому что она обязана перебить всё, что звучало до неё.
+
+## Музыка меню и города / Menu and city themes (05.10.2026)
+
+Иван 05.10.2026: «я скачал фри треки для игры: новая музыка для города и 3
+музыки для меню»; «в меню музыка случайная из этих трёх каждый заход в меню, а
+в городе — одна эта». Прежние темы меню («Ancient Power Of Serpents», Kevin
+MacLeod) и города («Medieval: The Old Tower Inn», RandomMind) убраны из игры.
+
+Файлы Ивана из папки «Музыка», сведены в моно 44,1 кГц MP3 64 кбит/с и
+выровнены по громкости тех, что заменили (двухпроходный loudnorm ffmpeg, пик
+не выше −3 dBTP): меню — около −25 LUFS, город — около −27 LUFS.
+
+- `music/menu-1.mp3` ← `Menu.mp3` (1:00). Главное меню.
+- `music/menu-2.mp3` ← `Menu 2.mp3` (2:13). Главное меню.
+- `music/menu-3.mp3` ← `Menu 3.mp3` (2:56). Главное меню.
+- `music/city.mp3` ← `Город.mp3` (1:12). Город.
+
+**Источник, автор и лицензия каждого трека — уточнить у Ивана** (он назвал их
+«фри треки»). До продажи вписать сюда страницы и авторов, а в титры
+(`tools/dcss-rpg-credits.js`) — авторов, если лицензия этого просит.
 
 ## DNG Codex — собственные звуки / crafted effects
 
