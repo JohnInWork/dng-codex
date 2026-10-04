@@ -58,6 +58,15 @@ repainted white and lost its bread.
 источника и название без префикса `i-`: `item/wand/i-fire.png` →
 `icon/wand-fire.png`.
 
+04.10.2026 тем же приёмом — ещё три, чьи накладки проскочили сторожа (в имени
+дефис). Собирает `tools/atlas/derive-badges.py`, ничего не скачивая.
+
+| file | from | для чего |
+| --- | --- | --- |
+| `icon/potion-heal-wounds.png` | `item/potion/i-heal-wounds.png` | зелье исцеления ран |
+| `icon/ring-r-cold.png` | `item/ring/i-r-cold.png` | заклинание «Ледяной доспех» |
+| `icon/ring-magical-power.png` | `item/ring/i-magical-power.png` | заклинание «Грозовая вспышка» |
+
 ## `item/`
 
 | file | what |
