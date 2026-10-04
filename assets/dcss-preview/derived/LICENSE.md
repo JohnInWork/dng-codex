@@ -67,6 +67,16 @@ repainted white and lost its bread.
 | `icon/ring-r-cold.png` | `item/ring/i-r-cold.png` | заклинание «Ледяной доспех» |
 | `icon/ring-magical-power.png` | `item/ring/i-magical-power.png` | заклинание «Грозовая вспышка» |
 
+04.10.2026 — значки характеристик для строк интерфейса (Иван выбрал накладки
+зелий прибавки). Без масштаба: обрезка по содержимому, 15×15 — в строке рядом с
+текстом 12 px буквы толщиной в пиксель иначе пропадают. Тот же скрипт.
+
+| file | from | для чего |
+| --- | --- | --- |
+| `attr/strength.png` | `item/potion/i-gain-strength.png` | сила |
+| `attr/agility.png` | `item/potion/i-gain-dexterity.png` | ловкость |
+| `attr/intelligence.png` | `item/potion/i-gain-intelligence.png` | интеллект |
+
 ## `item/`
 
 | file | what |
