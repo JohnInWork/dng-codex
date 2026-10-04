@@ -407,9 +407,10 @@ repainted white and lost its bread.
 
 Значки опознанных жезлов заклинаний `icon/spellwand-*.png`: знак
 заклинания и маленький жезл в левом нижнем углу (нарисован клетками в
-палитре библиотеки, 11×11), всё вместе — по центру 32×32. Знак — тот же,
-что у заклинания на панели, кроме случаев, когда он занят другой вещью или
-совпадает со знаком другого жезла: тогда взят свой.
+палитре библиотеки, 11×11), всё вместе — по центру 32×32. С 05.10.2026 знак
+у жезла активного заклинания — ровно значок заклинания (Иван: «иконка будет
+такая же, как у заклинания, с пометкой, что это жезл»); у жезлов убранных
+заклинаний и пассива — прежние свои знаки.
 
 | file | from | change |
 | --- | --- | --- |
@@ -417,14 +418,14 @@ repainted white and lost its bread.
 | `icon/spellwand-glaciate.png` | `item/wand/i-slowing.png` | угловая накладка: обрезана, ×2, в центр; перекрашен в лёд; жезл в углу |
 | `icon/spellwand-arcane-splinter.png` | `derived/icon/wand-magic_darts.png` | жезл в углу |
 | `icon/spellwand-ember-burst.png` | `derived/icon/wand-fireball.png` | жезл в углу |
-| `icon/spellwand-frost-burst.png` | `derived/icon/wand-fireball.png` | перекрашен в лёд; жезл в углу |
+| `icon/spellwand-frost-burst.png` | `derived/icon/wand-cold.png` | жезл в углу (с 05.10.2026 — значок заклинания) |
 | `icon/spellwand-storm-burst.png` | `item/ring/i-stealth.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу (с 04.10.2026 — «Ускорение») |
 | `icon/spellwand-thunderclap.png` | `derived/icon/spell-tempest.png` | жезл в углу (с 05.10.2026 — спираль «Бури») |
-| `icon/spellwand-cauterise.png` | `item/weapon/brands/i-pain.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
-| `icon/spellwand-kindle.png` | `item/ring/i-r-fire.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-cauterise.png` | `derived/icon/potion-curing.png` | жезл в углу (с 05.10.2026 — значок заклинания) |
+| `icon/spellwand-kindle.png` | `derived/icon/ring-fire.png` | жезл в углу (с 05.10.2026 — значок заклинания) |
 | `icon/spellwand-ice-armour.png` | `item/ring/i-r-cold.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
 | `icon/spellwand-purging-light.png` | `derived/icon/scroll-holy_word.png` | жезл в углу |
-| `icon/spellwand-renewal.png` | `item/potion/i-restore-abilities.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
+| `icon/spellwand-renewal.png` | `derived/icon/scroll-holy_word.png` | жезл в углу (с 05.10.2026 — значок заклинания) |
 | `icon/spellwand-unbinding.png` | `item/amulet/i-faith.png` | угловая накладка: обрезана, ×2, в центр; жезл в углу |
 | `icon/spellwand-cleanse-ally.png` | `derived/icon/potion-cancel.png` | жезл в углу |
 | `icon/spellwand-ward.png` | `derived/icon/amulet-warding.png` | жезл в углу |
@@ -436,7 +437,101 @@ repainted white and lost its bread.
 | `icon/spellwand-invisibility.png` | `derived/icon/potion-invisibility.png` | жезл в углу |
 | `icon/spellwand-teleport.png` | `derived/icon/scroll-teleportation.png` | жезл в углу |
 | `icon/spellwand-camp-call.png` | `dngn/altars/makhleb_flame1.png` | жезл в углу |
-| `icon/spellwand-unlock.png` | `item/misc/runes/generic.png` | жезл в углу |
+| `icon/spellwand-unlock.png` | `licensed/7soul-icons/key-master.png` | жезл в углу (с 05.10.2026 — значок заклинания; ключ — 7Soul, лицензия в `licensed/7soul-icons/`) |
+| `icon/spellwand-ember-bolt.png` | `derived/icon/wand-fire.png` | жезл в углу — значок Жезла огня, опознанного (пара Огненной стрелы) |
+| `icon/spellwand-storm-bolt.png` | `derived/icon/wand-lightning.png` | жезл в углу — значок Жезла искр, опознанного (пара Грозового разряда) |
+| `icon/spellwand-mending-light.png` | `derived/icon/wand-heal_wounds.png` | жезл в углу — значок Костяного жезла, опознанного (пара Света исцеления) |
+| `icon/spellwand-become-lich.png` | `derived/icon/staff-death.png` | жезл в углу — жезл Лича (v32) |
+
+Значки свитков заклинаний `icon/spellscroll-*.png` (генератор v32): тот же
+знак заклинания, что у жезла, и маленький развёрнутый лист в левом нижнем
+углу — палочки сверху и снизу, пергамент и две строки, нарисован клетками
+(11×11) в палитре маленького жезла, всё вместе — по центру 32×32. Выбор
+Ивана 05.10.2026 (№ 6 листа `output/option-sheets/16-scroll-marker.png`).
+Скрипт — `tools/atlas/derive-wands.py`.
+
+| file | from | change |
+| --- | --- | --- |
+| `icon/spellscroll-ember-bolt.png` | `derived/icon/wand-fire.png` | лист в углу |
+| `icon/spellscroll-cauterise.png` | `derived/icon/potion-curing.png` | лист в углу |
+| `icon/spellscroll-kindle.png` | `derived/icon/ring-fire.png` | лист в углу |
+| `icon/spellscroll-frost-lance.png` | `derived/icon/wand-frost.png` | лист в углу |
+| `icon/spellscroll-ice-armour.png` | `item/ring/i-r-cold.png` | угловая накладка: обрезана, ×2, в центр; лист в углу |
+| `icon/spellscroll-frost-burst.png` | `derived/icon/wand-cold.png` | лист в углу |
+| `icon/spellscroll-storm-bolt.png` | `derived/icon/wand-lightning.png` | лист в углу |
+| `icon/spellscroll-storm-burst.png` | `item/ring/i-stealth.png` | угловая накладка: обрезана, ×2, в центр; лист в углу |
+| `icon/spellscroll-thunderclap.png` | `derived/icon/spell-tempest.png` | лист в углу |
+| `icon/spellscroll-raise-skeleton.png` | `mon/undead/skeletons/skeleton_humanoid_small.png` | лист в углу |
+| `icon/spellscroll-raise-ghoul.png` | `mon/undead/ghoul.png` | лист в углу |
+| `icon/spellscroll-raise-warden.png` | `mon/undead/skeletal_warrior.png` | лист в углу |
+| `icon/spellscroll-become-lich.png` | `derived/icon/staff-death.png` | лист в углу |
+| `icon/spellscroll-mending-light.png` | `derived/icon/wand-heal_wounds.png` | лист в углу |
+| `icon/spellscroll-ward.png` | `derived/icon/amulet-warding.png` | лист в углу |
+| `icon/spellscroll-renewal.png` | `derived/icon/scroll-holy_word.png` | лист в углу |
+| `icon/spellscroll-teleport.png` | `derived/icon/scroll-teleportation.png` | лист в углу |
+| `icon/spellscroll-flight.png` | `derived/icon/potion-flight.png` | лист в углу |
+| `icon/spellscroll-invisibility.png` | `derived/icon/potion-invisibility.png` | лист в углу |
+| `icon/spellscroll-unlock.png` | `licensed/7soul-icons/key-master.png` | лист в углу (ключ — 7Soul, лицензия в `licensed/7soul-icons/`) |
+
+Свитки заклинаний в рюкзаке и на полу `item/scroll/spell-*.png` (генератор
+v32; Иван 05.10.2026: «свиток в инвентаре выглядит как свиток, а на панели —
+как заклинание»): простой свиток библиотеки и знак заклинания в правом нижнем
+углу — значок из накладки уменьшен ровно вдвое (то есть сама накладка), прочие
+вписаны в 15×15. Выбор Ивана — № 3 листа
+`output/option-sheets/18-spell-scroll-in-bag.png`. Скрипт —
+`tools/atlas/derive-wands.py`.
+
+| file | from | change |
+| --- | --- | --- |
+| `item/scroll/spell-ember-bolt.png` | `item/scroll/scroll.png`, `derived/icon/wand-fire.png` | знак в углу |
+| `item/scroll/spell-cauterise.png` | `item/scroll/scroll.png`, `derived/icon/potion-curing.png` | знак в углу |
+| `item/scroll/spell-kindle.png` | `item/scroll/scroll.png`, `derived/icon/ring-fire.png` | знак в углу |
+| `item/scroll/spell-frost-lance.png` | `item/scroll/scroll.png`, `derived/icon/wand-frost.png` | знак в углу |
+| `item/scroll/spell-ice-armour.png` | `item/scroll/scroll.png`, `item/ring/i-r-cold.png` | знак в углу |
+| `item/scroll/spell-frost-burst.png` | `item/scroll/scroll.png`, `derived/icon/wand-cold.png` | знак в углу |
+| `item/scroll/spell-storm-bolt.png` | `item/scroll/scroll.png`, `derived/icon/wand-lightning.png` | знак в углу |
+| `item/scroll/spell-storm-burst.png` | `item/scroll/scroll.png`, `item/ring/i-stealth.png` | знак в углу |
+| `item/scroll/spell-thunderclap.png` | `item/scroll/scroll.png`, `derived/icon/spell-tempest.png` | знак в углу |
+| `item/scroll/spell-raise-skeleton.png` | `item/scroll/scroll.png`, `mon/undead/skeletons/skeleton_humanoid_small.png` | знак в углу |
+| `item/scroll/spell-raise-ghoul.png` | `item/scroll/scroll.png`, `mon/undead/ghoul.png` | знак в углу |
+| `item/scroll/spell-raise-warden.png` | `item/scroll/scroll.png`, `mon/undead/skeletal_warrior.png` | знак в углу |
+| `item/scroll/spell-become-lich.png` | `item/scroll/scroll.png`, `derived/icon/staff-death.png` | знак в углу |
+| `item/scroll/spell-mending-light.png` | `item/scroll/scroll.png`, `derived/icon/wand-heal_wounds.png` | знак в углу |
+| `item/scroll/spell-ward.png` | `item/scroll/scroll.png`, `derived/icon/amulet-warding.png` | знак в углу |
+| `item/scroll/spell-renewal.png` | `item/scroll/scroll.png`, `derived/icon/scroll-holy_word.png` | знак в углу |
+| `item/scroll/spell-teleport.png` | `item/scroll/scroll.png`, `derived/icon/scroll-teleportation.png` | знак в углу |
+| `item/scroll/spell-flight.png` | `item/scroll/scroll.png`, `derived/icon/potion-flight.png` | знак в углу |
+| `item/scroll/spell-invisibility.png` | `item/scroll/scroll.png`, `derived/icon/potion-invisibility.png` | знак в углу |
+| `item/scroll/spell-unlock.png` | `item/scroll/scroll.png`, `licensed/7soul-icons/key-master.png` | знак в углу |
+
+Малые знаки заклинаний `item/sign/spell-*.png`: тот же знак, что в углу свитка
+в рюкзаке, отдельной картинкой — в правом нижнем углу прозрачного 32×32. Игра кладёт его в правый нижний угол облика
+опознанного жезла заклинания в рюкзаке (Иван 05.10.2026: «жезл в инвентаре
+должен выглядеть как жезл — так же, как свиток»). Скрипт —
+`tools/atlas/derive-wands.py`.
+
+| file | from | change |
+| --- | --- | --- |
+| `item/sign/spell-ember-bolt.png` | знак `icon/spellscroll-ember-bolt.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-cauterise.png` | знак `icon/spellscroll-cauterise.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-kindle.png` | знак `icon/spellscroll-kindle.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-frost-lance.png` | знак `icon/spellscroll-frost-lance.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-ice-armour.png` | знак `icon/spellscroll-ice-armour.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-frost-burst.png` | знак `icon/spellscroll-frost-burst.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-storm-bolt.png` | знак `icon/spellscroll-storm-bolt.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-storm-burst.png` | знак `icon/spellscroll-storm-burst.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-thunderclap.png` | знак `icon/spellscroll-thunderclap.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-raise-skeleton.png` | знак `icon/spellscroll-raise-skeleton.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-raise-ghoul.png` | знак `icon/spellscroll-raise-ghoul.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-raise-warden.png` | знак `icon/spellscroll-raise-warden.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-become-lich.png` | знак `icon/spellscroll-become-lich.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-mending-light.png` | знак `icon/spellscroll-mending-light.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-ward.png` | знак `icon/spellscroll-ward.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-renewal.png` | знак `icon/spellscroll-renewal.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-teleport.png` | знак `icon/spellscroll-teleport.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-flight.png` | знак `icon/spellscroll-flight.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-invisibility.png` | знак `icon/spellscroll-invisibility.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
+| `item/sign/spell-unlock.png` | знак `icon/spellscroll-unlock.png` (тот же источник) | малый знак: накладка ×2 — ровно вдвое, прочее — в 15×15 |
 
 ## Выбор Ивана по листам вариантов (03.10.2026)
 
@@ -448,3 +543,18 @@ repainted white and lost its bread.
 | `hud/hunger.png` | `player/hand1/trident.png`, `player/hand1/fork.png` | вилка (голова трезубца + ручка вилки) и ложка, набранная скриптом палитрой и контуром вилки; стоя, ×2 — значок голода (№ 6) |
 | `mon/innkeeper.png` | `player/base/human_m.png`, `player/legs/pants_brown.png`, `player/boots/short_brown2.png`, `player/body/shirt_vest.png`, `player/beard/pj.png`, `player/hair/brown1.png`, `player/hand1/misc/bottle.png` | фигура из слоёв героя; стекло бутылки перекрашено из синего в зелёное — трактирщик (№ 1) |
 | `mon/free-blade.png` | `player/cloak/black.png`, `player/base/human_m.png`, `player/legs/pants_black.png`, `player/boots/mesh_black.png`, `player/body/leather_metal.png`, `player/hair/aragorn.png`, `player/hand1/great_sword_slant.png` | фигура из слоёв героя в порядке игры — Вольный клинок (№ 1) |
+
+## Торговцы города v33 (05.10.2026)
+
+Собраны скриптом `tools/atlas/derive-merchants.py` из слоёв героя (CC0) в
+порядке игры, как трактирщик; без перекрасок.
+
+| file | from | как |
+| --- | --- | --- |
+| `mon/merchant-weaponsmith.png` | `player/base/human_m.png`, `player/legs/pants_black.png`, `player/boots/middle_brown3.png`, `player/body/leather_heavy.png`, `player/gloves/glove_brown.png`, `player/hair/brown2.png` | фигура из слоёв героя — оружейник, руки пустые (Иван, лист 20) |
+| `mon/merchant-jeweller.png` | `player/base/human_m.png`, `player/legs/pants_black.png`, `player/boots/middle_purple.png`, `player/body/vest_red2.png`, `player/hair/brown1.png`, `player/head/turban_purple.png`, `player/hand1/misc/crystal.png` | фигура из слоёв героя — ювелир |
+| `mon/merchant-alchemist.png` | `player/base/human_f.png`, `player/legs/skirt_white.png`, `player/boots/short_purple.png`, `player/body/robe_white_green.png`, `player/hair/fem_white.png`, `player/hand1/misc/bottle.png` | фигура из слоёв героя — алхимик |
+| `mon/merchant-scribe.png` | `player/base/human_f.png`, `player/legs/skirt_white.png`, `player/boots/middle_brown2.png`, `player/body/robe_red3.png`, `player/hair/fem_black.png`, `player/hand1/misc/deck.png` | фигура из слоёв героя — писарь |
+| `mon/merchant-wandmaker.png` | `player/base/deep_elf_m.png`, `player/legs/pants_black.png`, `player/boots/middle_purple.png`, `player/body/robe_purple.png`, `player/hand1/rod_aries.png` | фигура из слоёв героя — жезловщик |
+| `mon/merchant-bookseller.png` | `player/base/human_m.png`, `player/legs/pants_brown.png`, `player/boots/short_brown2.png`, `player/body/robe_brown.png`, `player/hair/djinn2.png`, `player/hand2/misc/book_blue.png` | фигура из слоёв героя — книжник |
+| `mon/merchant-supplier.png` | `player/base/human_m.png`, `player/legs/pants_short_brown3.png`, `player/boots/middle_ybrown.png`, `player/body/green_susp.png`, `player/hair/sam.png`, `player/head/bandana_ybrown.png`, `player/hand1/misc/box.png` | фигура из слоёв героя — снабженец города |

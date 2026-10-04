@@ -50,3 +50,11 @@ surrounding Dungeon Crawl Stone Soup library.
   painted on in the red of the library's curing-potion mark. It is the icon of
   the game's bandages (chosen by Ivan, 03.10.2026). A modification of CC-BY-SA
   material, so it is CC-BY-SA 3.0+ like every other file in `cut/`.
+- `cut/sign-scroll.png`, `cut/sign-wand.png`, `cut/sign-temple.png` — the
+  blank hanging sign `cut/sign-blank.png` with a scroll, a wand with a star,
+  and a temple front painted on pixel by pixel in the four golds the pack's
+  own signs are drawn in, centred where their marks hang. They are the signs
+  of the city's scribe, wandmaker and temple (05.10.2026): the pack has no
+  scroll or wand sign, and its book now hangs over the bookseller. Generated
+  by `tools/atlas/derive-signs.py`. A modification of CC-BY-SA material, so
+  CC-BY-SA 3.0+ like every other file in `cut/`.
