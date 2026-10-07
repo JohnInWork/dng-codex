@@ -290,3 +290,11 @@ CC0 1.0 as the project's own work.
 - `sfx/find-mummy.mp3` — `sfx/kill-3.mp3` (artisticdude), ниже, плюс скрежет плиты
 - `sfx/ambient-scream.mp3` — `sfx/death-f-1.mp3` (Galacti-Chron, голос Sky Rae), отнесённый вдаль
 - `sfx/ambient-steps.mp3` — `sfx/descend.mp3` (Joseph SARDIN, BigSoundBank), глухо, «за стеной»
+
+## voice-samples (07.10.2026)
+
+- `voice-samples/king-voice.mp3` — голос короля, грубый (так же говорят мужчины-именные, жрец, трактирщик).
+- `voice-samples/guide-voice.mp3` — голос проводника, мягкий (так же говорят женщины).
+
+Синтез проекта (`tools/audio/synth_voice.py`), CC0 1.0. Идут по кругу, пока в
+диалоге набирается строка (`tools/dcss-rpg-speech.js`).
