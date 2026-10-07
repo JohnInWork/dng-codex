@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-Dcu2HF55.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-BQqU2SWk.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-BjSrbrhc.css">
+    <script type="module" crossorigin src="../assets/game-CKV47qyH.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-DhDIBUTz.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-D-rrtiHZ.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -93,6 +93,7 @@
           <!-- Подвал — третья часть карточки: в landscape он встаёт под названием, а не под кнопками. -->
           <footer class="main-menu-meta">
             <span id="app-version"></span>
+            <span id="menu-storage-note" class="settings-note" hidden></span>
             <a id="feedback-link" href="https://github.com/JohnInWork/dng-codex/issues" target="_blank" rel="noreferrer">Отзывы и ошибки</a>
           </footer>
         </article>
@@ -1102,6 +1103,31 @@
                 <output id="brightness-value" aria-live="polite">100%</output>
                 <button id="brightness-up" type="button" aria-label="Светлее">+</button>
               </div>
+            </section>
+            <!-- Масштаб мира: ближе или дальше от героя (dcss-rpg-display.js). -->
+            <section class="settings-block" aria-labelledby="settings-zoom-title">
+              <h3 id="settings-zoom-title">Масштаб</h3>
+              <div id="settings-zoom" class="main-menu-audio" role="group" aria-label="Масштаб">
+                <span class="settings-brightness-glyph" aria-hidden="true">◈</span>
+                <button id="zoom-out" type="button" aria-label="Дальше">-</button>
+                <output id="zoom-value" aria-live="polite">100%</output>
+                <button id="zoom-in" type="button" aria-label="Ближе">+</button>
+              </div>
+            </section>
+            <section class="settings-block" aria-labelledby="settings-transfer-title">
+              <h3 id="settings-transfer-title">Сохранение</h3>
+              <p id="settings-storage-note" class="settings-note" hidden></p>
+              <p id="settings-transfer-note" class="settings-note"></p>
+              <label id="save-transfer-label" for="save-transfer-text" class="settings-note">Код сохранения</label>
+              <textarea id="save-transfer-text" class="save-transfer-text" rows="3" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+              <div class="save-transfer-buttons">
+                <button id="save-transfer-copy" type="button">Скопировать код</button>
+                <button id="save-transfer-download" type="button">Скачать файл</button>
+                <button id="save-transfer-paste" type="button">Загрузить из поля</button>
+                <button id="save-transfer-pick" type="button">Загрузить из файла</button>
+              </div>
+              <input id="save-transfer-file" type="file" accept=".json,application/json,text/plain" hidden>
+              <p id="save-transfer-status" class="settings-note" role="status" aria-live="polite"></p>
             </section>
             <section class="settings-block settings-danger" aria-labelledby="settings-wipe-title">
               <h3 id="settings-wipe-title">Начать всё сначала</h3>

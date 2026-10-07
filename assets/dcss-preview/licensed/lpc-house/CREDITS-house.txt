@@ -1,0 +1,4 @@
+"[LPC] House Insides" by Lanea Zimmerman (Sharm); castle light sources by HughSpectrum.
+License: CC-BY-SA 3.0 / GPL 3.0. <https://opengameart.org/content/lpc-house-insides>
+See the LPC guidelines: <http://lpc.opengameart.org/>
+Cut and padded to square sprites by tools/atlas/cut-lpc-house.py (no repainting).
