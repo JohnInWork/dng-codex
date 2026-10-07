@@ -58,3 +58,13 @@ surrounding Dungeon Crawl Stone Soup library.
   scroll or wand sign, and its book now hangs over the bookseller. Generated
   by `tools/atlas/derive-signs.py`. A modification of CC-BY-SA material, so
   CC-BY-SA 3.0+ like every other file in `cut/`.
+
+## Cemetery cut (`graves/`, 2026-10-08)
+
+The headstones, crosses, graves and statues on the top-left of
+`decorations-medieval.png` are by Reemax ("[LPC] Signposts, graves, line cloths
+and scare crow", CC-BY-SA 3.0 / GPL 3.0 — the credit is already in the chain
+file above). `tools/atlas/cut-lpc-graves.py` cuts them into `graves/*.png`, one
+picture each on a square 32/64/96 canvas, a little darker and cooler so the
+stone sits next to the masonry of the city; the game uses six of them in front
+of the way down. License and credit are unchanged.
