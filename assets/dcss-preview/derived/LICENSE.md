@@ -96,6 +96,10 @@ repainted white and lost its bread.
 | `head/crown_gold2.png` | Значок «Древней короны» (02.10.2026): слой куклы `player/head/crown_gold2.png` тем же приёмом (×3). Раньше значком был бронзовый шлем с плюмажем `item/armour/headgear/helmet_art3.png` — не корона и не то, что у героя на голове. |
 | `belt/belt_gray.png`, `belt/belt_redbrown.png`, `belt/belt1.png`, `belt/belt2.png` | Значки поясов (02.10.2026): слой куклы `player/legs/belt_gray.png`, `player/legs/belt_redbrown.png`, `player/body/belt1.png`, `player/body/belt2.png`, обрезанный, увеличенный вдвое и положенный в центр 32×32 (`ПОЯСА` в `tools/atlas/derive-icons.py`). Раньше значком была сама полоска на талии куклы, ниже центра клетки. |
 
+## Перекрашенная одежда: `player/<слот>/dye_*.png`, `item/<слот>/dye_*.png` (09.10.2026)
+
+119 цветных видов одежды (голова, тело, ноги, сапоги, перчатки): слой DCSS, повёрнутый по тону в краску роли героя, и значок рюкзака из него же. Перекраска слоёв DCSS скриптом `tools/atlas/recolor-equipment.py --install`, CC0.
+
 ## `mon/`
 
 | file | from | change |
