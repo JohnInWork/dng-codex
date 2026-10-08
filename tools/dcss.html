@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-Bw-KbU1t.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-3MOjMszg.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-vEgJRZnx.css">
+    <script type="module" crossorigin src="../assets/game-fKYXlXiZ.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-D6DZg6kN.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-DnJ8HWE-.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -1113,6 +1113,19 @@
                 <output id="zoom-value" aria-live="polite">100%</output>
                 <button id="zoom-in" type="button" aria-label="Ближе">+</button>
               </div>
+            </section>
+            <!--
+              Экранный джойстик: показать или спрятать (dcss-rpg-display.js). Одна крупная
+              кнопка-переключатель с «галочкой»; спрятанный джойстик не рисуется и не ловит
+              касаний, а ходят тапом по полу. На компьютере с мышью джойстика нет вовсе — и
+              блок скрыт (.settings-joystick-block).
+            -->
+            <section class="settings-block settings-joystick-block" aria-labelledby="settings-joystick-title">
+              <h3 id="settings-joystick-title">Джойстик</h3>
+              <button id="joystick-toggle" class="joystick-toggle" type="button" role="switch" aria-checked="true" aria-label="Показывать джойстик">
+                <i class="joystick-check" aria-hidden="true"></i>
+                <span id="joystick-label">Показывать</span>
+              </button>
             </section>
             <section class="settings-block" aria-labelledby="settings-transfer-title">
               <h3 id="settings-transfer-title">Сохранение</h3>
