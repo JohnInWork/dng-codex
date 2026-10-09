@@ -295,6 +295,7 @@ CC0 1.0 as the project's own work.
 
 - `voice-samples/king-voice.mp3` — голос короля, грубый (так же говорят мужчины-именные, жрец, трактирщик).
 - `voice-samples/guide-voice.mp3` — голос проводника, мягкий (так же говорят женщины).
+- `voice-samples/captain-voice.mp3` — голос капитана стражи, низкий и ровный (09.10.2026, `tools/audio/synth_voice.py captain`).
 
 Синтез проекта (`tools/audio/synth_voice.py`), CC0 1.0. Идут по кругу, пока в
 диалоге набирается строка (`tools/dcss-rpg-speech.js`).
