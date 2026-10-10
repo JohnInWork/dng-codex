@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-CEMYynqQ.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-O4SEbAwo.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-Bni4ijnZ.css">
+    <script type="module" crossorigin src="../assets/game-CNmEQp5B.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-Babsa-Ji.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-bNi2qg_s.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -901,6 +901,20 @@
             Не влезают в строку — группа действий целиком уходит вниз, к пальцу.
           -->
           <footer class="item-detail-actions">
+            <!--
+              Продажа стопки: сколько штук отдать (Иван, плейтест 09.10.2026:
+              «было две лопаты, и продались обе»). Виден только у стопки в окне
+              продажи; по умолчанию одна штука.
+            -->
+            <div id="item-detail-quantity" class="item-detail-quantity" role="group" aria-label="Сколько продать" hidden>
+              <p id="item-detail-quantity-title">Сколько продать?</p>
+              <div class="item-detail-quantity-row">
+                <button id="item-detail-quantity-less" type="button" data-quantity-step="-1" aria-label="Меньше">-</button>
+                <output id="item-detail-quantity-value" aria-live="polite">1 / 2</output>
+                <button id="item-detail-quantity-more" type="button" data-quantity-step="1" aria-label="Больше">+</button>
+                <button id="item-detail-quantity-all" type="button" data-quantity-all>Все</button>
+              </div>
+            </div>
             <!--
               «На панель» → в какую ячейку: в каждой видно, что там сейчас;
               занятую — заменить. Строкой над кнопками, у пальца.
