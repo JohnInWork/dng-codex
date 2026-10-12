@@ -64,6 +64,9 @@ repainted white and lost its bread.
 | file | from | для чего |
 | --- | --- | --- |
 | `icon/potion-heal-wounds.png` | `item/potion/i-heal-wounds.png` | зелье исцеления ран |
+| `icon/potion-wildfire.png` | `item/potion/i-berserk-rage.png` | зелье пламени (вредное, v49) |
+| `icon/potion-winter.png` | `item/potion/i-slowing.png` | зелье стужи (вредное, v49) |
+| `icon/potion-wasting.png` | `item/potion/i-decay.png` | зелье голода (вредное, v49) |
 | `icon/ring-r-cold.png` | `item/ring/i-r-cold.png` | заклинание «Ледяной доспех» (с 04.10.2026 — «Ледяное благословение») |
 | `icon/ring-magical-power.png` | `item/ring/i-magical-power.png` | заклинание «Грозовая вспышка» (до 04.10.2026) |
 
