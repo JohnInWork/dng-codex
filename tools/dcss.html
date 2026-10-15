@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-vsL4Rbzm.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-BXQkSlrq.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-DtMqwEiO.css">
+    <script type="module" crossorigin src="../assets/game-Dj9I4_jT.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-D7vzTyi2.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-B9AmqwWZ.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -85,6 +85,10 @@
               </button>
               <button id="open-credits" type="button">
                 <i class="ui-icon" data-icon="info" aria-hidden="true"></i><b id="open-credits-label">Авторы</b>
+              </button>
+              <!-- Только в тестовой сборке (`?test=1`): снова выбрать класс и этаж, не перезагружая страницу. -->
+              <button id="open-test-picker" type="button" hidden>
+                <i class="ui-icon" data-icon="stairs" aria-hidden="true"></i><b id="open-test-picker-label">Класс и этаж</b>
               </button>
             </div>
             <ul id="main-menu-conditions" class="main-menu-conditions" aria-label="Условия забега" hidden></ul>
@@ -207,6 +211,42 @@
             <button id="confirm-creation" class="creation-start" type="button">
               <i class="ui-icon" data-icon="stairs" aria-hidden="true"></i>
               <b id="confirm-creation-label">Начать</b>
+            </button>
+          </footer>
+        </article>
+      </section>
+
+      <!--
+        Тестовая сборка (`?test=1`): кем играть и на какой этаж попасть сразу.
+
+        Два шага, как просил Иван: сначала класс, потом место — этаж любого босса,
+        комнаты механик или любой этаж по номеру. Карточки строит renderTestPicker()
+        по testPickerModel() (tools/dcss-rpg-test-destinations.js); без `?test=1`
+        экран закрыт и до него не добраться.
+      -->
+      <section
+        id="test-picker"
+        class="test-picker"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="test-picker-title"
+        aria-hidden="true"
+        inert
+      >
+        <article class="test-picker-card pixel-frame" data-step="class">
+          <header class="test-picker-header">
+            <canvas id="test-picker-hero" class="test-picker-hero" width="32" height="32" aria-hidden="true" hidden></canvas>
+            <div>
+              <h2 id="test-picker-title">Тест · кем играть</h2>
+              <p id="test-picker-hint"></p>
+            </div>
+          </header>
+          <div id="test-picker-body" class="test-picker-body"></div>
+          <footer class="test-picker-actions">
+            <button id="test-picker-back" data-press-sound="close" class="creation-back" type="button">Назад</button>
+            <button id="test-picker-last" class="creation-start test-picker-last" type="button" hidden>
+              <i class="ui-icon" data-icon="cycle" aria-hidden="true"></i>
+              <span><b id="test-picker-last-label">Как в прошлый раз</b><small id="test-picker-last-detail"></small></span>
             </button>
           </footer>
         </article>
@@ -365,6 +405,10 @@
         </button>
         <button class="spell-action pixel-frame tappable" type="button" data-spell-slot="2" aria-label="Пустой слот" disabled>
           <img alt="" /><i></i><b>3</b><output></output>
+        </button>
+        <!-- Четвёртая — со свойством высокого тира «+1 ячейка» (15.10.2026); без него скрыта. -->
+        <button class="spell-action pixel-frame tappable" type="button" data-spell-slot="3" aria-label="Пустой слот" disabled hidden>
+          <img alt="" /><i></i><b>4</b><output></output>
         </button>
       </nav>
 
@@ -925,6 +969,7 @@
                 <button type="button" data-bar-slot="0"><b>1</b><img alt="" /><span><strong>Пусто</strong><small>Свободно</small></span></button>
                 <button type="button" data-bar-slot="1"><b>2</b><img alt="" /><span><strong>Пусто</strong><small>Свободно</small></span></button>
                 <button type="button" data-bar-slot="2"><b>3</b><img alt="" /><span><strong>Пусто</strong><small>Свободно</small></span></button>
+                <button type="button" data-bar-slot="3" hidden><b>4</b><img alt="" /><span><strong>Пусто</strong><small>Свободно</small></span></button>
               </div>
             </div>
             <div class="item-detail-actions-aside">

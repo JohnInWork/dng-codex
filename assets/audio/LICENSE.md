@@ -274,10 +274,33 @@ CC0 1.0 as the project's own work.
 `sfx/ambient-gust.mp3`, `sfx/ambient-rumble.mp3`, `sfx/ambient-drip.mp3`,
 `sfx/kraken-splash.mp3`, `sfx/kraken-lash.mp3`.
 
+Повадки существ и боссов, 14.10.2026: у каждого из этих звуков два варианта, `sfx/<id>-1.mp3` и `sfx/<id>-2.mp3` (игра берёт
+случайный). Все эти файлы — чистый синтез без записей, кроме трёх, что названы в списке ниже:
+слизни `sfx/split-burst-1.mp3`, `sfx/split-burst-2.mp3`; статуи `sfx/statue-rumble-1.mp3`, `sfx/statue-rumble-2.mp3`,
+`sfx/statue-wake-1.mp3`, `sfx/statue-wake-2.mp3`; вампир `sfx/bat-turn-1.mp3`, `sfx/bat-turn-2.mp3`,
+`sfx/bat-return-1.mp3`, `sfx/bat-return-2.mp3`, `sfx/bite-drink-1.mp3`, `sfx/bite-drink-2.mp3`; очи
+`sfx/gaze-open-1.mp3`, `sfx/gaze-open-2.mp3`, `sfx/gaze-pulse-1.mp3`, `sfx/gaze-pulse-2.mp3`, `sfx/gaze-orb-1.mp3`,
+`sfx/gaze-orb-2.mp3`; гидры `sfx/head-sever-1.mp3`, `sfx/head-sever-2.mp3`, `sfx/head-regrow-1.mp3`,
+`sfx/head-regrow-2.mp3`; перевёртыш `sfx/shifter-morph-1.mp3`, `sfx/shifter-morph-2.mp3`, `sfx/shifter-flash-1.mp3`,
+`sfx/shifter-flash-2.mp3`; кровавая роза `sfx/vine-reach-1.mp3`, `sfx/vine-reach-2.mp3`, `sfx/vine-grip-1.mp3`,
+`sfx/vine-grip-2.mp3`, `sfx/vine-pull-1.mp3`, `sfx/vine-pull-2.mp3`; Пепельный хранитель `sfx/ember-aim-1.mp3`,
+`sfx/ember-aim-2.mp3`, `sfx/ember-burst-1.mp3`, `sfx/ember-burst-2.mp3`, `sfx/ember-ring-1.mp3`,
+`sfx/ember-ring-2.mp3`, `sfx/ember-shotgun-1.mp3`, `sfx/ember-shotgun-2.mp3`, `sfx/ash-teleport-1.mp3`,
+`sfx/ash-teleport-2.mp3`; Хранитель святилища `sfx/rune-begin-1.mp3`, `sfx/rune-begin-2.mp3`, `sfx/summon-cast-1.mp3`,
+`sfx/summon-cast-2.mp3`, `sfx/minions-crumble-1.mp3`, `sfx/minions-crumble-2.mp3`.
+
+Страж глубин, 15.10.2026: ещё шесть звуков повадок, у каждого два варианта, чистый синтез без записей —
+`sfx/seal-set-1.mp3`, `sfx/seal-set-2.mp3` (печати встают), `sfx/seal-fire-1.mp3`, `sfx/seal-fire-2.mp3`,
+`sfx/seal-storm-1.mp3`, `sfx/seal-storm-2.mp3`, `sfx/seal-water-1.mp3`, `sfx/seal-water-2.mp3` (герой наступил на печать),
+`sfx/warden-shield-1.mp3`, `sfx/warden-shield-2.mp3` (щит), `sfx/warden-rush-1.mp3`, `sfx/warden-rush-2.mp3` (рывок).
+
 Синтез поверх переработанной записи из этого каталога (исходник — CC0, автор
 назван в его разделе выше):
 
 - `sfx/power-harvest.mp3` — `sfx/hit-blade-1.mp3` (qubodup), ниже на кварту, плюс удары сердца
+- `sfx/split-burst-2.mp3` — `sfx/hit-heavy-3.mp3` (мокрое полотенце по телу, раздел выше), ниже, плюс два малыша, что шлёпаются следом
+- `sfx/bite-drink-2.mp3` — `sfx/eat-1.mp3` (Jordan Irwin, AntumDeluge), выше, плюс два глотка
+- `sfx/head-sever-2.mp3` — `sfx/hit-blade-1.mp3` (qubodup), ниже, плюс треск кости
 - `sfx/power-echo.mp3` — `sfx/sword-accent.mp3` (Still North Media + qubodup), выше, с эхом и флэнжером
 - `sfx/power-reaper.mp3` — `sfx/kill-3.mp3` (artisticdude), на две трети ниже, плюс стук костей и ветер
 - `sfx/power-insatiable.mp3` — `sfx/eat-2.mp3` (rubberduck), плюс глоток
