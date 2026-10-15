@@ -630,3 +630,39 @@ v32; Иван 05.10.2026: «свиток в инвентаре выглядит 
 | file | from | как |
 | --- | --- | --- |
 | `dngn/spikes/<место>.png` (38 мест, список — `SPIKE_PLACE_IDS`) | — (нарисованы кодом) | клетка 32×32, прозрачный фон; форма и краска — таблица `ПО_МЕСТАМ` в `spikes-sheet.py` |
+
+## Безымянное в трёх обликах (16.10.2026)
+
+Собраны скриптом `tools/atlas/derive-nameless.py` из `mon/sprint/unspeakable.png` (CC0, Dungeon Crawl Stone Soup): красный облик —
+сама картинка, зелёный и синий — её пиксели с повёрнутым оттенком (яркость, насыщенность и прозрачность те же); все три
+на прозрачном квадрате 48×48 по нижнему краю (исходник 32×48, а игра рисует существ квадратом). Выбор картинки —
+Иван на странице «Боссы игры». Нужны повадке «Безымянное» (`tools/dcss-rpg-nameless.js`).
+
+| file | from | как |
+| --- | --- | --- |
+| `mon/nameless/red.png` | `mon/sprint/unspeakable.png` | без изменений |
+| `mon/nameless/green.png` | `mon/sprint/unspeakable.png` | оттенок +0,33 круга |
+| `mon/nameless/blue.png` | `mon/sprint/unspeakable.png` | оттенок +0,62 круга, светлее ×1,45 |
+
+## Поросль Хранителя рощи (16.10.2026)
+
+Собраны скриптом `tools/atlas/derive-grove.py` из кустов библиотеки (CC0, Dungeon Crawl Stone Soup): светлее и зеленее тёмных
+кустов-декора, чтобы враги, которых надо срубить, с декором не путались. Чаща — готовая картинка терний жезла
+(`mon/wand_thorns.png`). Нужны повадке «Хранитель рощи» (`tools/dcss-rpg-grove.js`).
+
+| file | from | как |
+| --- | --- | --- |
+| `mon/grove/bush.png` | `mon/fungi_plants/bush3.png` | оттенок +0,04, насыщенность ×1,15, яркость ×1,45 |
+| `mon/grove/sprout.png` | `mon/fungi_plants/bush2.png` | то же, сжат вдвое у земли |
+
+## Лавка снаряжальщика (16.10.2026)
+
+Нарисованы кодом скриптом `tools/atlas/derive-shop-scene.py` в палитре портрета «Shopkeeper» (pablopirata, CC0,
+`licensed/opengameart-shopkeeper/`): стена с полками и товаром, прилавок со свечой и монетами, два кадра пламени, пятно света
+(ступенчатое, в шашечку) и слой глаз портрета. Картинок библиотеки в них нет.
+
+| file | from | как |
+| --- | --- | --- |
+| `ui/shop/wall.png`, `ui/shop/counter.png` | — (нарисованы кодом) | 128×96, палитра портрета |
+| `ui/shop/flame-1.png`, `flame-2.png`, `light.png` | — (нарисованы кодом) | пламя 7×9, свет 48×48 |
+| `ui/shop/eyes.png` | `licensed/opengameart-shopkeeper/keeper.png` | только красные пиксели глаз |

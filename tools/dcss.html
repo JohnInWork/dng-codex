@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-BW4VJlOi.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-XS285tgB.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-C-RC-tsu.css">
+    <script type="module" crossorigin src="../assets/game-B5wuwDEF.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-U9pNcTHr.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-CJfyJu05.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -1264,6 +1264,28 @@
             <h2 id="outfit-title">Снаряжение</h2>
             <button id="close-outfit" data-press-sound="close" type="button" aria-label="Закрыть снаряжение">×</button>
           </header>
+          <!--
+            Торговец (16.10.2026): портрет «Shopkeeper» (pablopirata, OpenGameArt, CC0) на своей сцене — стена с полками,
+            прилавок, свеча; эффекты — свет свечи, глаза, пылинки, искры (`tools/atlas/derive-shop-scene.py`, стили
+            `.outfit-scene`). Реплика печатается по буквам (`sayOutfitKeeper`).
+          -->
+          <section class="outfit-scene" aria-label="Торговец">
+            <div class="outfit-stage" aria-hidden="true">
+              <img class="shop-wall" src="../assets/dcss-preview/derived/ui/shop/wall.png" alt="" />
+              <div class="shop-motes"><i style="--x:14%;--y:70%;--d:0s;--t:7s"></i><i style="--x:22%;--y:58%;--d:1.6s;--t:8s"></i><i style="--x:30%;--y:66%;--d:3.1s;--t:6.5s"></i><i style="--x:9%;--y:52%;--d:4.4s;--t:9s"></i><i style="--x:40%;--y:72%;--d:2.2s;--t:7.5s"></i><i style="--x:64%;--y:40%;--d:0.8s;--t:10s"></i><i style="--x:78%;--y:62%;--d:3.7s;--t:8.5s"></i><i style="--x:88%;--y:48%;--d:5.2s;--t:9.5s"></i></div>
+              <img class="shop-keeper" src="../assets/dcss-preview/licensed/opengameart-shopkeeper/keeper.png" alt="" />
+              <img class="shop-eyes" src="../assets/dcss-preview/derived/ui/shop/eyes.png" alt="" />
+              <div class="shop-sparks"><i style="--x:44%;--d:0s"></i><i style="--x:52%;--d:1.3s"></i><i style="--x:58%;--d:2.6s"></i><i style="--x:47%;--d:3.9s"></i><i style="--x:55%;--d:5.2s"></i></div>
+              <img class="shop-counter" src="../assets/dcss-preview/derived/ui/shop/counter.png" alt="" />
+              <img class="shop-light" src="../assets/dcss-preview/derived/ui/shop/light.png" alt="" />
+              <img class="shop-flame shop-flame-1" src="../assets/dcss-preview/derived/ui/shop/flame-1.png" alt="" />
+              <img class="shop-flame shop-flame-2" src="../assets/dcss-preview/derived/ui/shop/flame-2.png" alt="" />
+            </div>
+            <button id="outfit-speech" class="outfit-speech" type="button">
+              <b id="outfit-speech-name"></b>
+              <span id="outfit-speech-text" aria-live="polite"></span>
+            </button>
+          </section>
           <div class="outfit-top">
             <div class="outfit-hero">
               <div id="outfit-figure" class="outfit-figure"></div>
