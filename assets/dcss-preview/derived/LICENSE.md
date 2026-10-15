@@ -665,4 +665,4 @@ v32; Иван 05.10.2026: «свиток в инвентаре выглядит 
 | --- | --- | --- |
 | `ui/shop/wall.png`, `ui/shop/counter.png` | — (нарисованы кодом) | 128×96, палитра портрета |
 | `ui/shop/flame-1.png`, `flame-2.png`, `light.png` | — (нарисованы кодом) | пламя 7×9, свет 48×48 |
-| `ui/shop/eyes.png` | `licensed/opengameart-shopkeeper/keeper.png` | только красные пиксели глаз |
+| `ui/shop/eyes.png` | `tools/atlas/source/opengameart-shopkeeper.png` | только пиксели глаз, цвет угля |
