@@ -581,3 +581,52 @@ v32; Иван 05.10.2026: «свиток в инвентаре выглядит 
 | `mon/merchant-bookseller.png` | `player/base/human_m.png`, `player/legs/pants_brown.png`, `player/boots/short_brown2.png`, `player/body/robe_brown.png`, `player/hair/djinn2.png`, `player/hand2/misc/book_blue.png` | фигура из слоёв героя — книжник |
 | `mon/merchant-supplier.png` | `player/base/human_m.png`, `player/legs/pants_short_brown3.png`, `player/boots/middle_ybrown.png`, `player/body/green_susp.png`, `player/hair/sam.png`, `player/head/bandana_ybrown.png`, `player/hand1/misc/box.png` | фигура из слоёв героя — снабженец города |
 | `mon/city-guide.png` | `player/base/human_m.png`, `player/legs/pants_blue.png`, `player/boots/middle_brown.png`, `player/body/coat_red.png`, `player/hair/brown2.png`, `player/head/cap_blue.png`, `player/hand1/misc/lantern.png` | фигура из слоёв героя — проводник города (Иван: № 1 листа 19, фонарь вместо рога) |
+
+## Каменные статуи-существа (14.10.2026)
+
+Собраны скриптом `tools/atlas/derive-statues.py` из цветных картинок существ библиотеки (CC0):
+яркость разложена по пяти ступеням камня декоративных статуй (`dngn/statues/statue_*.png`),
+цвета нет, форма и прозрачность не тронуты. Это серый вид «спящей» статуи — повадка «Статуи оживают».
+
+| file | from | как |
+| --- | --- | --- |
+| `mon/statue-stone-guardian-golem.png` | `mon/nonliving/guardian_golem.png` | серый камень по ступеням декоративных статуй — голем-страж спит |
+| `mon/statue-stone-ushabti.png` | `mon/nonliving/ushabti.png` | серый камень — ушебти спит |
+| `mon/statue-stone-crystal-statue.png` | `mon/statues/orange_crystal_statue.png` | серый камень — кристальная статуя спит |
+| `mon/statue-stone-zot-statue.png` | `mon/vault/zot_statue.png` | серый камень — статуя Зота спит |
+
+## Летучая мышь вампира (14.10.2026)
+
+Собрана скриптом `tools/atlas/derive-vampire-bat.py` из бурой летучей мыши библиотеки (CC0): бурые тона
+перекрашены в фиолетово-синие цвета плаща вампира, глаза красные, форма и прозрачность не тронуты. Нужна,
+чтобы вампира в облике мыши не принимали за обычного зверя — повадка «Вампир и летучая мышь».
+
+| file | from | как |
+| --- | --- | --- |
+| `mon/vampire-bat.png` | `mon/animals/bat.png` | бурое → фиолетово-синее тех же светов, глаза — красные |
+
+## Печати Стража глубин (15.10.2026)
+
+Собраны скриптом `tools/atlas/derive-seals.py` из плиток знаков библиотеки (`dngn/floor/sigil_*.png`, CC0): жёлтые линии
+вырезаны с красного камня (две ступени), перекрашены под стихию и окружены тёмным контуром, чтобы ложиться на любой пол.
+Форма огня и грозы — сложение линий знаков, вода — две кольцевые ряби в той же двухступенчатой линии. У каждой стихии
+два кадра — обычный и «заряженный» (светлее). Нужны повадке «Страж глубин» (`tools/dcss-rpg-seals.js`).
+
+| file | from | как |
+| --- | --- | --- |
+| `dngn/seals/seal-fire-1.png`, `seal-fire-2.png` | `dngn/floor/sigil_rhombus.png`, `sigil_circle.png` | ромб с кругом, красно-оранжевый |
+| `dngn/seals/seal-storm-1.png`, `seal-storm-2.png` | `dngn/floor/sigil_cross.png`, `sigil_straight_NE_SW.png`, `sigil_straight_NW_SE.png` | звезда из креста и диагоналей, жёлто-белая |
+| `dngn/seals/seal-water-1.png`, `seal-water-2.png` | — (нарисованы кодом в стиле знаков) | две кольцевые ряби, синие |
+
+## Шипы арены босса (15.10.2026)
+
+Нарисованы кодом (пикселями, в тех же ступенях света и тени, что плитки DCSS: светлый левый бок, тёмный правый, чёрный контур)
+скриптом `tools/atlas/spikes-sheet.py`, в игру по одной на место кладёт `tools/atlas/derive-spikes.py`. Форма — от духа места
+(железные шипы, колья, клыки, кристаллы, деревянная засека, обсидиан, ржавые шипы, плита, терновник), краска — от его цвета;
+выбор Ивана — «мне шипы все нравятся — давай по цвету под разные типы локаций свои сделаем» (09.10.2026). Картинок библиотеки
+в них нет: в наборе DCSS шипов в полу не было, а плитки ловушек заняты настоящими ловушками (одна картинка — один смысл).
+Плита с шипами на арене всегда выдвинута. Нужны арене босса (`tools/dcss-rpg-boss-arena.js`).
+
+| file | from | как |
+| --- | --- | --- |
+| `dngn/spikes/<место>.png` (38 мест, список — `SPIKE_PLACE_IDS`) | — (нарисованы кодом) | клетка 32×32, прозрачный фон; форма и краска — таблица `ПО_МЕСТАМ` в `spikes-sheet.py` |
