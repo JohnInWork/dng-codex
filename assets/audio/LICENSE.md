@@ -1,7 +1,7 @@
 # Audio samples / Аудио-сэмплы
 
 Every file in this directory is released under CC0 1.0 (public-domain
-dedication): recorded samples converted to mono 44.1 kHz MP3, peak-normalised
+dedication), except the place music in `music/p-*.mp3`, which has its own section with each license and author: recorded samples converted to mono 44.1 kHz MP3, peak-normalised
 to −3 dBFS and, where noted, trimmed or mixed, plus the project's own crafted
 effects listed in the last section. No attribution is required; the authors
 are credited here out of courtesy. Freesound files were taken from the site's
@@ -322,3 +322,85 @@ CC0 1.0 as the project's own work.
 
 Синтез проекта (`tools/audio/synth_voice.py`), CC0 1.0. Идут по кругу, пока в
 диалоге набирается строка (`tools/dcss-rpg-speech.js`).
+
+## Музыка мест и боя / Place and boss music (17.10.2026)
+
+Чем звучит каждое место и бой со стражем — выбор Ивана. Все треки с OpenGameArt; сжаты в моно MP3 64 кбит/с, громкость
+выровнена к −18 LUFS, треки длиннее 6 минут обрезаны с затуханием (adaptations permitted by CC-BY / OGA-BY / CC0).
+Where a page offered several licenses, the commercial-friendly one is used (CC0, CC-BY or OGA-BY).
+
+- `music/p-forgoten-tomb-ambience.mp3` — «Forgoten tomb ambience», kindland. License: CC0. <https://opengameart.org/content/forgoten-tomb-ambience>
+- `music/p-narrow-corridors.mp3` — «Narrow Corridors», TinyWorlds. License: CC0. <https://opengameart.org/content/narrow-corridors>
+- `music/p-desert-caverns.mp3` — «Desert Caverns», Fantasy_Origins. License: CC-BY 3.0 (credit: Fantasy_Origins). <https://opengameart.org/content/desert-caverns>
+- `music/p-egyptian-meditation-music.mp3` — «Egyptian meditation music», brandon75689 (HaelDB). License: OGA-BY 3.0 and CC0. <https://opengameart.org/content/egyptian-meditation-music>
+- `music/p-icy-heights.mp3` — «Icy Heights», Ecrivain. License: CC0. <https://opengameart.org/content/icy-heights>
+- `music/p-cold-sanctuary-rpg-orchestral-essentials.mp3` — «"Cold Sanctuary" (RPG Orchestral Essentials) - Dungeon Music», InspectorJ (Jonathan Shaw). License: CC-BY 3.0 (credit: Jonathan Shaw / InspectorJ). <https://opengameart.org/content/cold-sanctuary-rpg-orchestral-essentials-dungeon-music>
+- `music/p-crystal-caverns-shimmer-refraction-gem-g.mp3` — «Crystal Caverns (shimmer / refraction / gem / geode / flawed, each + _loop)», Tsorthan Grove. License: CC-BY 4.0 (credit: Tsorthan Grove). <https://opengameart.org/content/crystal-caverns>
+- `music/p-crystal-cave-mysterious-ambience-seamles.mp3` — «Crystal Cave + Mysterious Ambience (seamless loop)», cynicmusic (joined by congusbongus). License: CC-BY 3.0 chosen from CC-BY 3.0 / CC-BY-SA 3.0 / GPL 3.0 (credit: cynicmusic). <https://opengameart.org/content/crystal-cave-mysterious-ambience-seamless-loop>
+- `music/p-water-temple.mp3` — «Water Temple», el-corleo (Eliot Corley). License: CC-BY 3.0. <https://opengameart.org/content/water-temple>
+- `music/p-village-ruins.mp3` — «Village Ruins», isaiah658. License: CC0. <https://opengameart.org/content/village-ruins>
+- `music/p-into-the-ruined-temple.mp3` — «Into the Ruined Temple», SterlingRay. License: CC0. <https://opengameart.org/content/into-the-ruined-temple>
+- `music/p-cave-theme.mp3` — «Cave Theme», Brandon75689 (submitted by HaelDB). License: OGA-BY 3.0 and CC0. <https://opengameart.org/content/cave-theme>
+- `music/p-dark-cavern-ambient.mp3` — «Dark Cavern Ambient», Paul Wortmann. License: CC0. <https://opengameart.org/content/dark-cavern-ambient>
+- `music/p-drums-in-the-deepwood-what-broods-under.mp3` — «Drums in the Deepwood - What Broods Under Deepening Cloudmurk», Elyvilon. License: CC-BY 4.0. <https://opengameart.org/content/dark-forest-tribal-troll-folk-shamanic-music-drums-in-the-deepwood>
+- `music/p-arcane-predators.mp3` — «Arcane Predators», NorthFantasyMusic. License: CC-BY 4.0 (credit: NorthFantasyMusic). <https://opengameart.org/content/arcane-predators>
+- `music/p-drums-in-the-deepwood-drums-in-the-deepw.mp3` — «Drums in the Deepwood - Drums in the Deepwood (title track)», Elyvilon. License: CC-BY 4.0. <https://opengameart.org/content/dark-forest-tribal-troll-folk-shamanic-music-drums-in-the-deepwood>
+- `music/p-wasteland-showdown-battle-music.mp3` — «Wasteland Showdown [Battle Music]», Matthew Pablo. License: CC-BY 3.0 (credit: Matthew Pablo). <https://opengameart.org/content/wasteland-showdown-battle-music>
+- `music/p-deep-humidity.mp3` — «Deep Humidity», TinyWorlds. License: CC0. <https://opengameart.org/content/deep-humidity>
+- `music/p-dungeon-ambience.mp3` — «Dungeon Ambience», yd. License: CC0. <https://opengameart.org/content/dungeon-ambience>
+- `music/p-underwater-theme-ii.mp3` — «Underwater Theme II», CleytonKauffman. License: CC0 (a comment says a readme in the zip once listed another license; page says CC0 - re-check the zip readme). <https://opengameart.org/content/underwater-theme-ii>
+- `music/p-sinking-island.mp3` — «Sinking Island», Gundatsch. License: CC-BY 3.0 / OGA-BY 3.0. <https://opengameart.org/content/sinking-island>
+- `music/p-autumn-forest.mp3` — «Autumn Forest», VocalMix. License: OGA-BY 3.0. <https://opengameart.org/content/autumn-forest>
+- `music/p-swamp-theme-loop.mp3` — «Swamp Theme Loop», beardalaxy. License: CC0. <https://opengameart.org/content/swamp-theme-loop>
+- `music/p-the-swamps.mp3` — «The Swamps», fluffclipse. License: CC-BY 3.0 (credit: fluffclipse). <https://opengameart.org/content/the-swamps>
+- `music/p-meadow-thoughts.mp3` — «Meadow Thoughts», Ecrivain. License: CC0. <https://opengameart.org/content/meadow-thoughts>
+- `music/p-restful-meadow.mp3` — «Restful Meadow», Tozan. License: CC0. <https://opengameart.org/content/restful-meadow>
+- `music/p-meloncholy-town.mp3` — «Meloncholy Town», VWolfdog. License: CC-BY 3.0 (credit: VWolfdog). <https://opengameart.org/content/meloncholy-town>
+- `music/p-looted-village.mp3` — «Looted Village», Bobjt. License: CC0. <https://opengameart.org/content/looted-village>
+- `music/p-desert-theme.mp3` — «Desert theme», yd. License: CC0. <https://opengameart.org/content/desert-theme>
+- `music/p-the-desert-of-dreams.mp3` — «The Desert of Dreams», Insydnis. License: CC-BY 3.0 (credit: Insydnis). <https://opengameart.org/content/the-desert-of-dreams>
+- `music/p-sunset-plains.mp3` — «Sunset Plains», Yoiyami. License: CC0 per page. <https://opengameart.org/content/sunset-plains>
+- `music/p-mists-in-the-elven-lands.mp3` — «Mists in the Elven Lands», The Oracle (description says Kaiser). License: CC0. <https://opengameart.org/content/mists-in-the-elven-lands> — trimmed to 6 min
+- `music/p-auf-gruenen-wiesen.mp3` — «Auf Gruenen Wiesen», The Oracle (description says Kaiser). License: CC0. <https://opengameart.org/content/auf-gr%C3%BCnen-wiesen> — trimmed to 6 min
+- `music/p-woodland-fantasy.mp3` — «Woodland Fantasy», Matthew Pablo. License: CC-BY 3.0 (credit: Matthew Pablo). <https://opengameart.org/content/woodland-fantasy>
+- `music/p-winter-wind.mp3` — «Winter Wind», wipics. License: CC0. <https://opengameart.org/content/winter-wind>
+- `music/p-frost-in-the-northern-winter.mp3` — «Frost in the Northern Winter», The Oracle (description says Kaiser). License: CC0. <https://opengameart.org/content/frost-in-the-northern-winter>
+- `music/p-dark-woods-loop.mp3` — «Dark Woods Loop», beardalaxy. License: CC0. <https://opengameart.org/content/dark-woods-loop>
+- `music/p-dark-forest-theme.mp3` — «Dark Forest Theme», cynicmusic. License: CC0. <https://opengameart.org/content/dark-forest-theme>
+- `music/p-rat-sewer.mp3` — «Rat Sewer», HaelDB. License: OGA-BY 3.0 and CC0. <https://opengameart.org/content/rat-sewer>
+- `music/p-the-monster-factory-looping.mp3` — «The Monster Factory (Looping)», Eric Matyas. License: CC-BY 3.0 (credit: Eric Matyas, soundimage.org). <https://opengameart.org/content/the-monster-factory-looping>
+- `music/p-the-workshop.mp3` — «The Workshop», croolbitstudios. License: CC-BY 4.0. <https://opengameart.org/content/the-workshop>
+- `music/p-victoriana-loop.mp3` — «Victoriana Loop», BossLevelVGM (Joe Baxter-Webb). License: CC-BY 3.0 (credit: Joe Baxter-Webb / BossLevel VGM). <https://opengameart.org/content/victoriana-loop>
+- `music/p-the-mad-scientist.mp3` — «the Mad Scientist», BossLevelVGM (Joe Baxter-Webb). License: CC-BY 3.0. <https://opengameart.org/content/the-mad-scientist>
+- `music/p-artifact-room.mp3` — «Artifact Room», Fupi. License: CC0. <https://opengameart.org/content/artifact-room>
+- `music/p-soft-mysterious-harp-loop.mp3` — «Soft Mysterious Harp Loop», VWolfdog. License: CC-BY 3.0. <https://opengameart.org/content/soft-mysterious-harp-loop>
+- `music/p-bumblebee-loop.mp3` — «Bumblebee loop», jobromedia (Johan Brodd; original Rimsky-Korsakov, public domain). License: multi-license incl. CC0 and CC-BY 3.0 (page lists CC-BY 3.0, CC-BY-SA 3.0, GPL 3.0, GPL 2.0, CC0). <https://opengameart.org/content/bumblebee-loop>
+- `music/p-lumbee-heights.mp3` — «Lumbee Heights», Spring Spring. License: OGA-BY 3.0 and CC0. <https://opengameart.org/content/lumbee-heights>
+- `music/p-echoes-of-the-past.mp3` — «Echoes of the Past», isaiah658. License: CC0. <https://opengameart.org/content/echoes-of-the-past>
+- `music/p-mystical-enigmatic-background-music.mp3` — «Mystical Enigmatic Background Music», CleytonKauffman. License: CC0. <https://opengameart.org/content/mystical-enigmatic-background-music>
+- `music/p-ancient-apparitions.mp3` — «Ancient Apparitions», marcelofg55 (Marcelo Fernandez). License: CC-BY 3.0. <https://opengameart.org/content/ancient-apparitions>
+- `music/p-dark-intro.mp3` — «Dark Intro», Nikke. License: CC0. <https://opengameart.org/content/dark-intro>
+- `music/p-horror-atmosphere.mp3` — «Horror Atmosphere», SubspaceAudio (Juhani Junkala). License: CC0. <https://opengameart.org/content/horror-atmosphere>
+- `music/p-reflections-upon-the-black-mirror.mp3` — «Reflections Upon the Black Mirror», Hitctrl. License: CC-BY 3.0. <https://opengameart.org/content/reflections-upon-the-black-mirror>
+- `music/p-death-is-just-another-path.mp3` — «Death Is Just Another Path», Otto Halmen. License: CC-BY 3.0 and OGA-BY 3.0. <https://opengameart.org/content/death-is-just-another-path>
+- `music/p-solemn-march.mp3` — «Solemn March», Yubatake. License: CC-BY 4.0. <https://opengameart.org/content/solemn-march>
+- `music/p-moonlit-lullaby-for-the-lost.mp3` — «Moonlit Lullaby for the Lost», Tsorthan Grove. License: CC0. <https://opengameart.org/content/moonlit-lullaby-for-the-lost>
+- `music/p-haunted-graveyard.mp3` — «Haunted Graveyard», tamesu. License: CC0. <https://opengameart.org/content/haunted-graveyard>
+- `music/p-relics-of-past.mp3` — «Relics of Past», Centurion_of_war. License: CC0. <https://opengameart.org/content/relics-of-past>
+- `music/p-dark-shrine-loop.mp3` — «Dark Shrine Loop», qubodup / yd. License: CC0. <https://opengameart.org/content/dark-shrine-loop>
+- `music/p-desert-mystic-dynastic-egyptian-theme.mp3` — «Desert_mystic (dynastic Egyptian theme)», PolygonDan. License: CC0. <https://opengameart.org/content/desertmystic-dynastic-egyptian-theme-cc0>
+- `music/p-menacing-otherworld.mp3` — «Menacing Otherworld», Ruskerdax. License: CC0. <https://opengameart.org/content/menacing-otherworld>
+- `music/p-tower-of-lava.mp3` — «Tower of Lava», Mega Pixel Music Lab. License: CC-BY 4.0 / CC-BY 3.0 (also SA options). <https://opengameart.org/content/tower-of-lava> — trimmed to 6 min
+- `music/p-dark-ambiance-cries-from-hell.mp3` — «Dark Ambiance | Cries From Hell», jalastram (Jesus Lastra). License: CC-BY 3.0. <https://opengameart.org/content/dark-ambiance-cries-from-hell> — trimmed to 6 min
+- `music/p-ambient-horror-track-01.mp3` — «Ambient Horror Track 01», CleytonKauffman. License: CC0. <https://opengameart.org/content/ambient-horror-track-01>
+- `music/p-lava-area-theme.mp3` — «Lava Area Theme», Wolfgang_. License: CC-BY 4.0. <https://opengameart.org/content/lava-area-theme>
+- `music/p-evil-temple-ambiance-loop.mp3` — «Evil temple Ambiance loop», Brandon Morris (via HaelDB). License: OGA-BY 3.0 and CC0. <https://opengameart.org/content/evil-temple-ambiance-loop>
+- `music/p-irradiated-skies.mp3` — «Irradiated Skies», Tsorthan Grove. License: CC-BY 4.0. <https://opengameart.org/content/irradiated-skies>
+- `music/p-wastelands.mp3` — «Wastelands», Tsorthan Grove. License: CC-BY 4.0. <https://opengameart.org/content/wastelands>
+- `music/p-boss-battle-music.mp3` — «Boss Battle Music», SubspaceAudio (Juhani Junkala). License: CC0. <https://opengameart.org/content/boss-battle-music>
+- `music/p-a-slave-to-no-one-boss-music.mp3` — «"A Slave To No One" - Boss Music», InspectorJ (Jonathan Shaw). License: CC-BY 3.0 (credit: Jonathan Shaw). <https://opengameart.org/content/a-slave-to-no-one-rpg-orchestral-essentials-boss-music>
+- `music/p-the-dark-amulet-dark-mage-theme.mp3` — «The Dark Amulet - Dark Mage Theme», Matthew Pablo. License: CC-BY 3.0 (credit: Matthew Pablo). <https://opengameart.org/content/the-dark-amulet-dark-mage-theme>
+- `music/p-boss-battle-9-metal.mp3` — «Boss Battle #9 [Metal]», nene. License: CC0. <https://opengameart.org/content/boss-battle-9-metal>
+- `music/p-boss-battle-2-symphonic-metal.mp3` — «Boss Battle #2 [Symphonic Metal]», nene. License: CC0. <https://opengameart.org/content/boss-battle-2-symphonic-metal>
+- `music/p-determined-pursuit-epic-orchestra-loop.mp3` — «Determined Pursuit (epic orchestra loop)», Emma_MA. License: CC0. <https://opengameart.org/content/determined-pursuit-epic-orchestra-loop>
+- `music/p-colossal-boss-battle-theme.mp3` — «Colossal Boss Battle Theme», Matthew Pablo. License: CC-BY 3.0 (credit: Matthew Pablo). <https://opengameart.org/content/colossal-boss-battle-theme>
