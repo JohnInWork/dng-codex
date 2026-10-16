@@ -67,6 +67,12 @@ repainted white and lost its bread.
 | `icon/potion-wildfire.png` | `item/potion/i-berserk-rage.png` | зелье пламени (вредное, v49) |
 | `icon/potion-winter.png` | `item/potion/i-slowing.png` | зелье стужи (вредное, v49) |
 | `icon/potion-wasting.png` | `item/potion/i-decay.png` | зелье голода (вредное, v49) |
+| `icon/potion-boon-strength.png` | `item/potion/i-gain-strength.png` | зелье силы (v52) |
+| `icon/potion-boon-agility.png` | `item/potion/i-gain-dexterity.png` | зелье ловкости (v52) |
+| `icon/potion-boon-intelligence.png` | `item/potion/i-gain-intelligence.png` | зелье ума (v52) |
+| `icon/potion-bane-strength.png` | `item/potion/i-degeneration.png` | зелье слабости (вредное, v52) |
+| `icon/potion-bane-agility.png` | `item/potion/i-paralysis.png` | зелье неуклюжести (вредное, v52) |
+| `icon/potion-bane-intelligence.png` | `item/potion/i-confusion.png` | зелье тупости (вредное, v52) |
 | `icon/ring-r-cold.png` | `item/ring/i-r-cold.png` | заклинание «Ледяной доспех» (с 04.10.2026 — «Ледяное благословение») |
 | `icon/ring-magical-power.png` | `item/ring/i-magical-power.png` | заклинание «Грозовая вспышка» (до 04.10.2026) |
 
