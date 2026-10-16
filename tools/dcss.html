@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-DmZE9qNY.js"></script>
+    <script type="module" crossorigin src="../assets/game-D9rQ58iN.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-CJOyrdcw.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-DIwqeAct.css">
+    <link rel="stylesheet" crossorigin href="../assets/game-QtTPeCS9.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -65,7 +65,7 @@
           <div class="main-menu-actions">
             <p id="main-menu-state" class="main-menu-state" hidden>ПАУЗА</p>
             <!-- Одна главная кнопка: «Играть» открывает слоты, на паузе — «Продолжить». -->
-            <button id="start-game" class="start-game" type="button" disabled>
+            <button id="start-game" class="start-game" type="button" data-pad-default disabled>
               <i class="ui-icon" data-icon="stairs" aria-hidden="true"></i>
               <b id="start-game-label">Играть</b>
               <small id="start-game-detail"></small>
@@ -1190,6 +1190,17 @@
               <button id="joystick-toggle" class="joystick-toggle" type="button" role="switch" aria-checked="true" aria-label="Показывать джойстик">
                 <i class="joystick-check" aria-hidden="true"></i>
                 <span id="joystick-label">Показывать</span>
+              </button>
+            </section>
+            <!--
+              Полный экран (16.10.2026, ПК и Steam): там, где окно это умеет — компьютер, Android, оболочка для Steam.
+              На iPhone страница на весь экран не встаёт, и блока нет (`hidden`).
+            -->
+            <section id="settings-fullscreen-block" class="settings-block settings-fullscreen-block" aria-labelledby="settings-fullscreen-title" hidden>
+              <h3 id="settings-fullscreen-title">Экран</h3>
+              <button id="fullscreen-toggle" class="joystick-toggle fullscreen-toggle" type="button" role="switch" aria-checked="false" aria-label="Полный экран">
+                <i class="joystick-check" aria-hidden="true"></i>
+                <span id="fullscreen-label">Полный экран</span>
               </button>
             </section>
             <section class="settings-block" aria-labelledby="settings-transfer-title">
