@@ -274,6 +274,9 @@ CC0 1.0 as the project's own work.
 `sfx/ambient-gust.mp3`, `sfx/ambient-rumble.mp3`, `sfx/ambient-drip.mp3`,
 `sfx/kraken-splash.mp3`, `sfx/kraken-lash.mp3`.
 
+Двери мест, 18.10.2026 (чистый синтез, CC0, работа проекта): `sfx/door-stone.mp3`, `sfx/door-metal.mp3`,
+`sfx/door-flesh.mp3`.
+
 Повадки существ и боссов, 14.10.2026: у каждого из этих звуков два варианта, `sfx/<id>-1.mp3` и `sfx/<id>-2.mp3` (игра берёт
 случайный). Все эти файлы — чистый синтез без записей, кроме трёх, что названы в списке ниже:
 слизни `sfx/split-burst-1.mp3`, `sfx/split-burst-2.mp3`; статуи `sfx/statue-rumble-1.mp3`, `sfx/statue-rumble-2.mp3`,
