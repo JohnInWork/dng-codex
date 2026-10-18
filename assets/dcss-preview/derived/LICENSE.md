@@ -672,3 +672,10 @@ v32; Иван 05.10.2026: «свиток в инвентаре выглядит 
 | `ui/shop/wall.png`, `ui/shop/counter.png` | — (нарисованы кодом) | 128×96, палитра портрета |
 | `ui/shop/flame-1.png`, `flame-2.png`, `light.png` | — (нарисованы кодом) | пламя 7×9, свет 48×48 |
 | `ui/shop/eyes.png` | `tools/atlas/source/opengameart-shopkeeper.png` | только пиксели глаз, цвет угля |
+
+## `item-hd/` — подробные значки вместо значков с куклы (18.10.2026)
+
+Значки предметов библиотеки DCSS (`item/armour/…`, `item/weapon/…`, CC0), перекрашенные
+градиентной картой в цвета прежнего значка `item/<слот>/<имя>.png` того же имени
+(`tools/atlas/derive-hd-icons.py`, выбор — `tools/atlas/source/hd-icons.json`).
+Исходники те же, что у остальной библиотеки: CC0.
