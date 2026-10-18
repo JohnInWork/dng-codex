@@ -2,7 +2,7 @@ const APP_ROOT = new URL('./', self.location.href);
 const CACHE_PREFIX = `dng-codex-static:${APP_ROOT.pathname}:`;
 // Имя кэша — хеш сборки (`scripts/stamp-service-worker.mjs`): новая выкладка —
 // новое имя, и прежний кэш с устаревшими картинками стирается сам.
-const CACHE = `${CACHE_PREFIX}992de94865be`;
+const CACHE = `${CACHE_PREFIX}a34c0e8eaefb`;
 const inScope = url => url.origin === APP_ROOT.origin && url.pathname.startsWith(APP_ROOT.pathname);
 self.addEventListener('install', event => {
   const shell = ['./', 'icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'manifest.webmanifest', 'manifest.en.webmanifest'].map(path => new URL(path, APP_ROOT).href);
@@ -18,6 +18,10 @@ self.addEventListener('message', event => {
 self.addEventListener('fetch', event => {
   const request = event.request;
   if (request.method !== 'GET' || !inScope(new URL(request.url))) return;
+  // Музыка мест играет потоком (`<audio>`), и браузер просит её кусками (Range, ответ 206).
+  // Частичный ответ в кэш не кладётся — `cache.put` бросал, и трек не играл вовсе
+  // (18.10.2026, Иван: «новой музыки в игре не слышу»). Такие запросы идут мимо кэша.
+  if (request.headers.has('range')) return;
   event.respondWith((async () => {
     const cache = await caches.open(CACHE);
     // These are same-origin immutable game files. Vite's Vary: Origin must not
@@ -29,7 +33,7 @@ self.addEventListener('fetch', event => {
       const response = request.mode === 'navigate'
         ? await fetch(request.url, { cache: 'no-cache', credentials: 'same-origin' })
         : await fetch(request);
-      if (response.ok) await cache.put(request, response.clone());
+      if (response.status === 200) await cache.put(request, response.clone()).catch(() => {});
       return response;
     } catch (error) {
       // Без сети страница берётся своя, с любым `?…`: сперва точный адрес, затем
