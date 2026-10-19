@@ -390,6 +390,7 @@ repainted white and lost its bread.
 | `mon/wand_thorns.png` | `mon/fungi_plants/briar_patch.png` | темнее, с багровыми шипами: тернии жезла на 20 с, а не куст «Колючего леса» |
 | `dngn/lava/cooled_stone.png` | `derived/dngn/lava/lava_bed.png` | та же сетка трещин без жара — серо-бурая корка остывшего камня |
 | `dngn/bog/mangrove1.png` … `mangrove3.png` | `dngn/trees/mangrove1.png` … `mangrove3.png` | листва перекрашена в тёмную оливу и бронзу под пол болота (`tools/atlas/derive-bog-trees.py`) |
+| `dngn/floor/swamp0.png` … `swamp3.png` | `dngn/floor/swamp0.png` … `swamp3.png` | рамка по краю (тёмный и светлый ряд) заменена пикселями середины той же плитки — пол без склеек (`tools/atlas/derive-seamless-floors.py`) |
 
 Облики неизвестных жезлов берутся из библиотеки без правки:
 `item/wand/gem_plastic.png` («Витой жезл») и `item/rod/rod00.png` …
