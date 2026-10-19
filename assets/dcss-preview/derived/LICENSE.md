@@ -389,6 +389,7 @@ repainted white and lost its bread.
 | `mon/frog_form.png` | `mon/animals/giant_frog.png` | ядовито-салатовая с лиловой тенью: превращённый жезлом враг, а не ручная жаба |
 | `mon/wand_thorns.png` | `mon/fungi_plants/briar_patch.png` | темнее, с багровыми шипами: тернии жезла на 20 с, а не куст «Колючего леса» |
 | `dngn/lava/cooled_stone.png` | `derived/dngn/lava/lava_bed.png` | та же сетка трещин без жара — серо-бурая корка остывшего камня |
+| `dngn/bog/mangrove1.png` … `mangrove3.png` | `dngn/trees/mangrove1.png` … `mangrove3.png` | листва перекрашена в тёмную оливу и бронзу под пол болота (`tools/atlas/derive-bog-trees.py`) |
 
 Облики неизвестных жезлов берутся из библиотеки без правки:
 `item/wand/gem_plastic.png` («Витой жезл») и `item/rod/rod00.png` …
