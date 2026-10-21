@@ -279,6 +279,8 @@ CC0 1.0 as the project's own work.
 
 Малое здоровье, 19.10.2026 (чистый синтез, CC0, работа проекта): `sfx/heartbeat.mp3` — стук сердца.
 
+Метеор, 20.10.2026 (чистый синтез, CC0, работа проекта): `sfx/meteor-cast.mp3`, `sfx/meteor-fall.mp3`, `sfx/meteor-impact.mp3`; Ледяной осколок и Грозовая туча: `sfx/ice-shard-impact.mp3`, `sfx/ice-shard-fall.mp3`, `sfx/storm-cast.mp3`, `sfx/storm-strike.mp3`.
+
 Повадки существ и боссов, 14.10.2026: у каждого из этих звуков два варианта, `sfx/<id>-1.mp3` и `sfx/<id>-2.mp3` (игра берёт
 случайный). Все эти файлы — чистый синтез без записей, кроме трёх, что названы в списке ниже:
 слизни `sfx/split-burst-1.mp3`, `sfx/split-burst-2.mp3`; статуи `sfx/statue-rumble-1.mp3`, `sfx/statue-rumble-2.mp3`,
