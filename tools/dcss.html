@@ -18,9 +18,9 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-MCrsd8N3.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-DJwIcloA.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-CrBlgRmh.css">
+    <script type="module" crossorigin src="../assets/game-B369d--L.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-B0ShnGGK.js">
+    <link rel="stylesheet" crossorigin href="../assets/game--ubVuhlZ.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -73,7 +73,11 @@
             <!-- На паузе из этого ряда видны только «Настройки»; «Слоты» с паузы убраны (Иван 03.10.2026). -->
             <div class="main-menu-secondary">
               <button id="edit-appearance" type="button" disabled>
-                <img id="menu-appearance-icon" src="../assets/dcss-preview/player/base/human_m.png" alt="" />
+                <!-- Герой на кнопке — тело и прическа слоями, как в игре (Иван 21.10.2026: «прически не видно»). -->
+                <span class="menu-appearance-figure" aria-hidden="true">
+                  <img id="menu-appearance-icon" src="../assets/dcss-preview/player/base/human_m.png" alt="" />
+                  <img id="menu-appearance-hair" src="../assets/dcss-preview/player/base/human_m.png" alt="" hidden />
+                </span>
                 <b id="edit-appearance-label">Внешность</b>
               </button>
               <button id="open-outfit" type="button">
