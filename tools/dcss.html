@@ -18,9 +18,10 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="../assets/game-B0Rb0gaf.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-Xd7j6Ygw.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-DbwDe5of.css">
+    <!-- «Небесный свод» — новый облик поверх раскладки (23.10.2026). -->
+    <script type="module" crossorigin src="../assets/game-BwHhponO.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-CGnHhf9w.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-Cwm2uoAY.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -68,8 +69,9 @@
             <button id="start-game" class="start-game" type="button" data-pad-default disabled>
               <i class="ui-icon" data-icon="stairs" aria-hidden="true"></i>
               <b id="start-game-label">Играть</b>
-              <small id="start-game-detail"></small>
             </button>
+            <!-- Подпись героя («Уровень 24 · Большой лук · Этаж V») — под кнопкой, а не в ней (Иван 23.10.2026: «текст в кнопке некрасиво»). -->
+            <small id="start-game-detail" class="start-game-detail"></small>
             <!-- На паузе из этого ряда видны только «Настройки»; «Слоты» с паузы убраны (Иван 03.10.2026). -->
             <div class="main-menu-secondary">
               <button id="edit-appearance" type="button" disabled>
@@ -688,6 +690,8 @@
           <!-- Две вкладки одного окна (Иван 04.10.2026): «магию и навыки надо разделить». -->
           <div class="character-tabs" role="tablist" aria-label="Разделы окна героя">
             <button id="character-tab-hero" type="button" role="tab" aria-selected="true" aria-controls="character-sheet-body">Герой</button>
+            <!-- Навыки — созвездия во весь экран (23.10.2026): вкладка открывает небо. -->
+            <button id="character-tab-skills" type="button" role="tab" aria-selected="false">Навыки</button>
             <button id="character-tab-spells" type="button" role="tab" aria-selected="false" aria-controls="character-spells-page">Заклинания</button>
           </div>
 
@@ -726,9 +730,9 @@
                 <div id="character-skill-groups"></div>
                 <div id="character-skill-detail" class="character-skill-detail pixel-frame" hidden>
                   <strong id="character-skill-detail-name"></strong>
-                  <div id="character-skill-detail-branch" class="skill-branch" aria-hidden="true"></div>
                   <p id="character-skill-detail-text"></p>
-                  <ol id="character-skill-ladder" class="skill-ladder"></ol>
+                  <div id="character-skill-tree" class="skill-tree" role="group"></div>
+                  <p id="character-skill-node" class="skill-tree-node-detail"></p>
                   <small id="character-skill-detail-next"></small>
                   <small id="character-skill-detail-cost"></small>
                   <div class="character-skill-detail-actions">
@@ -769,6 +773,37 @@
             <button id="close-character-sheet" data-press-sound="close" type="button" aria-label="Закрыть характеристики">×</button>
           </footer>
         </article>
+      </section>
+
+      <!-- Созвездия навыков во весь экран (Иван 23.10.2026: «как в Скайриме»). -->
+      <section
+        id="skill-sky-screen"
+        class="skill-sky-screen"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="skill-sky-title"
+        aria-hidden="true"
+        inert
+      >
+        <canvas id="skill-sky-canvas" class="skill-sky-canvas" aria-hidden="true"></canvas>
+        <div id="skill-sky-labels" class="skill-sky-labels" role="group"></div>
+        <header class="skill-sky-head">
+          <button id="skill-sky-back" class="skill-sky-back" data-press-sound="close" type="button" aria-label="Назад">&lt;</button>
+          <div class="skill-sky-titles">
+            <h2 id="skill-sky-title">Навыки</h2>
+            <p id="skill-sky-subtitle"></p>
+          </div>
+          <output id="skill-sky-points" class="skill-sky-points"></output>
+        </header>
+        <button id="skill-sky-prev" class="skill-sky-arrow" data-side="prev" type="button" aria-label="Предыдущий навык">&lt;</button>
+        <button id="skill-sky-next" class="skill-sky-arrow" data-side="next" type="button" aria-label="Следующий навык">&gt;</button>
+        <footer id="skill-sky-panel" class="skill-sky-panel">
+          <b id="skill-sky-name"></b>
+          <span id="skill-sky-effect"></span>
+          <small id="skill-sky-need"></small>
+          <div id="skill-sky-slots" class="skill-sky-slots" role="group" hidden></div>
+          <button id="skill-sky-learn" class="skill-sky-learn primary" type="button"></button>
+        </footer>
       </section>
 
       <section
