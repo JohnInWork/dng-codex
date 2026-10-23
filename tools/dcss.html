@@ -19,9 +19,9 @@
       crossorigin
     />
     <!-- «Небесный свод» — новый облик поверх раскладки (23.10.2026). -->
-    <script type="module" crossorigin src="../assets/game-BwHhponO.js"></script>
+    <script type="module" crossorigin src="../assets/game-Rgp_97NA.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-CGnHhf9w.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-Cwm2uoAY.css">
+    <link rel="stylesheet" crossorigin href="../assets/game-3JYNIJYG.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -688,13 +688,6 @@
           </header>
 
           <!-- Две вкладки одного окна (Иван 04.10.2026): «магию и навыки надо разделить». -->
-          <div class="character-tabs" role="tablist" aria-label="Разделы окна героя">
-            <button id="character-tab-hero" type="button" role="tab" aria-selected="true" aria-controls="character-sheet-body">Герой</button>
-            <!-- Навыки — созвездия во весь экран (23.10.2026): вкладка открывает небо. -->
-            <button id="character-tab-skills" type="button" role="tab" aria-selected="false">Навыки</button>
-            <button id="character-tab-spells" type="button" role="tab" aria-selected="false" aria-controls="character-spells-page">Заклинания</button>
-          </div>
-
           <div id="character-sheet-body" class="character-sheet-body" role="tabpanel" aria-labelledby="character-tab-hero">
             <section class="character-identity" aria-label="Развитие героя">
               <canvas id="character-paperdoll" width="192" height="224" aria-label="Герой в экипировке"></canvas>
@@ -774,6 +767,18 @@
           </footer>
         </article>
       </section>
+
+      <!--
+        Вкладки героя — одна строка на всех его окнах: лист героя, небо навыков, небо магии, рюкзак (Иван 23.10.2026:
+        «переключатели оставим на каждой из страничек и добавим инвентарь последним»). Видна, пока открыто одно из них.
+      -->
+      <nav id="hero-tabs" class="character-tabs hero-tabs" role="tablist" aria-label="Разделы окна героя">
+        <button id="character-tab-hero" type="button" role="tab" aria-selected="true" aria-controls="character-sheet-body">Герой</button>
+        <!-- Навыки — созвездия во весь экран (23.10.2026): вкладка открывает небо. -->
+        <button id="character-tab-skills" type="button" role="tab" aria-selected="false">Навыки</button>
+        <button id="character-tab-spells" type="button" role="tab" aria-selected="false" aria-controls="character-spells-page">Заклинания</button>
+        <button id="character-tab-inventory" type="button" role="tab" aria-selected="false">Рюкзак</button>
+      </nav>
 
       <!-- Созвездия навыков во весь экран (Иван 23.10.2026: «как в Скайриме»). -->
       <section
@@ -1332,7 +1337,7 @@
           <section class="outfit-scene" aria-label="Торговец">
             <div class="outfit-stage-box">
             <div class="outfit-stage" aria-hidden="true">
-              <img class="shop-wall" src="../assets/dcss-preview/derived/ui/shop/wall.png" alt="" />
+              <img class="shop-wall" src="../assets/dcss-preview/derived/ui/shop/wall-open.png" alt="" />
               <div class="shop-motes"><i style="--x:14%;--y:70%;--d:0s;--t:7s"></i><i style="--x:22%;--y:58%;--d:1.6s;--t:8s"></i><i style="--x:30%;--y:66%;--d:3.1s;--t:6.5s"></i><i style="--x:9%;--y:52%;--d:4.4s;--t:9s"></i><i style="--x:40%;--y:72%;--d:2.2s;--t:7.5s"></i><i style="--x:64%;--y:40%;--d:0.8s;--t:10s"></i><i style="--x:78%;--y:62%;--d:3.7s;--t:8.5s"></i><i style="--x:88%;--y:48%;--d:5.2s;--t:9.5s"></i></div>
               <img class="shop-keeper" src="../assets/dcss-preview/licensed/opengameart-shopkeeper/keeper.png" alt="" />
               <span class="shop-keeper-shine"><img src="../assets/dcss-preview/derived/ui/shop/keeper-shine.png" alt="" /></span>
