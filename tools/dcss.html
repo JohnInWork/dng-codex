@@ -19,9 +19,9 @@
       crossorigin
     />
     <!-- «Небесный свод» — новый облик поверх раскладки (23.10.2026). -->
-    <script type="module" crossorigin src="../assets/game-DM3a7UI1.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-CGnHhf9w.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-C2mqhbx8.css">
+    <script type="module" crossorigin src="../assets/game-DNyEHXVk.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-Ccf6eumt.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-lQD3nYqw.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -33,7 +33,7 @@
       </div>
       <canvas
         id="scene"
-        aria-label="Подземелье. Выбери открытый пол, чтобы переместить героя."
+        aria-label="Подземелье"
       ></canvas>
       <canvas id="void-sky" aria-hidden="true"></canvas>
 
@@ -155,7 +155,7 @@
             </section>
           </div>
           <footer class="appearance-actions">
-            <button id="close-appearance" data-press-sound="close" class="secondary" type="button" aria-label="Закрыть редактор">×</button>
+            <button id="close-appearance" data-press-sound="close" class="secondary" type="button" aria-label="Закрыть">×</button>
             <button id="save-appearance" type="button">Готово</button>
           </footer>
         </article>
@@ -181,7 +181,7 @@
         <article class="character-creation-card pixel-frame">
           <header>
             <h2 id="character-creation-title">Кем выйти</h2>
-            <p id="character-creation-hint">Возьми готового героя или собери своего.</p>
+            <p id="character-creation-hint">Готовый герой или свой.</p>
           </header>
           <div class="creation-archetypes" id="creation-archetypes"></div>
           <button id="creation-open-custom" class="creation-own" type="button">
@@ -340,7 +340,7 @@
           id="character-sheet-button"
           class="character-sheet-button tappable"
           type="button"
-          aria-label="Открыть характеристики персонажа"
+          aria-label="Характеристики"
           disabled
         >
           <img id="character-sheet-face" alt="" src="../assets/dcss-preview/player/base/human_m.png" />
@@ -370,6 +370,10 @@
         <img src="../assets/dcss-preview/dngn/gateways/portal.png" alt="" />
       </button>
 
+      <!-- Скорость игры ×1/×2 (Иван 24.10.2026: «в одиночку — кнопка x2, чтобы быстрее; ещё раз — x1»). В кооперативе скрыта. -->
+      <!-- Счётчик кадров (Иван 24.10.2026: «поставь счётчик FPS»): кадры в секунду и чем рисует браузер. -->
+      <output id="fps-meter" class="fps-meter" aria-hidden="true"></output>
+      <button id="game-speed" class="game-speed pixel-frame tappable" type="button" aria-label="Скорость игры: обычная" aria-pressed="false">×1</button>
       <button id="pause-game" class="pause-game pixel-frame tappable" type="button" aria-label="Пауза" disabled>
         <i class="ui-icon" data-icon="pause-button" aria-hidden="true"></i>
       </button>
@@ -379,7 +383,7 @@
         class="move-control pixel-frame"
         data-press-sound="none"
         role="group"
-        aria-label="Движение: нажми стрелку, удерживай её или потяни центр"
+        aria-label="Движение"
         data-active="false"
         aria-hidden="true"
         inert
@@ -412,7 +416,7 @@
         бинт, своя ловушка (`dcss-rpg-action-slots.js`). Отдельной кнопки
         «под рукой» больше нет: Иван — «3 норм».
       -->
-      <nav id="spell-bar" class="spell-bar" aria-label="Панель: заклинания и вещи" aria-hidden="true" data-empty="true" inert>
+      <nav id="spell-bar" class="spell-bar" aria-label="Панель" aria-hidden="true" data-empty="true" inert>
         <button class="spell-action pixel-frame tappable" type="button" data-spell-slot="0" aria-label="Пустой слот" disabled>
           <img alt="" /><i></i><b>1</b><output></output>
         </button>
@@ -650,7 +654,7 @@
         <article class="floor-map-card pixel-frame">
           <header class="floor-map-header">
             <h2 id="floor-map-title">Карта этажа I</h2>
-            <p id="floor-map-hint">Тап по клетке: идти. Щипок или колесо: масштаб.</p>
+            <p id="floor-map-hint" hidden></p>
           </header>
           <canvas id="floor-map-canvas" class="floor-map-canvas" aria-label="Разведанная часть этажа"></canvas>
           <ul id="floor-map-legend" class="floor-map-legend" aria-label="Что значат значки" hidden></ul>
@@ -748,7 +752,7 @@
               <header>
                 <div>
                   <h3 id="character-spells-title">Заклинания</h3>
-                  <p id="character-spells-hint">Выбери слот, затем заклинание</p>
+                  <p id="character-spells-hint">Слот, затем заклинание</p>
                 </div>
                 <output id="character-spells-intelligence"><i class="ui-icon" data-icon="brain" aria-hidden="true"></i> 4</output>
               </header>
@@ -775,8 +779,11 @@
       <nav id="hero-tabs" class="character-tabs hero-tabs" role="tablist" aria-label="Разделы окна героя">
         <button id="character-tab-hero" type="button" role="tab" aria-selected="true" aria-controls="character-sheet-body">Герой</button>
         <!-- Навыки — созвездия во весь экран (23.10.2026): вкладка открывает небо. -->
-        <button id="character-tab-skills" type="button" role="tab" aria-selected="false">Навыки</button>
-        <button id="character-tab-spells" type="button" role="tab" aria-selected="false" aria-controls="character-spells-page">Заклинания</button>
+        <!-- «Древо» (24.10.2026): навыки и магия — одна карта; прежние вкладки «Навыки» и «Заклинания» — в ней. -->
+        <button id="character-tab-skills" type="button" role="tab" aria-selected="false">Древо</button>
+        <button id="character-tab-spells" type="button" role="tab" aria-selected="false" aria-controls="character-spells-page" hidden>Заклинания</button>
+        <!-- «Карта» (Иван 24.10.2026: «в верхнее меню добавим карту»): карта этажа одной из вкладок. -->
+        <button id="character-tab-map" type="button" role="tab" aria-selected="false">Карта</button>
         <button id="character-tab-inventory" type="button" role="tab" aria-selected="false">Рюкзак</button>
       </nav>
 
@@ -809,6 +816,33 @@
           <div id="skill-sky-slots" class="skill-sky-slots" role="group" hidden></div>
           <button id="skill-sky-learn" class="skill-sky-learn primary" type="button"></button>
         </footer>
+      </section>
+
+      <!--
+        Дерево магии (Иван 24.10.2026: образец — дерево кружков с карточкой; вариант «Б» — с уровнями). Слева школы:
+        кружок школы, её заклинания и под каждым три улучшения (уровни II–IV); справа карточка выбранного.
+        Раскладка — tools/dcss-rpg-hero-tree.js (единое древо, 24.10.2026), рисует renderMagic() в dcss.js.
+      -->
+      <!-- Единое древо героя (24.10.2026): характеристики, навыки и магия на одной карте; внизу — панель для перетаскивания. -->
+      <section id="magic-screen" class="magic-screen" role="dialog" aria-modal="true" aria-label="Древо героя" aria-hidden="true" inert>
+        <header class="magic-head">
+          <button id="magic-close" class="magic-close" data-press-sound="close" type="button" aria-label="Закрыть">&lt;</button>
+          <output id="magic-points" class="magic-points"></output>
+        </header>
+        <div class="magic-body">
+          <div id="magic-tree" class="magic-tree" role="group" aria-label="Древо героя"></div>
+          <aside id="magic-card" class="magic-card" aria-live="polite">
+            <div class="magic-card-pic"><img id="magic-card-icon" alt="" /><span id="magic-card-level"></span></div>
+            <h2 id="magic-card-name"></h2>
+            <p id="magic-card-text"></p>
+            <p id="magic-card-facts" class="magic-card-facts"></p>
+            <p id="magic-card-need" class="magic-card-need"></p>
+            <button id="magic-card-action" class="magic-card-action" type="button"></button>
+            <div id="magic-card-slots" class="magic-card-slots" role="group"></div>
+          </aside>
+        </div>
+        <nav id="magic-bar" class="magic-bar" aria-label="Панель"></nav>
+        <img id="magic-drag" class="magic-drag" alt="" hidden />
       </section>
 
       <section
@@ -847,17 +881,20 @@
             «+5 мин», и без текущих чисел это обещание не с чем сравнить.
           -->
           <div id="inventory-vitals" class="inventory-vitals" role="group" aria-label="Состояние героя">
-            <span class="vital">
+            <span class="vital vital-health">
+              <small class="vital-name" aria-hidden="true">Здоровье</small>
               <span class="health" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
               <b id="inventory-health">0/0</b>
             </span>
-            <span class="vital">
+            <span class="vital vital-hunger">
+              <small class="vital-name" aria-hidden="true">Сытость</small>
               <span id="inventory-hunger-meter" class="hunger-meter" data-stage="fed" aria-hidden="true">
                 <img class="meter-icon" src="../assets/dcss-preview/item/food/bread_ration.png" alt="" /><i><b id="inventory-hunger-fill"></b></i>
               </span>
               <b id="inventory-hunger">0</b>
             </span>
-            <span class="vital">
+            <span class="vital vital-rest">
+              <small class="vital-name" aria-hidden="true">Бодрость</small>
               <span id="inventory-rest-meter" class="hunger-meter rest-meter" data-stage="rested" aria-hidden="true">
                 <img class="meter-icon" src="../assets/dcss-preview/derived/hud/moon.png" alt="" /><i><b id="inventory-rest-fill"></b></i>
               </span>
