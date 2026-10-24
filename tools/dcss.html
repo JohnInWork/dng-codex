@@ -19,9 +19,9 @@
       crossorigin
     />
     <!-- «Небесный свод» — новый облик поверх раскладки (23.10.2026). -->
-    <script type="module" crossorigin src="../assets/game-BRnHU8ti.js"></script>
+    <script type="module" crossorigin src="../assets/game-BB5nSX81.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-Ccf6eumt.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-lQD3nYqw.css">
+    <link rel="stylesheet" crossorigin href="../assets/game-ByRHRj0_.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -604,6 +604,34 @@
           <p id="chest-container-feedback" class="chest-container-feedback" role="status" aria-live="polite"></p>
           <footer class="chest-container-footer">
             <button id="close-chest-container" data-press-sound="close" type="button" aria-label="Закрыть сундук">×</button>
+          </footer>
+        </article>
+      </section>
+
+      <section
+        id="bounty-board"
+        class="bounty-board"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="bounty-board-title"
+        aria-hidden="true"
+        inert
+      >
+        <article class="bounty-board-card">
+          <header class="bounty-board-header">
+            <img id="bounty-board-face" src="../assets/dcss-preview/mon/vault_warden.png" alt="" />
+            <div>
+              <h2 id="bounty-board-title">Контракты</h2>
+              <p id="bounty-board-line"></p>
+            </div>
+            <output id="bounty-board-counter">0/3</output>
+          </header>
+          <div class="bounty-board-scroll">
+            <div id="bounty-board-done" class="bounty-board-done"></div>
+            <div id="bounty-board-roads" class="bounty-board-roads"></div>
+          </div>
+          <footer class="bounty-board-footer">
+            <button id="close-bounty-board" data-press-sound="close" type="button" aria-label="Закрыть контракты">×</button>
           </footer>
         </article>
       </section>
