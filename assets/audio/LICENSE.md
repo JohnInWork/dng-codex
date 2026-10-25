@@ -300,6 +300,7 @@ CC0 1.0 as the project's own work.
 `sfx/seal-set-1.mp3`, `sfx/seal-set-2.mp3` (печати встают), `sfx/seal-fire-1.mp3`, `sfx/seal-fire-2.mp3`,
 `sfx/seal-storm-1.mp3`, `sfx/seal-storm-2.mp3`, `sfx/seal-water-1.mp3`, `sfx/seal-water-2.mp3` (герой наступил на печать),
 `sfx/warden-shield-1.mp3`, `sfx/warden-shield-2.mp3` (щит), `sfx/warden-rush-1.mp3`, `sfx/warden-rush-2.mp3` (рывок).
+`sfx/bandage.mp3` — перевязка бинтом (25.10.2026): шорох ткани и узел, чистый синтез.
 
 Синтез поверх переработанной записи из этого каталога (исходник — CC0, автор
 назван в его разделе выше):
