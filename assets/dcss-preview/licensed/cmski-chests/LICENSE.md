@@ -10,6 +10,11 @@ video games and personal projects, and permits editing them for use in a
 project. The assets may not be resold, repackaged or redistributed in their
 original or modified form.
 
+The page states the same terms for the free demo and the paid full pack; the
+only difference is content (4 chests in the demo, 24 in the full pack).
+Checked against the author's page on 2026-10-25: selling DNG Codex with these
+chests is permitted, no purchase is required.
+
 These files are used as integrated runtime artwork for DNG Codex. They are not
 covered by the CC0 dedication that applies to the surrounding Dungeon Crawl
 Stone Soup library.
