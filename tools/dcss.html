@@ -19,9 +19,9 @@
       crossorigin
     />
     <!-- «Небесный свод» — новый облик поверх раскладки (23.10.2026). -->
-    <script type="module" crossorigin src="../assets/game-D7rjxGQ7.js"></script>
+    <script type="module" crossorigin src="../assets/game-1oc2aoRk.js"></script>
     <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-CuuTKem5.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-DVsELoOc.css">
+    <link rel="stylesheet" crossorigin href="../assets/game-BE8Gk_oE.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -691,7 +691,7 @@
           <footer class="floor-map-actions">
             <button id="close-floor-map" data-press-sound="close" type="button" aria-label="Закрыть карту">×</button>
             <button id="floor-map-legend-toggle" type="button" aria-label="Что значат значки" aria-pressed="false">?</button>
-            <button id="floor-map-center" type="button" aria-label="К герою"><i class="ui-icon" data-icon="crosshair" aria-hidden="true"></i></button>
+            <button id="floor-map-center" type="button" aria-label="К герою"><i class="ui-icon" data-icon="locate" aria-hidden="true"></i></button>
             <button id="floor-map-zoom-out" type="button" aria-label="Отдалить">-</button>
             <button id="floor-map-zoom-in" type="button" aria-label="Приблизить">+</button>
           </footer>
@@ -1309,6 +1309,11 @@
               <!-- Сторона джойстика (11.11.2026): только боком на телефоне — стоя он посередине, и кнопки здесь нет. -->
               <button id="joystick-side" class="joystick-toggle joystick-side" type="button" aria-label="Джойстик. Сторона: справа">
                 <span id="joystick-side-label">Сторона: справа</span>
+              </button>
+              <!-- Ход касанием (13.11.2026): выключен — палец по полу героя не ведёт; что в шаге, касание открывает. -->
+              <button id="tap-move-toggle" class="joystick-toggle tap-move-toggle" type="button" role="switch" aria-checked="true" aria-label="Ходить касанием по полу">
+                <i class="joystick-check" aria-hidden="true"></i>
+                <span id="tap-move-label">Ход касанием</span>
               </button>
             </section>
             <!--
