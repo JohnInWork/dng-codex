@@ -19,9 +19,9 @@
       crossorigin
     />
     <!-- «Небесный свод» — новый облик поверх раскладки (23.10.2026). -->
-    <script type="module" crossorigin src="../assets/game-Bsql4vkm.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-CuuTKem5.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-XS9u8S2t.css">
+    <script type="module" crossorigin src="../assets/game-CHGN6g3T.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-4dbjq_-j.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-B7dSpuf3.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -80,7 +80,7 @@
                   <img id="menu-appearance-icon" src="../assets/dcss-preview/player/base/human_m.png" alt="" />
                   <img id="menu-appearance-hair" src="../assets/dcss-preview/player/base/human_m.png" alt="" hidden />
                 </span>
-                <b id="edit-appearance-label">Внешность</b>
+                <b id="edit-appearance-label">Персонаж</b>
               </button>
               <button id="open-outfit" type="button">
                 <i class="ui-icon" data-icon="shoulder-armor" aria-hidden="true"></i><b id="open-outfit-label">Магазин</b>
@@ -130,23 +130,36 @@
       >
         <article class="appearance-card pixel-frame">
           <header class="appearance-header">
-            <h2 id="appearance-editor-title">Внешность</h2>
+            <h2 id="appearance-editor-title">Персонаж</h2>
             <i aria-hidden="true"></i>
           </header>
           <div class="appearance-preview">
             <canvas id="appearance-paperdoll" width="192" height="224" aria-label="Предпросмотр героя"></canvas>
           </div>
+          <!--
+            Персонаж (13.11.2026, Иван: «отдельно выбираем расу, потом пол, потом внешность — разными стрелками»): у
+            расы под стрелками её бонус или замок; раса действует с нового забега.
+          -->
           <div class="appearance-options">
-            <section class="appearance-option" aria-labelledby="appearance-body-label">
-              <b id="appearance-body-label">Тело</b>
+            <section class="appearance-option appearance-race" aria-labelledby="appearance-race-label">
+              <b id="appearance-race-label">Раса</b>
               <div>
-                <button type="button" data-appearance-kind="body" data-appearance-step="-1" aria-label="Предыдущее тело">&lt;</button>
-                <output id="appearance-body-value">1/2</output>
-                <button type="button" data-appearance-kind="body" data-appearance-step="1" aria-label="Следующее тело">&gt;</button>
+                <button type="button" data-appearance-kind="race" data-appearance-step="-1" aria-label="Предыдущая раса">&lt;</button>
+                <output id="appearance-race-value">Человек</output>
+                <button type="button" data-appearance-kind="race" data-appearance-step="1" aria-label="Следующая раса">&gt;</button>
+              </div>
+              <p id="appearance-race-text" class="appearance-race-text" aria-live="polite"></p>
+            </section>
+            <section class="appearance-option" aria-labelledby="appearance-gender-label">
+              <b id="appearance-gender-label">Пол</b>
+              <div>
+                <button type="button" data-appearance-kind="gender" data-appearance-step="-1" aria-label="Другой пол">&lt;</button>
+                <output id="appearance-gender-value">Мужчина</output>
+                <button type="button" data-appearance-kind="gender" data-appearance-step="1" aria-label="Другой пол">&gt;</button>
               </div>
             </section>
             <section class="appearance-option" aria-labelledby="appearance-hair-label">
-              <b id="appearance-hair-label">Волосы</b>
+              <b id="appearance-hair-label">Внешность</b>
               <div>
                 <button type="button" data-appearance-kind="hair" data-appearance-step="-1" aria-label="Предыдущая причёска">&lt;</button>
                 <output id="appearance-hair-value">2/9</output>
