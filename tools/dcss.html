@@ -19,9 +19,9 @@
       crossorigin
     />
     <!-- «Небесный свод» — новый облик поверх раскладки (23.10.2026). -->
-    <script type="module" crossorigin src="../assets/game-ef3hkQxS.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-gfBo_B6Z.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-DT6gAeOn.css">
+    <script type="module" crossorigin src="../assets/game-YNdal48N.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-CmB7E_i7.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-BsWu78F-.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -743,6 +743,28 @@
                   <i id="character-experience-fill"></i>
                 </div>
               </div>
+              <!-- Здоровье, сытость и бодрость — как в рюкзаке (Иван 16.11.2026: «в Герое тоже выводить хп, сон, голод»). -->
+              <div id="character-vitals" class="inventory-vitals character-vitals" role="group" aria-label="Состояние героя">
+                <span class="vital vital-health">
+                  <small class="vital-name" aria-hidden="true">Здоровье</small>
+                  <span class="health" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                  <b id="character-health">0/0</b>
+                </span>
+                <span class="vital vital-hunger">
+                  <small class="vital-name" aria-hidden="true">Сытость</small>
+                  <span id="character-hunger-meter" class="hunger-meter" data-stage="fed" aria-hidden="true">
+                    <img class="meter-icon" src="../assets/dcss-preview/item/food/bread_ration.png" alt="" /><i><b id="character-hunger-fill"></b></i>
+                  </span>
+                  <b id="character-hunger">0</b>
+                </span>
+                <span class="vital vital-rest">
+                  <small class="vital-name" aria-hidden="true">Бодрость</small>
+                  <span id="character-rest-meter" class="hunger-meter rest-meter" data-stage="rested" aria-hidden="true">
+                    <img class="meter-icon" src="../assets/dcss-preview/derived/hud/moon.png" alt="" /><i><b id="character-rest-fill"></b></i>
+                  </span>
+                  <b id="character-rest">0</b>
+                </span>
+              </div>
             </section>
 
             <section class="character-details">
@@ -941,6 +963,12 @@
                 <img class="meter-icon" src="../assets/dcss-preview/derived/hud/moon.png" alt="" /><i><b id="inventory-rest-fill"></b></i>
               </span>
               <b id="inventory-rest">0</b>
+            </span>
+            <!-- Опыт и в рюкзаке (Иван 16.11.2026): тот же счёт, что под фигурой в «Герое». -->
+            <span class="vital vital-xp">
+              <small class="vital-name" aria-hidden="true">Опыт</small>
+              <span id="inventory-xp-meter" class="hunger-meter xp-meter" aria-hidden="true"><i><b id="inventory-xp-fill"></b></i></span>
+              <b id="inventory-xp">0/0</b>
             </span>
           </div>
 
