@@ -296,7 +296,8 @@ CC0 1.0 as the project's own work.
 `sfx/ember-aim-2.mp3`, `sfx/ember-burst-1.mp3`, `sfx/ember-burst-2.mp3`, `sfx/ember-ring-1.mp3`,
 `sfx/ember-ring-2.mp3`, `sfx/ember-shotgun-1.mp3`, `sfx/ember-shotgun-2.mp3`, `sfx/ash-teleport-1.mp3`,
 `sfx/ash-teleport-2.mp3`; Хранитель святилища `sfx/rune-begin-1.mp3`, `sfx/rune-begin-2.mp3`, `sfx/summon-cast-1.mp3`,
-`sfx/summon-cast-2.mp3`, `sfx/minions-crumble-1.mp3`, `sfx/minions-crumble-2.mp3`.
+`sfx/summon-cast-2.mp3`, `sfx/minions-crumble-1.mp3`, `sfx/minions-crumble-2.mp3`; король лягушек (17.11.2026)
+`sfx/frog-king-1.mp3`, `sfx/frog-king-2.mp3`.
 
 Страж глубин, 15.10.2026: ещё шесть звуков повадок, у каждого два варианта, чистый синтез без записей —
 `sfx/seal-set-1.mp3`, `sfx/seal-set-2.mp3` (печати встают), `sfx/seal-fire-1.mp3`, `sfx/seal-fire-2.mp3`,
