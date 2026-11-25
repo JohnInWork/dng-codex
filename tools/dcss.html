@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta
+      id="viewport-meta"
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
     />
@@ -19,9 +20,10 @@
       crossorigin
     />
     <!-- «Небесный свод» — новый облик поверх раскладки (23.10.2026). -->
-    <script type="module" crossorigin src="../assets/game-Dy11GpVB.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-D5vkqB7P.js">
-    <link rel="stylesheet" crossorigin href="../assets/game-5IpcmNOW.css">
+    <script type="module" crossorigin src="../assets/game-BXJaugrb.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/dcss-rpg-visual-overrides-Usg0x89o.js">
+    <link rel="modulepreload" crossorigin href="../assets/dist-JpKXDfnl.js">
+    <link rel="stylesheet" crossorigin href="../assets/game-7BxInf-x.css">
   </head>
   <body data-state="loading" data-screen="menu">
     <main>
@@ -1334,6 +1336,26 @@
                 <button id="zoom-out" type="button" aria-label="Дальше">-</button>
                 <output id="zoom-value" aria-live="polite">100%</output>
                 <button id="zoom-in" type="button" aria-label="Ближе">+</button>
+              </div>
+            </section>
+            <!-- Размер интерфейса (23.11.2026, dcss-rpg-ui-scale.js): Авто, 100%, 125%, 150%. -->
+            <section class="settings-block" aria-labelledby="settings-ui-scale-title">
+              <h3 id="settings-ui-scale-title">Размер интерфейса</h3>
+              <div id="settings-ui-scale" class="main-menu-audio" role="group" aria-label="Размер интерфейса">
+                <span class="settings-brightness-glyph" aria-hidden="true">◈</span>
+                <button id="ui-scale-down" type="button" aria-label="Мельче">-</button>
+                <output id="ui-scale-value" aria-live="polite">Авто</output>
+                <button id="ui-scale-up" type="button" aria-label="Крупнее">+</button>
+              </div>
+            </section>
+            <!-- Уровень графики (23.11.2026, dcss-rpg-graphics.js): Авто, Низкая, Средняя, Высокая. -->
+            <section class="settings-block" aria-labelledby="settings-graphics-title">
+              <h3 id="settings-graphics-title">Графика</h3>
+              <div id="settings-graphics" class="main-menu-audio" role="group" aria-label="Графика">
+                <span class="settings-brightness-glyph" aria-hidden="true">◈</span>
+                <button id="graphics-down" type="button" aria-label="Ниже">-</button>
+                <output id="graphics-value" aria-live="polite">Авто</output>
+                <button id="graphics-up" type="button" aria-label="Выше">+</button>
               </div>
             </section>
             <!--
